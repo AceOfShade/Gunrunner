@@ -13,7 +13,7 @@ public class Variables {
 
 	static JFrame jf1;
 
-	static int screenwidth = 700, screenhight = 600;
+	static int screenwidth = 800, screenhight = 600;
 	static int backgroundY1 = 0;
 	static int x=400,y=400;
 	static int px=350,py=400; 
