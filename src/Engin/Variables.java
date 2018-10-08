@@ -27,7 +27,7 @@ public class Variables {
 	static boolean lefting=false, righting=false;
 	static int sy;
 	static int sx;
-	static BufferedImage b1,player1,player1inv,e,bullet,enemy,icon;
+	static BufferedImage b1,player1,player1inv,e,bullet,bulletinv,enemy,icon;
 	static byte level;
 	static float velY;
 	static int jumpheight = 70;
@@ -47,6 +47,7 @@ public class Variables {
 			
 			icon=ImageIO.read(new File("rsc/iconi.png"));//Icon Image
 			bullet=ImageIO.read(new File("rsc/patrone.png"));//Patrone
+			bulletinv=ImageIO.read(new File("rsc/patroneinv.png"));//Patronelinks
 			enemy=ImageIO.read(new File("rsc/gegner1.png"));//Gegner
 			player1 = ImageIO.read(new File("rsc/playermodel.png"));//Spieler(normal)
 			player1inv = ImageIO.read(new File("rsc/player3inv.png"));//Spieler(inv.)
