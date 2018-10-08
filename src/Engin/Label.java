@@ -39,6 +39,9 @@ public class Label extends JLabel{
 		for(int i = 0; i < Variables.freiePos;i++) {
 			if(Variables.shots[i].sX != Variables.px+75) {
 				g.drawImage(Variables.bullet, Variables.shots[i].sX, Variables.shots[i].sY, 9,9, null);
+				if(Variables.moveleft) {
+					g.drawImage(Variables.bulletinv, Variables.shots[i].sX, Variables.shots[i].sY, 9, 9, null);
+				}
 			}
 		}
 		repaint(); 	
