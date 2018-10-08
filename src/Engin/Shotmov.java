@@ -17,9 +17,11 @@ public class Shotmov {
 				if(Variables.shot && e >= 10) {Variables.shots[Variables.freiePos] = new Shot(); Variables.freiePos++; e=0;} //spawning
 				
 				
-				for(int i = 0; i < Variables.freiePos && Variables.freiePos != 0; i++) { // despawn
-					Variables.shots[i].sX += Variables.shots[i].speedshot;
-					if(Variables.shots[i].sX >= Variables.screenwidth) {
+				for(int i = 0; i < Variables.freiePos && Variables.freiePos != 0; i++) { 
+						
+						Variables.shots[i].Schuss();
+						
+					if(Variables.shots[i].sX >= Variables.screenwidth) {// despawn
 						for(int a = i; a < Variables.freiePos; a++) {
 							Variables.shots[a]= Variables.shots[a+1];
 						}
