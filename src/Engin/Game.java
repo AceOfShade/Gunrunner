@@ -5,7 +5,7 @@ import java.util.TimerTask;
 
 public class Game {
 	Timer g;
-	Playermov pv = new Playermov();
+	Playermove pv = new Playermove();
 	
 	public Game() {
 		g=new Timer();

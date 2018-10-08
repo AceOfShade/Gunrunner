@@ -12,7 +12,7 @@ import javax.swing.JFrame;
 public class Variables {
 
 	static JFrame jf1;
-
+    //Screen width and hight
 	static int screenwidth = 800, screenhight = 600;
 	static int backgroundY1 = 0;
 	static int x=400,y=400;
@@ -26,19 +26,24 @@ public class Variables {
 	static int speedshot=20;
 	static boolean kollision=false;
 	static double speedright=5,speedleft=5,speedjump=3,speeddown=4.5;
+	//Move
 	static boolean moveup = false, shot= false, moveleft = false, moveright = false, movedown=false;
+	//kein plan also label
 	static Label lbl;
 	static boolean lefting=false, righting=false;
+	//Schuss X und Y
 	static int sy;
 	static int sx;
+	//Bilder
 	static BufferedImage b1,player1,player1inv,e,bullet,bulletinv,enemy,icon;
+	//frag fabian
 	static byte level;
 	static float velY;
 	static int jumpheight = 70;
 	static boolean debug = false;
 	static Shot[] shots;
 	static int freiePos = 0;
-	static int maxShots =1000000;//1000000 max Schüsse gleichzeitig 
+	static int maxShots =100  ;//100 max Schüsse gleichzeitig 
 	static boolean f2;//Playerwechsel
 	static Enemy[] enemys;
 	

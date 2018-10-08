@@ -3,10 +3,10 @@ package Engin;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class Shotmov {
+public class Shotmove {
 	int e = 0;
 	Timer movment;
-	public Shotmov() {
+	public Shotmove() {
 		movment=new Timer();
 		movment.scheduleAtFixedRate(new TimerTask() {
 

@@ -1,6 +1,6 @@
 package Engin;
 
-public class Playermov {
+public class Playermove {
 	int jh; //max Sprunghöhe von Variables kopiert
 	
 	public void move(){
