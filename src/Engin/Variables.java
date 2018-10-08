@@ -34,7 +34,7 @@ public class Variables {
 	static boolean debug = false;
 	static Shot[] shots;
 	static int freiePos = 0;
-	static int maxShots =100;//100 max Schüsse gleichzeitig 
+	static int maxShots =100  ;//100 max Schüsse gleichzeitig 
 	static boolean f2;//Playerwechsel
 	static Enemy[] enemys;
 	
