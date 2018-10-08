@@ -39,7 +39,7 @@ public class Label extends JLabel{
 				if(Variables.moveleft) {
 					g.drawImage(Variables.bulletinv, Variables.shots[i].sX, Variables.shots[i].sY, 9, 9, null);
 				}
-			}
+			}//xd
 		}
 		repaint(); 	
 	}
