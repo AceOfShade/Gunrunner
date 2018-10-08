@@ -49,7 +49,7 @@ public class Variables {
 			bullet=ImageIO.read(new File("rsc/patrone.png"));//Patrone
 			enemy=ImageIO.read(new File("rsc/gegner1.png"));//Gegner
 			player1 = ImageIO.read(new File("rsc/playermodel.png"));//Spieler(normal)
-			e = ImageIO.read(new File("rsc/player2.png"));//Spieler(Esteregg)
+			e = ImageIO.read(new File("rsc/player3.png"));//Spieler(Esteregg)
 		} 
 		catch (IOException e) {
 			e.printStackTrace();
