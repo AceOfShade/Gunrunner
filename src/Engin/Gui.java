@@ -13,7 +13,7 @@ import javax.swing.JFrame;
 		Variables.jf1.setResizable(false);
 		Variables.jf1.requestFocus();
 		Variables.jf1.addKeyListener((KeyListener) new KeyHandler());
-		Variables.jf1.setIconImage(Variables.ii);
+		Variables.jf1.setIconImage(Variables.icon);
 		Variables.jf1.setVisible(true);
 	
 	Variables.lbl = new Label();

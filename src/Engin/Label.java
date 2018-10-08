@@ -21,7 +21,7 @@ public class Label extends JLabel{
 		
 		
 		g.drawImage(Variables.b1, 0, Variables.backgroundY1, 800, 600, null);	
-		g.drawImage(Variables.g,Variables.ex, Variables.ey, 100, 140, null);
+		g.drawImage(Variables.enemy,Variables.ex, Variables.ey, 100, 140, null);
 		
 		//verschiedene Player
 		if(Variables.f2) {
