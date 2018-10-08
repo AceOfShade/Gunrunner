@@ -23,18 +23,15 @@ public class Label extends JLabel{
 		g.drawImage(Variables.b1, 0, Variables.backgroundY1, 800, 600, null);	
 		g.drawImage(Variables.enemy,Variables.ex, Variables.ey, 100, 140, null);
 		
-		if(Variables.moveleft==true) {
-			g.drawImage(Variables.player1inv,Variables.px, Variables.py ,100,140,null);
-			
-		}
-		else {
 		//verschiedene Player
 		if(Variables.f2) {
 			g.drawImage(Variables.player1, Variables.px, Variables.py, 100, 140, null);	
+		}else if(Variables.moveleft){
+			g.drawImage(Variables.player1inv,Variables.px, Variables.py ,100,140,null);
 		}else {
-			g.drawImage(Variables.e, Variables.px, Variables.py, 100, 140, null);	
+			g.drawImage(Variables.e, Variables.px, Variables.py, 100, 140, null);
 		}
-		}
+		
 		//alle Bullets painten
 		for(int i = 0; i < Variables.freiePos;i++) {
 			if(Variables.shots[i].sX != Variables.px+75) {
