@@ -38,9 +38,5 @@ public class Playermove {
 			}
 		//Jump-Ende
 		if(Variables.debug) {System.out.println("Vel: " + Variables.velY + Variables.moveup);}//debug mode
-		
-		if(Collision.rectangleRectangleCollision(Variables.py, Variables.ey)) {
-			
-		}
 	}
 }

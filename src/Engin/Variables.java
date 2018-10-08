@@ -16,13 +16,19 @@ public class Variables {
 	static int screenwidth = 800, screenhight = 600;
 	static int backgroundY1 = 0;
 	static int x=400,y=400;
-	static int px=350,py=400;
-	static int phight=140;		//Player hight
-	static int pwidth=100;		//Player width
+	
+	//Player
+	static int px=350,py=400; 
+	static int phight=100;			//Player hight
+	static int pwidth=140;			//Player width
 	//Kurzfristig
+	
+	//Enemy
 	static int ex=675,ey=400;
-	static int ehight=140;		//Enemy hight
-	static int ewidth=140;		//Enemy width
+	static int ehight=100;			//Enemy hight
+	static int ewidth=140;			//Enemy width
+	
+	
 	static int speedshot=20;
 	static boolean kollision=false;
 	static double speedright=5,speedleft=5,speedjump=3,speeddown=4.5;
