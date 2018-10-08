@@ -8,7 +8,7 @@ public class Enemy {
 		this.eY = eY;
 		this.hp = hp;
 	}
-	public Enemy() {
+	public Enemy() { //Marco war hier 2015
 		this.eX = 675;
 		this.eY = 400;
 		this.hp = 3;
