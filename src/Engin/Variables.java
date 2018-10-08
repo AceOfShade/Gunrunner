@@ -12,22 +12,29 @@ import javax.swing.JFrame;
 public class Variables {
 
 	static JFrame jf1;
-
+    //Screen width and hight
 	static int screenwidth = 800, screenhight = 600;
 	static int backgroundY1 = 0;
 	static int x=400,y=400;
+	//Palyer X und Y
 	static int px=350,py=400; 
-	//Kurzfristig
+	//Zombie X und Y
 	static int ex=675,ey=400;
+	//
 	static int speedshot=20;
 	static boolean kollision=false;
 	static double speedright=5,speedleft=5,speedjump=3,speeddown=4.5;
+	//Move
 	static boolean moveup = false, shot= false, moveleft = false, moveright = false, movedown=false;
+	//kein plan also label
 	static Label lbl;
 	static boolean lefting=false, righting=false;
+	//Schuss X und Y
 	static int sy;
 	static int sx;
+	//Bilder
 	static BufferedImage b1,player1,player1inv,e,bullet,bulletinv,enemy,icon;
+	//frag fabian
 	static byte level;
 	static float velY;
 	static int jumpheight = 70;
