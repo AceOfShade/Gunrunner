@@ -14,21 +14,21 @@ public class Shotmov {
 			public void run() {
 				
 				e++;
-				if(Variables.shot && e >= 10) {Variables.shots[Variables.freiePos] = new Shot(); Variables.freiePos++; e=0;} //spawning
+				if(Variables.shot && e >= 10) {Variables.shots[Variables.freePos] = new Shot(); Variables.freePos++; e=0;} //spawning
 				
 				
-				for(int i = 0; i < Variables.freiePos && Variables.freiePos != 0; i++) { // despawn
+				for(int i = 0; i < Variables.freePos && Variables.freePos != 0; i++) { // despawn
 					Variables.shots[i].sX += Variables.shots[i].speedshot;
 					if(Variables.shots[i].sX >= Variables.screenwidth) {
-						for(int a = i; a < Variables.freiePos; a++) {
+						for(int a = i; a < Variables.freePos; a++) {
 							Variables.shots[a]= Variables.shots[a+1];
 						}
-						Variables.freiePos--;
+						Variables.freePos--;
 					}
 				}
 				
 				
-				if(Variables.debug) {System.out.println("Anzahl Schüsse:" +Variables.freiePos);}//debug mode
+				if(Variables.debug) {System.out.println("Anzahl Schüsse:" +Variables.freePos);}//debug mode
 				
 			}
 	}, 0, 10);
