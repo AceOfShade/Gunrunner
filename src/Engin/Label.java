@@ -23,7 +23,7 @@ public class Label extends JLabel{
 		g.drawImage(Variables.b1, 0, Variables.backgroundY1, 800, 600, null);	
 		g.drawImage(Variables.enemy,Variables.ex, Variables.ey, 100, 140, null);
 		
-		//verschiedene Player
+		//different Playermodels
 		if(Variables.f2) {
 			g.drawImage(Variables.player1, Variables.px, Variables.py, 100, 140, null);	
 		}else if(Variables.moveleft){
@@ -32,14 +32,14 @@ public class Label extends JLabel{
 			g.drawImage(Variables.e, Variables.px, Variables.py, 100, 140, null);
 		}
 		
-		//alle Bullets painten
-		for(int i = 0; i < Variables.freiePos;i++) {
+		//painting all Bullets 
+		for(int i = 0; i < Variables.freePos;i++) {
 			if(Variables.shots[i].sX != Variables.px+75) {
 				g.drawImage(Variables.bullet, Variables.shots[i].sX, Variables.shots[i].sY, 9,9, null);
 				if(Variables.moveleft) {
 					g.drawImage(Variables.bulletinv, Variables.shots[i].sX, Variables.shots[i].sY, 9, 9, null);
 				}
-			}//xd
+			}
 		}
 		repaint(); 	
 	}

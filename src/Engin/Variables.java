@@ -21,7 +21,6 @@ public class Variables {
 	static int px=350,py=400; 
 	static int phight=100;			//Player hight
 	static int pwidth=140;			//Player width
-	//Kurzfristig
 	
 	//Enemy
 	static int ex=675,ey=400;
@@ -30,7 +29,7 @@ public class Variables {
 	
 	
 	static int speedshot=20;
-	static boolean kollision=false;
+	static boolean collision=false;
 	static double speedright=5,speedleft=5,speedjump=3,speeddown=4.5;
 	//Move
 	static boolean moveup = false, shot= false, moveleft = false, moveright = false, movedown=false;
@@ -48,8 +47,8 @@ public class Variables {
 	static int jumpheight = 70;
 	static boolean debug = false;
 	static Shot[] shots;
-	static int freiePos = 0;
-	static int maxShots =100  ;//100 max Schüsse gleichzeitig 
+	static int freePos = 0;
+	static int maxShots =100  ;//100 max shots per frame 
 	static boolean f2;//Playerwechsel
 	static Enemy[] enemys;
 	
@@ -61,16 +60,16 @@ public class Variables {
 			b1 = ImageIO.read(new File("rsc/back.png"));//background
 			start= ImageIO.read(new File("rsc/start.png"));//start
 			icon=ImageIO.read(new File("rsc/iconi.png"));//Icon Image
-			bullet=ImageIO.read(new File("rsc/patrone.png"));//Patrone
-			bulletinv=ImageIO.read(new File("rsc/patroneinv.png"));//Patroneinv
-			enemy=ImageIO.read(new File("rsc/gegner1.png"));//Gegner
-			player1 = ImageIO.read(new File("rsc/playermodel.png"));//Spieler(normal)
-			player1inv = ImageIO.read(new File("rsc/player3inv.png"));//Spieler(inv.)
-			e = ImageIO.read(new File("rsc/player3.png"));//Spieler(Easteregg)
+			bullet=ImageIO.read(new File("rsc/patrone.png"));//shot
+			bulletinv=ImageIO.read(new File("rsc/patroneinv.png"));//Shot(inv.)
+			enemy=ImageIO.read(new File("rsc/gegner1.png"));//Enemy
+			player1 = ImageIO.read(new File("rsc/playermodel.png"));//Player(normal)
+			player1inv = ImageIO.read(new File("rsc/player3inv.png"));//Player(inv.)
+			e = ImageIO.read(new File("rsc/player3.png"));//Player(Easteregg)
 		} 
 		catch (IOException e) {
 			e.printStackTrace();
-			System.out.println("Bilder konnten nicht geladen werden");
+			System.out.println("Can't load images");
 		}
 	}			
 }

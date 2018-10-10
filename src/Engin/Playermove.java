@@ -1,7 +1,7 @@
 package Engin;
 
 public class Playermove {
-	int jh; //max Sprunghöhe von Variables kopiert
+	int jh; //max jumpheight copied from Variables 
 	
 	public void move(){
 		if(Variables.moveright==true)
@@ -16,27 +16,27 @@ public class Playermove {
 				}
 		}
 		//Jump
-		if(Variables.py >= 400) {jh = Variables.jumpheight; } // jump max höhe;
+		if(Variables.py >= 400) {jh = Variables.jumpheight; } // jump max height;
 		
 		if(Variables.moveup && jh != 0){
-			if(Variables.py>0 ){Variables.velY-=Variables.speedjump; } //Sprung ges. hinzugeben (voller Sprung)
+			if(Variables.py>0 ){Variables.velY-=Variables.speedjump; } //Jump add full (full Sprung)
 		}else {
-			Variables.velY = 0; //Sprung ges. hinzugeben (nicht voller Sprung, solang man w hält)
+			Variables.velY = 0; //Jump add (not full Jump, until you release w)
 		}
-		if(Variables.velY == 0 && Variables.py < 400) { //sinken
-			Variables.py+= Variables.speeddown; //sinken
+		if(Variables.velY == 0 && Variables.py < 400) { //falling down
+			Variables.py+= Variables.speeddown; 
 		}
 		 
-		if(Variables.velY < 0 && jh > 0) { //steigen
+		if(Variables.velY < 0 && jh > 0) { //jumping up
 			Variables.py-= Variables.speedjump;
 			Variables.velY++;
 			jh--;
 		}
 		
-		if(Variables.py > 400){	//wenn man in den boden buggt
+		if(Variables.py > 400){	//if stuck in floor
 				Variables.py = 400; 
 			}
-		//Jump-Ende
+		//Jump-End
 		if(Variables.debug) {System.out.println("Vel: " + Variables.velY + Variables.moveup);}//debug mode
 	}
 }
