@@ -41,7 +41,7 @@ public class Variables {
 	static int sy;
 	static int sx;
 	//Bilder
-	static BufferedImage b1,player1,player1inv,e,bullet,bulletinv,enemy,icon;
+	static BufferedImage b1,start,player1,player1inv,e,bullet,bulletinv,enemy,icon;
 	//frag fabian
 	static byte level;
 	static float velY;
@@ -59,14 +59,14 @@ public class Variables {
 		
 		try {
 			b1 = ImageIO.read(new File("rsc/back.png"));//background
-			
+			start= ImageIO.read(new File("rsc/start.png"));//start
 			icon=ImageIO.read(new File("rsc/iconi.png"));//Icon Image
 			bullet=ImageIO.read(new File("rsc/patrone.png"));//Patrone
-			bulletinv=ImageIO.read(new File("rsc/patroneinv.png"));//Patronelinks
+			bulletinv=ImageIO.read(new File("rsc/patroneinv.png"));//Patroneinv
 			enemy=ImageIO.read(new File("rsc/gegner1.png"));//Gegner
 			player1 = ImageIO.read(new File("rsc/playermodel.png"));//Spieler(normal)
 			player1inv = ImageIO.read(new File("rsc/player3inv.png"));//Spieler(inv.)
-			e = ImageIO.read(new File("rsc/player3.png"));//Spieler(Esteregg)
+			e = ImageIO.read(new File("rsc/player3.png"));//Spieler(Easteregg)
 		} 
 		catch (IOException e) {
 			e.printStackTrace();
