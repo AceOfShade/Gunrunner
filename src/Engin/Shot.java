@@ -16,11 +16,12 @@ public class Shot {
 			right = true;
 		}
 	}
-	public void Schuss(){
+	public void schuss(){
 		if(right) {
 			sX +=speedshot;
 		}else {
 			sX -= speedshot;
 		}
 	}
+	
 }
