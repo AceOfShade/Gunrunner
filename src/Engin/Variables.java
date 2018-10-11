@@ -21,7 +21,6 @@ public class Variables {
 	static int px=350,py=400; 
 	static int phight=100;			//Player hight
 	static int pwidth=140;			//Player width
-	//Kurzfristig
 	
 	//Enemy
 	static int ex=675,ey=400;
@@ -30,8 +29,13 @@ public class Variables {
 	
 	
 	static int speedshot=20;
+<<<<<<< HEAD
 	static boolean kollision=false;
 	static double speedright=500,speedleft=500,speedjump=3000,speeddown=40.5;
+=======
+	static boolean collision=false;
+	static double speedright=5,speedleft=5,speedjump=3,speeddown=4.5;
+>>>>>>> b37497078362587ba95aabaf1cc01d1ba655e791
 	//Move
 	static boolean moveup = false, shot= false, moveleft = false, moveright = false, movedown=false;
 	//kein plan also label
@@ -41,15 +45,15 @@ public class Variables {
 	static int sy;
 	static int sx;
 	//Bilder
-	static BufferedImage b1,player1,player1inv,e,bullet,bulletinv,enemy,icon;
+	static BufferedImage b1,start,player1,player1inv,e,bullet,bulletinv,enemy,icon;
 	//frag fabian
 	static byte level;
 	static float velY;
 	static int jumpheight = 70;
 	static boolean debug = false;
 	static Shot[] shots;
-	static int freiePos = 0;
-	static int maxShots =100  ;//100 max Schüsse gleichzeitig 
+	static int freePos = 0;
+	static int maxShots =100  ;//100 max shots per frame 
 	static boolean f2;//Playerwechsel
 	static Enemy[] enemys;
 	
@@ -59,18 +63,18 @@ public class Variables {
 		
 		try {
 			b1 = ImageIO.read(new File("rsc/back.png"));//background
-			
+			start= ImageIO.read(new File("rsc/start.png"));//start
 			icon=ImageIO.read(new File("rsc/iconi.png"));//Icon Image
-			bullet=ImageIO.read(new File("rsc/patrone.png"));//Patrone
-			bulletinv=ImageIO.read(new File("rsc/patroneinv.png"));//Patronelinks
-			enemy=ImageIO.read(new File("rsc/gegner1.png"));//Gegner
-			player1 = ImageIO.read(new File("rsc/playermodel.png"));//Spieler(normal)
-			player1inv = ImageIO.read(new File("rsc/player3inv.png"));//Spieler(inv.)
-			e = ImageIO.read(new File("rsc/player3.png"));//Spieler(Esteregg)
+			bullet=ImageIO.read(new File("rsc/patrone.png"));//shot
+			bulletinv=ImageIO.read(new File("rsc/patroneinv.png"));//Shot(inv.)
+			enemy=ImageIO.read(new File("rsc/gegner1.png"));//Enemy
+			player1 = ImageIO.read(new File("rsc/playermodel.png"));//Player(normal)
+			player1inv = ImageIO.read(new File("rsc/player3inv.png"));//Player(inv.)
+			e = ImageIO.read(new File("rsc/player3.png"));//Player(Easteregg)
 		} 
 		catch (IOException e) {
 			e.printStackTrace();
-			System.out.println("Bilder konnten nicht geladen werden");
+			System.out.println("Can't load images");
 		}
 	}			
 }
