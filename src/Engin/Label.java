@@ -1,5 +1,6 @@
 package Engin;
 
+import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -31,6 +32,10 @@ public class Label extends JLabel{
 		}else {
 			g.drawImage(Variables.e, Variables.px, Variables.py, 100, 140, null);
 		}
+		
+		g.drawString("Health: " + Variables.health, 20, 40);
+		g.drawString("Kills: " + Variables.kills, 20, 20);
+		
 		
 		//painting all Bullets 
 		for(int i = 0; i < Variables.freePos;i++) {

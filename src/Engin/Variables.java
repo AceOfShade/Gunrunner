@@ -5,6 +5,7 @@ import java.awt.image.BufferedImage;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
@@ -21,11 +22,15 @@ public class Variables {
 	static int px=350,py=400; 
 	static int phight=100;			//Player hight
 	static int pwidth=140;			//Player width
+	static int kills=0;				//kills from player
+	static int health=3;			//player health
 	
 	//Enemy
 	static int ex=675,ey=400;
 	static int ehight=100;			//Enemy hight
 	static int ewidth=140;			//Enemy width
+	static ArrayList<Sprite> enemySprites;
+	
 	
 	
 	static int speedshot=20;
