@@ -31,7 +31,7 @@ public class Variables {
 	
 	static int speedshot=20;
 	static boolean kollision=false;
-	static double speedright=5,speedleft=5,speedjump=3,speeddown=4.5;
+	static double speedright=500,speedleft=500,speedjump=3000,speeddown=40.5;
 	//Move
 	static boolean moveup = false, shot= false, moveleft = false, moveright = false, movedown=false;
 	//kein plan also label

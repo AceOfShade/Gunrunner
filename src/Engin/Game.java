@@ -5,7 +5,7 @@ import java.util.TimerTask;
 
 public class Game {
 	Timer g;
-	Playermove pv = new Playermove();
+	Player p = new Player();
 	
 	public Game() {
 		g=new Timer();
@@ -13,7 +13,7 @@ public class Game {
 
 			@Override
 			public void run() {
-				pv.move();
+				p.move();
 				
 			}
 	}, 0, 10);

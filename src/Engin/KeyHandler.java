@@ -5,19 +5,19 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class KeyHandler implements KeyListener {
+	Player p = new Player();
 
 	@Override
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_W) {
-			Variables.moveup = true;
+				p.jump();
 			}
 			
 		if (e.getKeyCode() == KeyEvent.VK_A) {
-			Variables.moveleft = true;
+			p.moveLeft();
 		}
 		if (e.getKeyCode() == KeyEvent.VK_D) {	
-			Variables.moveright = true;
-			
+			p.moveRight();
 		}
 		if (e.getKeyCode() == KeyEvent.VK_SPACE) {		
 			Variables.shot = true;
