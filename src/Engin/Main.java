@@ -10,7 +10,6 @@ public class Main {
 		new Label();
 		Label l=new Label();
 		l.Iconsetzen();
-		new Shotmove();		
 	}
 }
 

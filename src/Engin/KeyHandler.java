@@ -6,7 +6,6 @@ import java.awt.event.KeyListener;
 
 public class KeyHandler implements KeyListener {
 	Player p = new Player();
-	Shotmove s = new Shotmove();
 
 	@Override
 	public void keyPressed(KeyEvent e) {

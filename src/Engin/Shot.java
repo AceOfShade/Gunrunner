@@ -7,7 +7,7 @@ public class Shot {
 	boolean right;
 	
 	public Shot() {
-		this.speedshot = 30;
+		this.speedshot = Variables.speedshot;
 		this.sX = Variables.px+75;
 		this.sY = Variables.py+85;
 		if(Variables.moveleft) {
@@ -24,4 +24,9 @@ public class Shot {
 		}
 	}
 	
+	
 }
+
+
+
+
