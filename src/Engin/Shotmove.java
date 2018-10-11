@@ -21,7 +21,7 @@ public class Shotmove {
 						
 						Variables.shots[i].Schuss();
 						
-						for(int a = i; a < Variables.freePos; a++) {
+						for(int a = i; a < Variables.freePos; a++ ) {
 							if(Variables.shots[i].sX >= Variables.screenwidth ) {// despawn
 							Variables.shots[a]= Variables.shots[a+1];
 						}
