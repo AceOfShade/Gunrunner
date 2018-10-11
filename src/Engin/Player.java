@@ -8,6 +8,7 @@ int jh; //max Sprunghöhe von Variables kopiert
 		{	if(Variables.px<730){					
 				Variables.px+=Variables.speedright;
 		}
+<<<<<<< HEAD
 		}
 		if(Variables.moveleft==true){
 		if(Variables.px>0)
@@ -38,6 +39,19 @@ int jh; //max Sprunghöhe von Variables kopiert
 			}
 		//Jump-Ende
 		if(Variables.debug) {System.out.println("Vel: " + Variables.velY + Variables.moveup);}//debug mode
+=======
+	}
+
+	public void jump(){
+		this.velY -=500;
+	} 
+	public void moveRight() {
+		velX += Variables.speedright;
+	}
+	
+	public void moveLeft() {
+		velX += Variables.speedleft;
+>>>>>>> 1b9759f88fa44a424baa56948b988ea6c637ae5b
 	}
 	
 	
