@@ -65,7 +65,7 @@ public class Variables {
 			b1 = ImageIO.read(new File("rsc/back.png"));//background
 			start= ImageIO.read(new File("rsc/start.png"));//start
 			icon=ImageIO.read(new File("rsc/iconi.png"));//Icon Image
-			bullet=ImageIO.read(new File("rsc/patrone.png"));//shot
+			bullet=ImageIO.read(new File("rsc/patrone.png"));//Shot
 			bulletinv=ImageIO.read(new File("rsc/patroneinv.png"));//Shot(inv.)
 			enemy=ImageIO.read(new File("rsc/gegner1.png"));//Enemy
 			player1 = ImageIO.read(new File("rsc/playermodel.png"));//Player(normal)
@@ -74,7 +74,7 @@ public class Variables {
 		} 
 		catch (IOException e) {
 			e.printStackTrace();
-			System.out.println("Can't load images");
+			System.out.println("Can't load images :(");
 		}
 	}			
 }
