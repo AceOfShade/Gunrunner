@@ -22,8 +22,8 @@ public class Player {
 
 	public void jump(){
 		this.velY -=500;
-	}
-	
+	} 
+	//e
 	public void moveRight() {
 		velX += Variables.speedright;
 	}
