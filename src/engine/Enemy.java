@@ -1,13 +1,18 @@
-package Engin;
+package engine;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
 
 public class Enemy extends Sprite{
+	
+	
 	public Enemy(int pX, int pY, BufferedImage pImage, Game pGame) {
+		
 		super(pX, pY, pImage, pGame);
-		// TODO Auto-generated constructor stub
-	}
+		
+			
+			}
+	
 
 
 	public int eX, eY, hp;

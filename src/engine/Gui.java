@@ -1,4 +1,4 @@
-package Engin;
+package engine;
 import java.awt.event.KeyListener;
 import javax.swing.JFrame;
 	public class Gui {

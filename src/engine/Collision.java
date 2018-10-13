@@ -1,4 +1,4 @@
-package Engin;
+package engine;
 
 public class Collision {
 	public static boolean rectangleRectangleCollision(Sprite pSprite1, Sprite pSprite2) {

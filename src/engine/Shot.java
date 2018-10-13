@@ -1,4 +1,4 @@
-package Engin;
+package engine;
 
 public class Shot {
 	double speedshot;
@@ -19,7 +19,8 @@ public class Shot {
 	public void schuss(){
 		if(right) {
 			sX +=speedshot;
-		}else {
+		}
+		if(right==false) {
 			sX -= speedshot;
 		}
 	}
