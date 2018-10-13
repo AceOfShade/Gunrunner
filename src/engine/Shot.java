@@ -2,8 +2,7 @@ package engine;
 
 public class Shot {
 	double speedshot;
-	int sX;
-	int sY;
+	int sX, sY;
 	boolean right;
 	
 	public Shot() {
