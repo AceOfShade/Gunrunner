@@ -10,7 +10,7 @@ public class Movement {
 
 		for(int i = 0; i < Variables.freePos && Variables.freePos != 0; i++) { // despawn
 			Variables.shots[i].schuss();
-			if(Variables.shots[i].sX > Variables.screenwidth|| Variables.shots[i].sX <0) {
+			if(Variables.shots[i].sX > Variables.screenwidth || Variables.shots[i].sX < 0) {
 				for(int a = i; a < Variables.freePos; a++) {
 					Variables.shots[a]= Variables.shots[a+1];
 				}

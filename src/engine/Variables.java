@@ -2,8 +2,6 @@ package engine;
 
 
 import java.awt.image.BufferedImage;
-
-import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
 
@@ -62,32 +60,22 @@ public class Variables {
 		shots = new Shot[maxShots];
 		
 		try {
-<<<<<<< HEAD:src/engine/Variables.java
-			b1 = ImageIO.read(Variables.class.getResourceAsStream("./back.png"));
-			start = ImageIO.read(Variables.class.getResourceAsStream("./start.png"));
-			icon = ImageIO.read(Variables.class.getResourceAsStream("./iconi.png"));
-			bullet = ImageIO.read(Variables.class.getResourceAsStream("./patrone.png"));
-			bulletinv=ImageIO.read(Variables.class.getResourceAsStream("./patroneinv.png"));
-			enemy=ImageIO.read(Variables.class.getResourceAsStream("./gegner1.png"));
-			player1 = ImageIO.read(Variables.class.getResourceAsStream("./player3.png"));
-			player1inv = ImageIO.read(Variables.class.getResourceAsStream("./player3inv.png"));
-			e = ImageIO.read(Variables.class.getResourceAsStream("./playermodel.png"));
-			} 
-=======
-			b1 = ImageIO.read(new File("rsc/back.png"));//background
-			start= ImageIO.read(new File("rsc/start.png"));//start
-			icon=ImageIO.read(new File("rsc/iconi.png"));//Icon Image
-			bullet=ImageIO.read(new File("rsc/patrone.png"));//Shot
-			bulletinv=ImageIO.read(new File("rsc/patroneinv.png"));//Shot(inv.)
-			enemy=ImageIO.read(new File("rsc/gegner1.png"));//Enemy
-			player1 = ImageIO.read(new File("rsc/playermodel.png"));//Player(normal)
-			player1inv = ImageIO.read(new File("rsc/player3inv.png"));//Player(inv.)
-			e = ImageIO.read(new File("rsc/player3.png"));//Player(Easteregg)
+
+			b1 = ImageIO.read(Variables.class.getResourceAsStream("/back.png"));
+			start = ImageIO.read(Variables.class.getResourceAsStream("/start.png"));
+			icon = ImageIO.read(Variables.class.getResourceAsStream("/iconi.png"));
+			bullet = ImageIO.read(Variables.class.getResourceAsStream("/patrone.png"));
+			bulletinv=ImageIO.read(Variables.class.getResourceAsStream("/patroneinv.png"));
+			enemy=ImageIO.read(Variables.class.getResourceAsStream("/gegner1.png"));
+			player1 = ImageIO.read(Variables.class.getResourceAsStream("/playermodel.png"));
+			player1inv = ImageIO.read(Variables.class.getResourceAsStream("/player3inv.png"));
+			e = ImageIO.read(Variables.class.getResourceAsStream("/player3.png"));
+			
+
 		} 
->>>>>>> 27919ece3908827a8709d6076a468f3d1603f7fc:src/Engin/Variables.java
 		catch (IOException e) {
 			e.printStackTrace();
-			System.out.println("Can't load images :(");
+			System.out.println("Can't load images");
 		}
 	}			
 }
