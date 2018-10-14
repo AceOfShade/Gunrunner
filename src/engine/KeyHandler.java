@@ -29,6 +29,10 @@ public class KeyHandler implements KeyListener {
 			if(Variables.f2) {Variables.f2 = false;}
 			else {Variables.f2 = true;}
 		}
+		if (e.getKeyCode() == KeyEvent.VK_ESCAPE) {
+			if(!Variables.startmenu) {Variables.startmenu=true;}
+			else {Variables.startmenu=false;}
+		}
 	}
 
 	@Override
