@@ -4,7 +4,7 @@ public class Movement {
 	int jh; //max Sprunghöhe von Variables kopiert
 	int e = 0;
 	
-	public void schiessen() {//Schießen halt
+	public void shoot() {//Schießen halt
 		e++;
 		if(Variables.shot&& e > 5) {Variables.shots[Variables.freePos] = new Shot(); Variables.freePos++; e = 0;;} //spawning
 
@@ -24,7 +24,7 @@ public class Movement {
 	
 	
 	
-	public void bewegen() {//bewegung
+	public void move() {//bewegung
 		if(Variables.moveright==true)
 		{	if(Variables.px<730){					
 				Variables.px+=Variables.speedright;

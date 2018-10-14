@@ -15,8 +15,8 @@ public class Game {
 
 			@Override
 			public void run() {
-				m.schiessen();
-				m.bewegen();
+				m.shoot();
+				m.move();
 			}
 	}, 0, 10);
 }
