@@ -46,10 +46,11 @@ public class Label extends JLabel{
 				}
 			}
 			}
+		
 		}else {
 			g.drawImage(Variables.start, 0, Variables.backgroundY1, 800, 600, null);
 		}
-		repaint(); 	
+		repaint();
 	}
 }
 		
