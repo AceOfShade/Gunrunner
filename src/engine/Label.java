@@ -20,7 +20,7 @@ public class Label extends JLabel{
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		
-		
+		if(!Variables.startmenu) {
 		g.drawImage(Variables.b1, 0, Variables.backgroundY1, 800, 600, null);	
 		g.drawImage(Variables.enemy,Variables.ex, Variables.ey, 100, 140, null);
 		
@@ -45,6 +45,9 @@ public class Label extends JLabel{
 				g.drawImage(Variables.bulletinv, Variables.shots[i].sX, Variables.shots[i].sY, 9, 9, null);
 				}
 			}
+			}
+		}else {
+			g.drawImage(Variables.start, 0, Variables.backgroundY1, 800, 600, null);
 		}
 		repaint(); 	
 	}

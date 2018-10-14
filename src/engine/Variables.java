@@ -39,6 +39,7 @@ public class Variables {
 	//kein plan also label
 	static Label lbl;
 	static boolean lefting=false, righting=false;
+	static boolean startmenu = true;
 	//Schuss X und Y
 	static int sy;
 	static int sx;

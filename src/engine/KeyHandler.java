@@ -18,7 +18,8 @@ public class KeyHandler implements KeyListener {
 		if (e.getKeyCode() == KeyEvent.VK_D) {	
 			Variables.moveright=true;
 		}
-		if (e.getKeyCode() == KeyEvent.VK_SPACE) {		
+		if (e.getKeyCode() == KeyEvent.VK_SPACE) {
+			if(Variables.startmenu) {Variables.startmenu = false;}
 			Variables.shot = true;
 		}
 		if(e.getKeyCode() == KeyEvent.VK_F1) { 
