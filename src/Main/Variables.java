@@ -3,14 +3,10 @@ package main;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.util.ArrayList;
-
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
-
 import enteties.Enemy;
 import enteties.Shot;
-import enteties.Sprite;
 import rendering.Label;
 
 public class Variables {
@@ -25,14 +21,10 @@ public class Variables {
 	//Player
 
 	public static int px=350,py=400; 
-	public static BufferedImage pheight;			//Player hight
-	public static BufferedImage pwidth;			//Player width
+	public static int pheight;			//Player hight
+	public static int pwidth;			//Player width
 	public static int kills=0;						//kills from player
 	public static int health=3;					//player health
-
-	public static ArrayList<Sprite> bullets;	//Arraylist with all objects from type Sprite
-	public static ArrayList<Sprite> playerSprites1 = new ArrayList<Sprite>();	//Arraylist with all objects from type Sprite
-	public static ArrayList<Sprite> playerSprites;	//Arraylist with all objects from type Sprite
 	
 	//playerSprites = new ArrayList<Sprite>();
 
@@ -42,7 +34,6 @@ public class Variables {
 	public static int ex=675,ey=400;
 	public static int eheight=100;					//Enemy hight
 	public static int ewidth=140;					//Enemy width
-	public static ArrayList<Sprite> enemySprites = new ArrayList<Sprite>();
 	
 	
 	
@@ -67,7 +58,7 @@ public class Variables {
 	public static int jumpheight = 70;
 	public static boolean debug = false;
 	public static Shot[] shots;
-	public static int freePos = 0;
+	public static int freePos;
 	public static int maxShots =100  ;	//100 max shots per frame 
 	public static boolean f2;			//Playerwechsel
 	public static Enemy[] enemies;

@@ -1,17 +1,16 @@
 package main;
 
-import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import enteties.Collision;
 import enteties.Movement;
 import enteties.Player;
-import enteties.Sprite;
+import rendering.Collision;
 
 public class Game {
 	Timer g;
 	Movement m = new Movement();
+	Collision c = new Collision();
 	
 	
 	
@@ -24,6 +23,7 @@ public class Game {
 			public void run() {
 				m.shoot();
 				m.move();
+				c.testC();
 				
 				if(Variables.debug) {
 					System.out.println("Px" + Player.px);
@@ -31,32 +31,5 @@ public class Game {
 				}
 			}
 	}, 0, 10);
-		
-		Sprite player = new Sprite(350, 400, Variables.player1, this);
-		
-		@SuppressWarnings("unused")
-		ArrayList<Sprite> objects1 = new ArrayList<Sprite>(200);
-		ArrayList<Sprite> objects = new ArrayList<Sprite>();
-		//objects.addAll(Variables.playerSprites);
-		objects.addAll(Variables.enemySprites);
-		for(int i = 0; i < Variables.freePos; i++) {//muss fabian noch verbessern
-		
-		}
-		for(int i = 0; i<objects.size(); i++) {
-			if(Collision.rectangleRectangleCollision(player, objects.get(i))) {
-				if(Variables.health>0) return;
-				Variables.health--;
-			}
-		}
-		
-}
-
-	public ArrayList<Sprite> getEnemys() {
-		return Variables.enemySprites;
 	}
-	
-	public ArrayList<Sprite> getPlayer() {
-		return Variables.playerSprites;
-	}
-	
 }
