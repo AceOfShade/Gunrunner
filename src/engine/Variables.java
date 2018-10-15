@@ -17,20 +17,12 @@ public class Variables {
 	static int x=400,y=400;
 	
 	//Player
-<<<<<<< HEAD
-<<<<<<< HEAD
 	static int px=350,py=400; 
 	static BufferedImage phight;			//Player hight
 	static BufferedImage pwidth;			//Player width
 	static int kills=0;						//kills from player
 	static int health=3;					//player health
 	static ArrayList<Sprite> playerSprites;	//Arraylist with all objects from type Sprite
-=======
-	
->>>>>>> 63c300d27df33435d1313e6f4f4e6a7dfe0e28e4
-=======
-	
->>>>>>> 63c300d27df33435d1313e6f4f4e6a7dfe0e28e4
 	//Sound
 	static boolean sound=false;
 	//Enemy
