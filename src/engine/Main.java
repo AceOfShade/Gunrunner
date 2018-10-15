@@ -1,15 +1,21 @@
   package engine;
 
 public class Main {
-
+	static Game g;
+	static KeyHandler k;
+	static Gui gu;
+	static Variables v;
+	static Label l;
+	static Sound s;
+	
+	
 	public static void main(String[] args) {
-		new Game();
-		new KeyHandler();
-		new Gui();
-		new Variables();
-		new Label();
-		new Sound();
-		Label l=new Label();
+		g = new Game();
+		k = new KeyHandler();
+		gu =new Gui();
+		v = new Variables();
+		l = new Label();
+		s = new Sound();
 		l.Iconsetzen();
 		
 	}
