@@ -1,7 +1,9 @@
-package engine;
+package Enteties;
 
 import java.awt.image.BufferedImage;
 import java.util.ArrayList;
+
+import Main.Game;
 
 public class Enemy extends Sprite{
 	

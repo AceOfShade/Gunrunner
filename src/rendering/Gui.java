@@ -1,6 +1,8 @@
-package engine;
+package rendering;
 import java.awt.event.KeyListener;
 import javax.swing.JFrame;
+
+import Main.Variables;
 	public class Gui {
 
 	public Gui(){

@@ -1,4 +1,8 @@
-package engine;
+package Enteties;
+
+import Main.Main;
+import Main.Variables;
+import engine.Sound;
 
 public class Movement {
 	int jh; //max Sprunghöhe von Variables kopiert

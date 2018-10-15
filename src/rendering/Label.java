@@ -1,4 +1,4 @@
-package engine;
+package rendering;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -7,6 +7,9 @@ import java.awt.RenderingHints;
 import java.io.File;
 import javax.imageio.ImageIO;
 import javax.swing.JLabel;
+
+import Enteties.Player;
+import Main.Variables;
 
 @SuppressWarnings("unused")
 public class Label extends JLabel{

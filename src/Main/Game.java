@@ -1,8 +1,13 @@
-package engine;
+package Main;
 
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import Enteties.Collision;
+import Enteties.Movement;
+import Enteties.Player;
+import Enteties.Sprite;
 
 public class Game {
 	Timer g;

@@ -1,9 +1,12 @@
-package engine;
+package Enteties;
+
+import Main.Variables;
 
 public class Shot {
-	double speedshot;
-	int sX, sY;
-	boolean right;
+	public double speedshot;
+	public int sX;
+	public int sY;
+	public boolean right;
 	
 	public Shot() {
 		this.speedshot = Variables.speedshot;

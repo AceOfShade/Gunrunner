@@ -1,4 +1,9 @@
-  package engine;
+  package Main;
+
+import engine.Sound;
+import rendering.Gui;
+import rendering.KeyHandler;
+import rendering.Label;
 
 public class Main {
 	static Game g;
