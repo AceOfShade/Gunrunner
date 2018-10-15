@@ -22,7 +22,8 @@ public class Variables {
 	static int pwidth=140;			//Player width
 	static int kills=0;				//kills from player
 	static int health=3;			//player health
-	
+	//Sound
+	static boolean sound=false;
 	//Enemy
 	static int ex=675,ey=400;
 	static int ehight=100;			//Enemy hight

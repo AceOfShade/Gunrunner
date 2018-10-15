@@ -21,6 +21,7 @@ public class KeyHandler implements KeyListener {
 		if (e.getKeyCode() == KeyEvent.VK_SPACE) {
 			if(Variables.startmenu) {Variables.startmenu = false;}
 			Variables.shot = true;
+			Variables.sound =true;
 		}
 		if(e.getKeyCode() == KeyEvent.VK_F1) { 
 			Variables.debug =true;
