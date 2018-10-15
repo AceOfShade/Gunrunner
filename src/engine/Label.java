@@ -21,7 +21,7 @@ public class Label extends JLabel{
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		
 		if(!Variables.startmenu) {
-		g.drawImage(Variables.b1, 0, Variables.backgroundY1, 800, 600, null);	
+		g.drawImage(Variables.l1, 0, Variables.backgroundY1, 800, 600, null);	
 		g.drawImage(Variables.enemy,Variables.ex, Variables.ey, 100, 140, null);
 		
 		//different Playermodels
