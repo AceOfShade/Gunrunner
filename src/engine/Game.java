@@ -28,8 +28,8 @@ public class Game {
 	}, 0, 10);
 		
 		Sprite player = new Sprite(350, 400, Variables.player1, this);
-		/*
-		ArrayList<Sprite> objects = new ArrayList<Sprite>();
+		
+		ArrayList<Sprite> objects = new ArrayList<Sprite>(200);
 		objects.addAll(Variables.playerSprites);
 		objects.addAll(Variables.enemySprites);
 		
@@ -40,7 +40,7 @@ public class Game {
 				Variables.health--;
 			}
 		}
-		*/
+		
 }
 
 	public ArrayList<Sprite> getEnemys() {

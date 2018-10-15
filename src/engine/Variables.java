@@ -17,19 +17,23 @@ public class Variables {
 	static int x=400,y=400;
 	
 	//Player
+
 	static int px=350,py=400; 
 	static BufferedImage phight;			//Player hight
 	static BufferedImage pwidth;			//Player width
 	static int kills=0;						//kills from player
 	static int health=3;					//player health
-	static ArrayList<Sprite> playerSprites;	//Arraylist with all objects from type Sprite
+
+	static ArrayList<Sprite> playerSprites1;	//Arraylist with all objects from type Sprite
+	static ArrayList<Sprite> playerSprites = new ArrayList<Sprite>();	//Arraylist with all objects from type Sprite
+
 	//Sound
 	static boolean sound=false;
 	//Enemy
 	static int ex=675,ey=400;
 	static int ehight=100;					//Enemy hight
 	static int ewidth=140;					//Enemy width
-	static ArrayList<Sprite> enemySprites;
+	static ArrayList<Sprite> enemySprites = new ArrayList<Sprite>();
 	
 	
 	
