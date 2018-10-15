@@ -1,7 +1,6 @@
 package engine;
 
 import java.awt.Color;
-
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
@@ -37,8 +36,7 @@ public class Label extends JLabel{
 		g.drawString("Kills: " + Player.kills, 20, 20);
 		
 		
-		//painting all Bullets 
-		//wenn  du schieﬂt dann geht es wieder in¥s array aber das array ist nicht in einer for schleife deshlab beendet es beim hundersten schuss statt von neu anzufangen
+		//painting all Bullets
 		for(int i = 0; i < Variables.freePos;i++) {
 			if(Variables.shots[i].sX != Player.px+75) {
 				g.drawImage(Variables.bullet, Variables.shots[i].sX, Variables.shots[i].sY, 9,9, null);
@@ -54,7 +52,3 @@ public class Label extends JLabel{
 		repaint();
 	}
 }
-		
- 
-
-

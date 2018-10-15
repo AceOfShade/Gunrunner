@@ -19,17 +19,19 @@ public class Variables {
 	//Player
 
 	static int px=350,py=400; 
-	static BufferedImage phight;			//Player hight
+	static BufferedImage pheight;			//Player hight
 	static BufferedImage pwidth;			//Player width
 	static int kills=0;						//kills from player
 	static int health=3;					//player health
+
+	static ArrayList<Sprite> playerSprites1;	//Arraylist with all objects from type Sprite
 	static ArrayList<Sprite> playerSprites = new ArrayList<Sprite>();	//Arraylist with all objects from type Sprite
 
 	//Sound
 	static boolean sound=false;
 	//Enemy
 	static int ex=675,ey=400;
-	static int ehight=100;					//Enemy hight
+	static int eheight=100;					//Enemy hight
 	static int ewidth=140;					//Enemy width
 	static ArrayList<Sprite> enemySprites = new ArrayList<Sprite>();
 	
@@ -48,7 +50,7 @@ public class Variables {
 	static int sy;
 	static int sx;
 	//Bilder
-	static BufferedImage l1,l2,start,player1,player1inv,e,bullet,bulletinv,enemy,icon;
+	static BufferedImage l1,l2,loading,start,player1,player1inv,e,bullet,bulletinv,enemy,icon,kill,hp;
 	//frag fabian
 	static byte level;
 	static float velY;
@@ -56,9 +58,9 @@ public class Variables {
 	static boolean debug = false;
 	static Shot[] shots;
 	static int freePos = 0;
-	static int maxShots =100  ;//100 max shots per frame 
-	static boolean f2;//Playerwechsel
-	static Enemy[] enemys;
+	static int maxShots =100  ;	//100 max shots per frame 
+	static boolean f2;			//Playerwechsel
+	static Enemy[] enemies;
 	
 	// Constructor
 	public Variables() {
@@ -75,16 +77,17 @@ public class Variables {
 			player1 = ImageIO.read(Variables.class.getResourceAsStream("/playermodel.png"));
 			player1inv = ImageIO.read(Variables.class.getResourceAsStream("/player3inv.png"));
 			e = ImageIO.read(Variables.class.getResourceAsStream("/player3.png"));
-			
+<<<<<<< HEAD
+=======
+			hp = ImageIO.read(Variables.class.getResourceAsStream("/Hp.png"));
+			kill = ImageIO.read(Variables.class.getResourceAsStream("/Kills.png"));
+			loading = ImageIO.read(Variables.class.getResourceAsStream("/loadingscreen.png"));
 
+>>>>>>> ccd93b6e83eefb11ffa498617dc3ac9f1084da35
 		} 
 		catch (IOException e) {
 			e.printStackTrace();
 			System.out.println("Can't load images");
 		}
-		
-		
 	}	
-	
-	
 }

@@ -5,7 +5,7 @@ import java.awt.image.BufferedImage;
 
 public class Sprite {
 
-	private int x, y, width, hight;
+	private int x, y, width, height;
 	private BufferedImage image;
 	private Game game;
 	
@@ -15,13 +15,12 @@ public class Sprite {
 		Variables.px = pX;
 		Variables.py = pY;
 		Variables.pwidth = pImage; //.getWidth();
-		Variables.phight = pImage; //.getHeight();
+		Variables.pheight = pImage; //.getHeight();
 		this.image = pImage;
 		this.game = pGame;
 	}
 	
-	public void logic(float tpf)
-	{
+	public void logic(float tpf){
 		
 	}
 	
@@ -56,11 +55,11 @@ public class Sprite {
 	}
 
 	public int getHight() {
-		return hight;
+		return height;
 	}
 
 	public void setHight(int hight) {
-		this.hight = hight;
+		this.height = hight;
 	}
 
 	public BufferedImage getImage() {
