@@ -20,6 +20,10 @@ public class Game {
 				m.shoot();
 				m.move();
 				
+				if(Variables.debug) {
+					System.out.println("Px" + Variables.px);
+					System.out.println("Py" + Variables.py); 
+				}
 			}
 	}, 0, 10);
 }
