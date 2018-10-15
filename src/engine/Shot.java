@@ -7,8 +7,8 @@ public class Shot {
 	
 	public Shot() {
 		this.speedshot = Variables.speedshot;
-		this.sX = Variables.px+75;
-		this.sY = Variables.py+85;
+		this.sX = Player.px+75;
+		this.sY = Player.py+85;
 		if(Variables.moveleft) {
 			right = false;
 		}else {

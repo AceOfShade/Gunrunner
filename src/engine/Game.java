@@ -21,8 +21,8 @@ public class Game {
 				m.move();
 				
 				if(Variables.debug) {
-					System.out.println("Px" + Variables.px);
-					System.out.println("Py" + Variables.py); 
+					System.out.println("Px" + Player.px);
+					System.out.println("Py" + Player.py); 
 				}
 			}
 	}, 0, 10);
