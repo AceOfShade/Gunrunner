@@ -38,10 +38,11 @@ public class Label extends JLabel{
 		
 		
 		//painting all Bullets 
+		//wenn  du schießt dann geht es wieder in´s array aber das array ist nicht in einer for schleife deshlab beendet es beim hundersten schuss statt von neu anzufangen
 		for(int i = 0; i < Variables.freePos;i++) {
 			if(Variables.shots[i].sX != Variables.px+75) {
 				g.drawImage(Variables.bullet, Variables.shots[i].sX, Variables.shots[i].sY, 9,9, null);
-				if(Variables.moveleft==true) {	
+				if(Variables.moveleft) {	
 				g.drawImage(Variables.bulletinv, Variables.shots[i].sX, Variables.shots[i].sY, 9, 9, null);
 				}
 			}
