@@ -1,6 +1,5 @@
 package Enteties;
 
-import Main.Main;
 import Main.Variables;
 import engine.Sound;
 
@@ -54,8 +53,8 @@ public class Movement {
 		//Jump
 				if(Player.py >= 400) {jh = Variables.jumpheight; } // jump max höhe;
 				
-				if(Variables.moveup && jh != 0){
-					if(Player.py>0 ){Variables.velY-=Variables.speedjump; } //Sprung ges. hinzugeben (voller Sprung)
+				if(Variables.moveup && jh != 0 && Player.py  == 400){
+					Variables.velY-=Variables.speedjump;  //Sprung ges. hinzugeben (voller Sprung)
 				}else {
 					Variables.velY = 0; //Sprung ges. hinzugeben (nicht voller Sprung, solang man w hält)
 				}
