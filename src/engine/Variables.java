@@ -50,7 +50,7 @@ public class Variables {
 	static int sy;
 	static int sx;
 	//Bilder
-	static BufferedImage l1,l2,start,player1,player1inv,e,bullet,bulletinv,enemy,icon;
+	static BufferedImage l1,l2,loading,start,player1,player1inv,e,bullet,bulletinv,enemy,icon,kill,hp;
 	//frag fabian
 	static byte level;
 	static float velY;
@@ -77,7 +77,9 @@ public class Variables {
 			player1 = ImageIO.read(Variables.class.getResourceAsStream("/playermodel.png"));
 			player1inv = ImageIO.read(Variables.class.getResourceAsStream("/player3inv.png"));
 			e = ImageIO.read(Variables.class.getResourceAsStream("/player3.png"));
-			
+			hp = ImageIO.read(Variables.class.getResourceAsStream("/Hp.png"));
+			kill = ImageIO.read(Variables.class.getResourceAsStream("/Kills.png"));
+			loading = ImageIO.read(Variables.class.getResourceAsStream("/loadingscreen.png"));
 
 		} 
 		catch (IOException e) {
