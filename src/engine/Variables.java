@@ -77,16 +77,9 @@ public class Variables {
 			player1 = ImageIO.read(Variables.class.getResourceAsStream("/playermodel.png"));
 			player1inv = ImageIO.read(Variables.class.getResourceAsStream("/player3inv.png"));
 			e = ImageIO.read(Variables.class.getResourceAsStream("/player3.png"));
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> ccd93b6e83eefb11ffa498617dc3ac9f1084da35
 			hp = ImageIO.read(Variables.class.getResourceAsStream("/Hp.png"));
 			kill = ImageIO.read(Variables.class.getResourceAsStream("/Kills.png"));
 			loading = ImageIO.read(Variables.class.getResourceAsStream("/loadingscreen.png"));
-
->>>>>>> ccd93b6e83eefb11ffa498617dc3ac9f1084da35
 		} 
 		catch (IOException e) {
 			e.printStackTrace();
