@@ -8,8 +8,11 @@ public class Main {
 		new Gui();
 		new Variables();
 		new Label();
+		new Sound();
 		Label l=new Label();
 		l.Iconsetzen();
+		Sound s =new Sound();
+		s.playSound();
 	}
 }
 
