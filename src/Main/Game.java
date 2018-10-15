@@ -35,10 +35,11 @@ public class Game {
 		Sprite player = new Sprite(350, 400, Variables.player1, this);
 		
 		ArrayList<Sprite> objects = new ArrayList<Sprite>(200);
-		objects.addAll(Variables.playerSprites);
+		//objects.addAll(Variables.playerSprites);
 		objects.addAll(Variables.enemySprites);
+		for(int i = 0; i < Variables.freePos; i++) {//muss fabian noch verbessern
 		
-		
+		}
 		for(int i = 0; i<objects.size(); i++) {
 			if(Collision.rectangleRectangleCollision(player, objects.get(i))) {
 				if(Variables.health>0) return;

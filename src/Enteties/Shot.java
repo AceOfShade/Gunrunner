@@ -2,7 +2,7 @@ package Enteties;
 
 import Main.Variables;
 
-public class Shot {
+public class Shot{
 	public double speedshot;
 	public int sX;
 	public int sY;

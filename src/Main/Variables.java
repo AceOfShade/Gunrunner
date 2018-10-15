@@ -30,7 +30,7 @@ public class Variables {
 	public static int kills=0;						//kills from player
 	public static int health=3;					//player health
 
-	public static ArrayList<Sprite> playerSprites1;	//Arraylist with all objects from type Sprite
+	public static ArrayList<Sprite> bullets;	//Arraylist with all objects from type Sprite
 	public static ArrayList<Sprite> playerSprites = new ArrayList<Sprite>();	//Arraylist with all objects from type Sprite
 
 	//Sound
@@ -40,6 +40,7 @@ public class Variables {
 	public static int eheight=100;					//Enemy hight
 	public static int ewidth=140;					//Enemy width
 	public static ArrayList<Sprite> enemySprites = new ArrayList<Sprite>();
+	
 	
 	
 	
