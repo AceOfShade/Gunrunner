@@ -29,15 +29,12 @@ public class Variables {
 	public static BufferedImage pwidth;			//Player width
 	public static int kills=0;						//kills from player
 	public static int health=3;					//player health
-<<<<<<< HEAD:src/Main/Variables.java
 
 	public static ArrayList<Sprite> bullets;	//Arraylist with all objects from type Sprite
-	public static ArrayList<Sprite> playerSprites = new ArrayList<Sprite>();	//Arraylist with all objects from type Sprite
-=======
+	public static ArrayList<Sprite> playerSprites1 = new ArrayList<Sprite>();	//Arraylist with all objects from type Sprite
 	public static ArrayList<Sprite> playerSprites;	//Arraylist with all objects from type Sprite
 	
 	//playerSprites = new ArrayList<Sprite>();
->>>>>>> 9e24ee4020dbe0df24f9b5fc8355d53029067c6f:src/main/Variables.java
 
 	//Sound
 	public static boolean sound=false;

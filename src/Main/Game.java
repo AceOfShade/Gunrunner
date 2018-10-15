@@ -34,11 +34,9 @@ public class Game {
 		
 		Sprite player = new Sprite(350, 400, Variables.player1, this);
 		
-<<<<<<< HEAD:src/Main/Game.java
-		ArrayList<Sprite> objects = new ArrayList<Sprite>(200);
-=======
+		@SuppressWarnings("unused")
+		ArrayList<Sprite> objects1 = new ArrayList<Sprite>(200);
 		ArrayList<Sprite> objects = new ArrayList<Sprite>();
->>>>>>> 9e24ee4020dbe0df24f9b5fc8355d53029067c6f:src/main/Game.java
 		//objects.addAll(Variables.playerSprites);
 		objects.addAll(Variables.enemySprites);
 		for(int i = 0; i < Variables.freePos; i++) {//muss fabian noch verbessern
