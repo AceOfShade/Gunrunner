@@ -6,9 +6,9 @@ import javax.sound.sampled.Clip;
 
 public class Sound {
 	public void playSound() {
-		if(Variables.shot) {
+		if(Variables.shot==true) {
 	    try {
-	        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(Sound.class.getResourceAsStream("./gunsound.mp3"));
+	        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(Sound.class.getResourceAsStream("/gunsound.wav"));
 	        Clip clip = AudioSystem.getClip();
 	        clip.open(audioInputStream);
 	        clip.start();
