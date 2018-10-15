@@ -8,8 +8,8 @@ import java.io.File;
 import javax.imageio.ImageIO;
 import javax.swing.JLabel;
 
-import Enteties.Player;
-import Main.Variables;
+import enteties.Player;
+import main.Variables;
 
 @SuppressWarnings("unused")
 public class Label extends JLabel{

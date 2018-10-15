@@ -1,4 +1,4 @@
-package Main;
+package main;
 
 
 import java.awt.image.BufferedImage;
@@ -8,9 +8,9 @@ import java.util.ArrayList;
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 
-import Enteties.Enemy;
-import Enteties.Shot;
-import Enteties.Sprite;
+import enteties.Enemy;
+import enteties.Shot;
+import enteties.Sprite;
 import rendering.Label;
 
 public class Variables {
@@ -29,9 +29,9 @@ public class Variables {
 	public static BufferedImage pwidth;			//Player width
 	public static int kills=0;						//kills from player
 	public static int health=3;					//player health
-
-	public static ArrayList<Sprite> playerSprites1;	//Arraylist with all objects from type Sprite
-	public static ArrayList<Sprite> playerSprites = new ArrayList<Sprite>();	//Arraylist with all objects from type Sprite
+	public static ArrayList<Sprite> playerSprites;	//Arraylist with all objects from type Sprite
+	
+	//playerSprites = new ArrayList<Sprite>();
 
 	//Sound
 	public static boolean sound=false;

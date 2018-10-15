@@ -1,13 +1,13 @@
-package Main;
+package main;
 
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import Enteties.Collision;
-import Enteties.Movement;
-import Enteties.Player;
-import Enteties.Sprite;
+import enteties.Collision;
+import enteties.Movement;
+import enteties.Player;
+import enteties.Sprite;
 
 public class Game {
 	Timer g;
@@ -34,8 +34,8 @@ public class Game {
 		
 		Sprite player = new Sprite(350, 400, Variables.player1, this);
 		
-		ArrayList<Sprite> objects = new ArrayList<Sprite>(200);
-		objects.addAll(Variables.playerSprites);
+		ArrayList<Sprite> objects = new ArrayList<Sprite>();
+		//objects.addAll(Variables.playerSprites);
 		objects.addAll(Variables.enemySprites);
 		
 		
@@ -52,5 +52,8 @@ public class Game {
 		return Variables.enemySprites;
 	}
 	
+	public ArrayList<Sprite> getPlayer() {
+		return Variables.playerSprites;
+	}
 	
 }

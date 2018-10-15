@@ -4,7 +4,7 @@ package rendering;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-import Main.Variables;
+import main.Variables;
 
 public class KeyHandler implements KeyListener {
 
