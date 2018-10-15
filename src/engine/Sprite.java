@@ -12,10 +12,10 @@ public class Sprite {
 	
 	public Sprite(int pX, int pY, BufferedImage pImage, Game pGame)
 	{
-		this.x = pX;
-		this.y = pY;
-		this.width = pImage.getWidth();
-		this.hight = pImage.getHeight();
+		Variables.px = pX;
+		Variables.py = pY;
+		Variables.pwidth = pImage; //.getWidth();
+		Variables.phight = pImage; //.getHeight();
 		this.image = pImage;
 		this.game = pGame;
 	}

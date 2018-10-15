@@ -2,7 +2,7 @@
 
 public class Main {
 	static Game g;
-	static KeyHandler k;
+	static KeyHandler kh;
 	static Gui gu;
 	static Variables v;
 	static Label l;
@@ -11,7 +11,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		g = new Game();
-		k = new KeyHandler();
+		kh = new KeyHandler();
 		gu =new Gui();
 		v = new Variables();
 		l = new Label();

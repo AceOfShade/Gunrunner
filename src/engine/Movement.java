@@ -36,37 +36,37 @@ public class Movement {
 	
 	public void move() {//bewegung
 		if(Variables.moveright==true)
-		{	if(Variables.px<730){					
-				Variables.px+=Variables.speedright;
+		{	if(Player.px<730){					
+			Player.px+=Variables.speedright;
 		}
 		}
 		if(Variables.moveleft==true){
-		if(Variables.px>0)
+		if(Player.px>0)
 		{
-		Variables.px-=Variables.speedleft;
+			Player.px-=Variables.speedleft;
 				}
 		}
 		
 		//Jump
-				if(Variables.py >= 400) {jh = Variables.jumpheight; } // jump max höhe;
+				if(Player.py >= 400) {jh = Variables.jumpheight; } // jump max höhe;
 				
 				if(Variables.moveup && jh != 0){
-					if(Variables.py>0 ){Variables.velY-=Variables.speedjump; } //Sprung ges. hinzugeben (voller Sprung)
+					if(Player.py>0 ){Variables.velY-=Variables.speedjump; } //Sprung ges. hinzugeben (voller Sprung)
 				}else {
 					Variables.velY = 0; //Sprung ges. hinzugeben (nicht voller Sprung, solang man w hält)
 				}
-				if(Variables.velY == 0 && Variables.py < 400) { //sinken
-					Variables.py+= Variables.speeddown; //sinken
+				if(Variables.velY == 0 && Player.py < 400) { //sinken
+					Player.py+= Variables.speeddown; //sinken
 				}
 				 
 				if(Variables.velY < 0 && jh > 0) { //steigen
-					Variables.py-= Variables.speedjump;
+					Player.py-= Variables.speedjump;
 					Variables.velY++;
 					jh--;
 				}
 				
-				if(Variables.py > 400){	//wenn man in den boden buggt
-						Variables.py = 400; 
+				if(Player.py > 400){	//wenn man in den boden buggt
+					Player.py = 400; 
 					}
 				//Jump-Ende
 				if(Variables.debug) {System.out.println("Vel: " + Variables.velY + Variables.moveup);}//debug mode

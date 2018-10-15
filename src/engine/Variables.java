@@ -17,17 +17,22 @@ public class Variables {
 	static int x=400,y=400;
 	
 	//Player
+<<<<<<< HEAD
 	static int px=350,py=400; 
-	static int phight=100;			//Player hight
-	static int pwidth=140;			//Player width
-	static int kills=0;				//kills from player
-	static int health=3;			//player health
+	static BufferedImage phight;			//Player hight
+	static BufferedImage pwidth;			//Player width
+	static int kills=0;						//kills from player
+	static int health=3;					//player health
+	static ArrayList<Sprite> playerSprites;	//Arraylist with all objects from type Sprite
+=======
+	
+>>>>>>> 63c300d27df33435d1313e6f4f4e6a7dfe0e28e4
 	//Sound
 	static boolean sound=false;
 	//Enemy
 	static int ex=675,ey=400;
-	static int ehight=100;			//Enemy hight
-	static int ewidth=140;			//Enemy width
+	static int ehight=100;					//Enemy hight
+	static int ewidth=140;					//Enemy width
 	static ArrayList<Sprite> enemySprites;
 	
 	
@@ -79,5 +84,9 @@ public class Variables {
 			e.printStackTrace();
 			System.out.println("Can't load images");
 		}
-	}			
+		
+		
+	}	
+	
+	
 }

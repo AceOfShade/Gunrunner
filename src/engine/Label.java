@@ -26,21 +26,21 @@ public class Label extends JLabel{
 		
 		//different Playermodels
 		if(Variables.f2) {
-			g.drawImage(Variables.player1, Variables.px, Variables.py, 100, 140, null);	
+			g.drawImage(Variables.player1, Player.px, Player.py, 100, 140, null);	
 		}else if(Variables.moveleft){
-			g.drawImage(Variables.player1inv,Variables.px, Variables.py ,100,140,null);
+			g.drawImage(Variables.player1inv,Player.px, Player.py ,100,140,null);
 		}else {
-			g.drawImage(Variables.e, Variables.px, Variables.py, 100, 140, null);
+			g.drawImage(Variables.e, Player.px, Player.py, 100, 140, null);
 		}
 		
-		g.drawString("Health: " + Variables.health, 20, 40);
-		g.drawString("Kills: " + Variables.kills, 20, 20);
+		g.drawString("Health: " + Player.health, 20, 40);
+		g.drawString("Kills: " + Player.kills, 20, 20);
 		
 		
 		//painting all Bullets 
 		//wenn  du schieﬂt dann geht es wieder in¥s array aber das array ist nicht in einer for schleife deshlab beendet es beim hundersten schuss statt von neu anzufangen
 		for(int i = 0; i < Variables.freePos;i++) {
-			if(Variables.shots[i].sX != Variables.px+75) {
+			if(Variables.shots[i].sX != Player.px+75) {
 				g.drawImage(Variables.bullet, Variables.shots[i].sX, Variables.shots[i].sY, 9,9, null);
 				if(Variables.moveleft) {	
 				g.drawImage(Variables.bulletinv, Variables.shots[i].sX, Variables.shots[i].sY, 9, 9, null);

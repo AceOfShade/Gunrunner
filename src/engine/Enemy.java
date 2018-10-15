@@ -40,7 +40,7 @@ public class Enemy extends Sprite{
 		ArrayList<?> a = getGame().getEnemys();
 		for(int i = 0; i < a.size(); i++) {
 			if(Collision.rectangleRectangleCollision(this, (Sprite) (a.get(i)))) {
-				Variables.health--;
+				Player.health--;
 			}
 		}
 	}

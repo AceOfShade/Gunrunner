@@ -21,14 +21,31 @@ public class Game {
 				m.move();
 				
 				if(Variables.debug) {
-					System.out.println("Px" + Variables.px);
-					System.out.println("Py" + Variables.py); 
+					System.out.println("Px" + Player.px);
+					System.out.println("Py" + Player.py); 
 				}
 			}
 	}, 0, 10);
+		
+		Sprite player = new Sprite(350, 400, Variables.player1, this);
+		/*
+		ArrayList<Sprite> objects = new ArrayList<Sprite>();
+		objects.addAll(Variables.playerSprites);
+		objects.addAll(Variables.enemySprites);
+		
+		
+		for(int i = 0; i<objects.size(); i++) {
+			if(Collision.rectangleRectangleCollision(player, objects.get(i))) {
+				if(Variables.health>0) return;
+				Variables.health--;
+			}
+		}
+		*/
 }
 
 	public ArrayList<Sprite> getEnemys() {
 		return Variables.enemySprites;
 	}
+	
+	
 }
