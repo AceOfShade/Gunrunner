@@ -4,7 +4,7 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
-import Main.Variables;
+import main.Variables;
 
 public class Sound {
 	public void playSound() {

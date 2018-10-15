@@ -1,6 +1,6 @@
-package Main;
+package main;
 
-import Enteties.Player;
+import enteties.Player;
 
 public class Level {
 	

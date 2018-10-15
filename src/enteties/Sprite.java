@@ -1,10 +1,10 @@
-package Enteties;
+package enteties;
 
 import java.awt.Graphics;
 import java.awt.image.BufferedImage;
 
-import Main.Game;
-import Main.Variables;
+import main.Game;
+import main.Variables;
 
 public class Sprite {
 

@@ -2,7 +2,7 @@ package rendering;
 import java.awt.event.KeyListener;
 import javax.swing.JFrame;
 
-import Main.Variables;
+import main.Variables;
 	public class Gui {
 
 	public Gui(){
