@@ -3,10 +3,12 @@ package engine;
 public class Movement {
 	int jh; //max Sprunghöhe von Variables kopiert
 	int e = 0;
+	Sound s =new Sound();
 	
 	public void shoot() {//Schießen halt
 		e++;
-		if(Variables.shot&& e > 5) {Variables.shots[Variables.freePos] = new Shot(); Variables.freePos++; e = 0;;} //spawning
+		if(Variables.shot&& e > 5) {Variables.shots[Variables.freePos] = new Shot(); Variables.freePos++; e = 0; s.playSound();} //spawning
+		
 
 		for(int i = 0; i < Variables.freePos && Variables.freePos != 0; i++) { // despawn
 			Variables.shots[i].schuss();

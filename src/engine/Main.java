@@ -11,8 +11,7 @@ public class Main {
 		new Sound();
 		Label l=new Label();
 		l.Iconsetzen();
-		Sound s =new Sound();
-		s.playSound();
+		
 	}
 }
 

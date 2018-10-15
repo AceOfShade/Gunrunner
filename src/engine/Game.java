@@ -8,6 +8,8 @@ public class Game {
 	Timer g;
 	Movement m = new Movement();
 	
+	
+	
 	public Game() {
 		
 		g=new Timer();
@@ -17,6 +19,7 @@ public class Game {
 			public void run() {
 				m.shoot();
 				m.move();
+				
 			}
 	}, 0, 10);
 }
