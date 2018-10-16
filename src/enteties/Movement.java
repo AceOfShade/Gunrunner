@@ -1,6 +1,6 @@
 package enteties;
 
-import engine.Sound;
+import sound.Sound;
 import main.Variables;
 
 public class Movement {

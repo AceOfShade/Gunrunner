@@ -1,6 +1,6 @@
   package main;
 
-import engine.Sound;
+import sound.Sound;
 import rendering.Gui;
 import rendering.KeyHandler;
 import rendering.Label;
