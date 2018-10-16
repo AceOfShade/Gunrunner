@@ -45,7 +45,6 @@ public class Variables {
 	//Move
 	public static boolean moveup = false, shot= false, moveleft = false, moveright = false, movedown=false;
 	//kein plan also label
-	public static Label lbl;
 	public static boolean lefting=false, righting=false;
 	public static boolean startmenu = true;
 	public static boolean loadscreen = false;
