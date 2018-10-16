@@ -28,8 +28,8 @@ public class Collision {
 	}
 	
 	public boolean rectangleRectangleCollision(int x1, int y1, int h1, int w1, int x2, int y2, int w2, int h2) {
-		if(x1 +w1 <= x2 + w2) {
-			if(x1 + w1 >= x2) {
+		if((x1+58) +w1 <= x2 + w2) {			//+58 because of the detection area behind the enemy
+			if((x1+80) + w1 >= x2) {			//+80 because of the detection area before the enemy
 				if(y1 +h1 <= y2 + h2) {
 					if(y1 + h1 >= y2) {
 						return true;
