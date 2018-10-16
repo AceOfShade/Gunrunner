@@ -9,6 +9,7 @@ import javax.imageio.ImageIO;
 import javax.swing.JLabel;
 
 import entities.Player;
+import main.Main;
 import main.Variables;
 
 @SuppressWarnings("unused")
@@ -38,8 +39,8 @@ public class Label extends JLabel{
 					g.drawImage(Variables.e, Player.px, Player.py, 100, 140, null);
 				}
 				
-				g.drawString("Health: " + Player.health, 20, 40);
-				g.drawString("Kills: " + Player.kills, 20, 20);
+				g.drawString("Health: " + Main.lvl.p.health, 20, 40);
+				g.drawString("Kills: " + Main.lvl.p.kills, 20, 20);
 				
 				
 				//painting all Bullets
