@@ -18,6 +18,7 @@ public class Variables {
 	public static int screenhight = 600;
 	public static int backgroundY1 = 0;
 	public static int x=400,y=400;
+
 	
 	//Player
 
@@ -47,6 +48,7 @@ public class Variables {
 	public static Label lbl;
 	public static boolean lefting=false, righting=false;
 	public static boolean startmenu = true;
+	public static boolean loadscreen = false;
 	//Schuss X und Y
 	public static int sy;
 	public static int sx;

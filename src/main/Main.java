@@ -5,6 +5,9 @@ import entities.*;
 import rendering.*;
 
 public class Main {
+	public static boolean gamestart;
+	public static boolean loadscreen;
+	
 	public static Game g;
 	public static KeyHandler kh;
 	public static Gui gui;
@@ -24,6 +27,6 @@ public class Main {
 		s = new Sound();
 		lvl= new Level();
 		mov= new Movement();
-		
+		g.startGame();
 	}
 }
