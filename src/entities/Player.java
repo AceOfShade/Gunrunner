@@ -1,4 +1,4 @@
-package enteties;
+package entities;
 
 public class Player {
 	public static int px=350;

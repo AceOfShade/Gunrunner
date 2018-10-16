@@ -5,8 +5,9 @@ import java.awt.image.BufferedImage;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
-import enteties.Enemy;
-import enteties.Shot;
+
+import entities.Enemy;
+import entities.Shot;
 import rendering.Label;
 
 public class Variables {
@@ -26,7 +27,6 @@ public class Variables {
 	public static int kills=0;						//kills from player
 	public static int health=3;					//player health
 	
-	//playerSprites = new ArrayList<Sprite>();
 
 	//Sound
 	public static boolean sound=false;
@@ -66,6 +66,7 @@ public class Variables {
 	// Constructor
 	public Variables() {
 		shots = new Shot[maxShots];
+		
 		
 		try {
 

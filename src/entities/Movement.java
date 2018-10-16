@@ -1,4 +1,4 @@
-package enteties;
+package entities;
 
 import sound.Sound;
 import main.Variables;
@@ -25,7 +25,7 @@ public class Movement {
 			}
 		}
 		
-		if(Variables.freePos == 98) {
+		if(Variables.freePos >= 98) {
 			Variables.freePos = 0;
 			for(int i = 0; i < Variables.shots.length; i++) {
 				Variables.shots[i]= null;

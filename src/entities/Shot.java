@@ -1,6 +1,6 @@
-package enteties;
+package entities;
 
-import main.Variables;
+import main.*;
 
 public class Shot{
 	public double speedshot;

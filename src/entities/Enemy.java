@@ -1,4 +1,4 @@
-package enteties;
+package entities;
 
 public class Enemy{
 

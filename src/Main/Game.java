@@ -3,8 +3,8 @@ package main;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import enteties.Movement;
-import enteties.Player;
+import entities.Movement;
+import entities.Player;
 import rendering.Collision;
 
 public class Game {

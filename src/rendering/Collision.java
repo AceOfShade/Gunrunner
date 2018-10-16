@@ -1,6 +1,6 @@
 package rendering;
 
-import enteties.Player;
+import entities.Player;
 //import enteties.Sprite;
 import main.Variables;
 
@@ -8,7 +8,7 @@ public class Collision {
 	
 	
 	public void testC() {
-		//P-Z
+		//P-E
 //		for(int i = 0; i < Variables.freePos; i++) {
 		if(
 		rectangleRectangleCollision(Player.px, Player.py, Variables.pheight, Variables.pwidth, Variables.ex, Variables.ey, Variables.eheight, Variables.ewidth)
@@ -17,7 +17,7 @@ public class Collision {
 			System.out.println("Collision: Player-Enemy");
 		}
 		
-		//S-Z
+		//S-E
 		for(int i = 0; i < Variables.freePos; i++) {
 			if(rectangleRectangleCollision(Variables.shots[i].sX, Variables.shots[i].sY, 9, 9, Variables.ex, Variables.ey, Variables.eheight, Variables.ewidth)
 					) {
@@ -28,9 +28,9 @@ public class Collision {
 	}
 	
 	public boolean rectangleRectangleCollision(int x1, int y1, int h1, int w1, int x2, int y2, int w2, int h2) {
-		if(x1 <= x2 + w2) {
+		if(x1 +w1 <= x2 + w2) {
 			if(x1 + w1 >= x2) {
-				if(y1 <= y2 + h2) {
+				if(y1 +h1 <= y2 + h2) {
 					if(y1 + h1 >= y2) {
 						return true;
 					}

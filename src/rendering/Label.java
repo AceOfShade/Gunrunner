@@ -8,7 +8,7 @@ import java.io.File;
 import javax.imageio.ImageIO;
 import javax.swing.JLabel;
 
-import enteties.Player;
+import entities.Player;
 import main.Variables;
 
 @SuppressWarnings("unused")

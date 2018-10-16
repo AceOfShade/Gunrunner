@@ -1,27 +1,29 @@
-  package main;
+ package main;
 
-import sound.Sound;
-import rendering.Gui;
-import rendering.KeyHandler;
-import rendering.Label;
+import sound.*;
+import entities.*;
+import rendering.*;
 
 public class Main {
-	static Game g;
-	static KeyHandler kh;
-	static Gui gu;
-	static Variables v;
-	static Label l;
-	static Sound s;
+	public static Game g;
+	public static KeyHandler kh;
+	public static Gui gui;
+	public static Variables v;
+	public static Label lbl;
+	public static Sound s;
+	public static Level lvl;
+	public static Movement mov;
 	
 	
 	public static void main(String[] args) {
 		g = new Game();
 		kh = new KeyHandler();
-		gu =new Gui();
+		gui =new Gui();
 		v = new Variables();
-		l = new Label();
+		lbl = new Label();
 		s = new Sound();
-		l.Iconsetzen();
+		lvl= new Level();
+		mov= new Movement();
 		
 	}
 }
