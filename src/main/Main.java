@@ -24,6 +24,6 @@ public class Main {
 		s = new Sound();
 		lvl= new Level();
 		mov= new Movement();
-		
+		lbl.Iconsetzen();
 	}
 }
