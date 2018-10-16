@@ -17,13 +17,15 @@ public class KeyHandler implements KeyListener {
 		if (e.getKeyCode() == KeyEvent.VK_A) {
 			Variables.moveleft=true;
 		}
-		if (e.getKeyCode() == KeyEvent.VK_D) {	
+		if (e.getKeyCode() == KeyEvent.VK_D) {
 			Variables.moveright=true;
 		}
 		if (e.getKeyCode() == KeyEvent.VK_SPACE) {
-			if(Variables.startmenu) {Variables.startmenu = false;}
-			Variables.shot = true;
-			Variables.sound =true;
+			if(Variables.startmenu) {
+				Variables.startmenu = false;
+			}else {
+				Variables.shot = true;
+			}
 		}
 		if(e.getKeyCode() == KeyEvent.VK_F1) { 
 			Variables.debug =true;
@@ -36,6 +38,8 @@ public class KeyHandler implements KeyListener {
 			if(!Variables.startmenu) {Variables.startmenu=true;}
 			else {Variables.startmenu=false;}
 		}
+		
+		
 	}
 
 	@Override
@@ -52,7 +56,6 @@ public class KeyHandler implements KeyListener {
 		if (e.getKeyCode() == KeyEvent.VK_D) {
 			Variables.moveright = false;
 		}
-		
 	}
 
 	@Override
