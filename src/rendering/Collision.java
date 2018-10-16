@@ -1,6 +1,7 @@
 package rendering;
 
 import entities.Player;
+import main.Main;
 //import enteties.Sprite;
 import main.Variables;
 
@@ -11,9 +12,9 @@ public class Collision {
 		//P-E
 //		for(int i = 0; i < Variables.freePos; i++) {
 		if(
-		rectangleRectangleCollision(Player.px, Player.py, Variables.pheight, Variables.pwidth, Variables.ex, Variables.ey, Variables.eheight, Variables.ewidth)
+		rectangleRectangleCollision(Main.lvl.p.x, Main.lvl.p.y, Main.lvl.p.h, Main.lvl.p.w, Main.lvl.e.x, Variables.ey, Variables.eheight, Variables.ewidth)
 		){
-			Variables.health -= 1;//wenn player auf  enemy trifft passiert das was hier drin steht
+			Main.lvl.p.health -= 1;//wenn player auf  enemy trifft passiert das was hier drin steht
 			System.out.println("Collision: Player-Enemy");
 		}
 		

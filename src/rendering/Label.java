@@ -28,15 +28,15 @@ public class Label extends JLabel{
 				g.drawImage(Variables.loading, Variables.backgroundY1, 1, 800, 600, null);	
 			}
 				g.drawImage(Variables.l1, 0, Variables.backgroundY1, 800, 600, null);	
-				g.drawImage(Variables.enemy,Variables.ex, Variables.ey, 100, 140, null);
+				g.drawImage(Variables.enemy,575, 400, 100, 140, null);
 				
 				//different Playermodels
 				if(Variables.f2) {
-					g.drawImage(Variables.player1, Player.px, Player.py, 100, 140, null);	
+					g.drawImage(Variables.player1, Main.lvl.p.x, Main.lvl.p.y, 100, 140, null);	
 				}else if(Variables.moveleft){
-					g.drawImage(Variables.player1inv,Player.px, Player.py ,100,140,null);
+					g.drawImage(Variables.player1inv,Main.lvl.p.x, Main.lvl.p.y ,100,140,null);
 				}else {
-					g.drawImage(Variables.e, Player.px, Player.py, 100, 140, null);
+					g.drawImage(Variables.e, Main.lvl.p.x, Main.lvl.p.y, 100, 140, null);
 				}
 				
 				g.drawString("Health: " + Main.lvl.p.health, 20, 40);
@@ -45,7 +45,7 @@ public class Label extends JLabel{
 				
 				//painting all Bullets
 				for(int i = 0; i < Variables.freePos;i++) {
-					if(Variables.shots[i].sX != Player.px+75) {
+					if(Variables.shots[i].sX != Main.lvl.p.x+75) {
 						g.drawImage(Variables.bullet, Variables.shots[i].sX, Variables.shots[i].sY, 9,9, null);
 						if(Variables.moveleft) {	
 						g.drawImage(Variables.bulletinv, Variables.shots[i].sX, Variables.shots[i].sY, 9, 9, null);
