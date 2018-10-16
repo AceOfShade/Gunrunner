@@ -19,10 +19,10 @@ public class Game {
 		g.scheduleAtFixedRate(new TimerTask() {
 				@Override
 				public void run() {
-					if(Variables.loadscreen) {
+					if(!Variables.loadscreen) {
 						tick++;
 						if(tick == 100) {
-							Variables.loadscreen = false;
+							Variables.loadscreen = true;
 						}
 					}
 					m.shoot();
