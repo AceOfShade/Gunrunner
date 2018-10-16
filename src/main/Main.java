@@ -27,10 +27,7 @@ public class Main {
 		s = new Sound();
 		lvl= new Level();
 		mov= new Movement();
-<<<<<<< HEAD
 		lbl.Iconsetzen();
-=======
 		g.startGame();
->>>>>>> a6e3f9b81d66d6ca37b1205c55f1c9942613a8a7
 	}
 }
