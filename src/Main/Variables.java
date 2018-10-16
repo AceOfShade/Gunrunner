@@ -2,11 +2,7 @@ package main;
 
 
 import java.awt.image.BufferedImage;
-import java.io.IOException;
-import javax.imageio.ImageIO;
-import javax.swing.JFrame;
 import entities.Shot;
-import rendering.Label;
 
 public class Variables {
 
@@ -37,8 +33,5 @@ public class Variables {
 	// Constructor
 	public Variables() {
 		shots = new Shot[maxShots];
-		
-		
-		
 	}	
 }
