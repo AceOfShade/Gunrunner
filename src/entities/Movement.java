@@ -9,7 +9,7 @@ public class Movement {
 	int e = 0;
 	Sound s =new Sound();
 	
-	public void shoot() {//Schießen halt
+	public void shoot() {
 		e++;
 		if(Variables.shot&& e > 5) {Variables.shots[Variables.freePos] = new Shot(); Variables.freePos++; e = 0; s.playSound();
 		} //spawning
@@ -39,34 +39,34 @@ public class Movement {
 	
 	
 	
-	public void move() {//bewegung
+	public void move() {
 		if(Variables.moveright==true)
 		{	if(Main.lvl.p.x<730){					
-			Main.lvl.p.x+=Variables.speedright;
+			Main.lvl.p.x+=Variables.speedX;
 		}
 		}
 		if(Variables.moveleft==true){
 		if(Main.lvl.p.x>0)
 		{
-			Main.lvl.p.x-=Variables.speedleft;
+			Main.lvl.p.x-=Variables.speedX;
 				}
 		}
 		
 		//Jump
-				if(Main.lvl.p.y >= 400) {jh = Variables.jumpheight; } // jump max höhe;
+				if(Main.lvl.p.y >= 400) {jh = Main.lvl.p.jumpheight; } // jump max höhe;
 				
 				if(Variables.moveup && jh != 0){
-					Variables.velY-=Variables.speedjump;  //Sprung ges. hinzugeben (voller Sprung)
+					Main.lvl.p.velY-=Variables.speedjump;  //Sprung ges. hinzugeben (voller Sprung)
 				}else {
-					Variables.velY = 0; //Sprung ges. hinzugeben (nicht voller Sprung, solang man w hält)
+					Main.lvl.p.velY = 0; //Sprung ges. hinzugeben (nicht voller Sprung, solang man w hält)
 				}
-				if(Variables.velY == 0 && Main.lvl.p.y < 400) { //sinken
+				if(Main.lvl.p.velY == 0 && Main.lvl.p.y < 400) { //sinken
 					Main.lvl.p.y+= Variables.speeddown; //sinken
 				}
 				 
-				if(Variables.velY < 0 && jh > 0) { //steigen
+				if(Main.lvl.p.velY < 0 && jh > 0) { //steigen
 					Main.lvl.p.y-= Variables.speedjump;
-					Variables.velY++;
+					Main.lvl.p.velY++;
 					jh--;
 				}
 				
@@ -74,7 +74,7 @@ public class Movement {
 					Main.lvl.p.y = 400; 
 					}
 				//Jump-Ende
-				if(Variables.debug) {System.out.println("Vel: " + Variables.velY + Variables.moveup);}//debug mode
+				if(Variables.debug) {System.out.println("Vel: " + Main.lvl.p.velY + Variables.moveup);}//debug mode
 			
 		
 	}

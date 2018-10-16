@@ -5,6 +5,8 @@ import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import java.io.File;
+import java.io.IOException;
+
 import javax.imageio.ImageIO;
 import javax.swing.JLabel;
 
@@ -16,7 +18,30 @@ import main.Variables;
 public class Label extends JLabel{
 	private static final long serialVersionUID = 1L;
 	
-	public void Iconsetzen(){Variables.jf1.setIconImage(Variables.icon);}
+	public Label() {
+		setBounds(0,0,Variables.screenwidth,Variables.screenhight);
+		setVisible(true);
+		
+		try {
+
+			Variables.l1 = ImageIO.read(Variables.class.getResourceAsStream("/level1.png"));
+			Variables.start = ImageIO.read(Variables.class.getResourceAsStream("/start.png"));
+			Variables.icon = ImageIO.read(Variables.class.getResourceAsStream("/iconi.png"));
+			Variables.bullet = ImageIO.read(Variables.class.getResourceAsStream("/patrone.png"));
+			Variables.bulletinv=ImageIO.read(Variables.class.getResourceAsStream("/patroneinv.png"));
+			Variables.enemy=ImageIO.read(Variables.class.getResourceAsStream("/gegner1.png"));
+			Variables.player1 = ImageIO.read(Variables.class.getResourceAsStream("/playermodel.png"));
+			Variables.player1inv = ImageIO.read(Variables.class.getResourceAsStream("/player3inv.png"));
+			Variables.e = ImageIO.read(Variables.class.getResourceAsStream("/player3.png"));
+			Variables.hp = ImageIO.read(Variables.class.getResourceAsStream("/Hp.png"));
+			Variables.kill = ImageIO.read(Variables.class.getResourceAsStream("/Kills.png"));
+			Variables.loading = ImageIO.read(Variables.class.getResourceAsStream("/loadingscreen.png"));
+		} 
+		catch (IOException e) {
+			e.printStackTrace();
+			System.out.println("Can't load images");
+		}
+	}
 	
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
