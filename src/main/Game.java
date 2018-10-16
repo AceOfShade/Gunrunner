@@ -24,7 +24,7 @@ public class Game {
 						if(tick == 100) {
 							Variables.loadscreen = true;
 						}
-						Main.lvl.createLvl(Variables);
+						Main.lvl.createLvl(Variables.level);
 					}
 					m.shoot();
 					m.move();
