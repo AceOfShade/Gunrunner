@@ -19,6 +19,7 @@ public class Main {
 	
 	
 	public static void main(String[] args) {
+<<<<<<< HEAD
 		lvl= new Level();
 		g = new Game();
 		kh = new KeyHandler();
@@ -28,6 +29,17 @@ public class Main {
 		s = new Sound();
 		mov= new Movement();
 		lbl.Iconsetzen();
+=======
+		v = new Variables();
+		lbl = new Label();
+		g = new Game();
+		kh = new KeyHandler();
+		gui =new Gui();
+		
+		s = new Sound();
+		lvl= new Level();
+		mov= new Movement();
+>>>>>>> master
 		g.startGame();
 	}
 }
