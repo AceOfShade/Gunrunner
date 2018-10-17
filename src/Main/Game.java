@@ -28,19 +28,11 @@ public class Game {
 					}
 					m.shoot();
 					m.move();
-<<<<<<< HEAD
-					c.testC();
-					
-					if(Variables.debug) {
-						System.out.println("Px" + Player.px);
-						System.out.println("Py" + Player.py); 
-=======
 //					c.testC();
 					
 					if(Variables.debug) {
 						System.out.println("Px" + Main.lvl.p.x);
 						System.out.println("Py" + Main.lvl.p.y); 
->>>>>>> master
 					}
 				}
 		}, 0, 10);

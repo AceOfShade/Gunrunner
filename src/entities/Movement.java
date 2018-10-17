@@ -12,11 +12,7 @@ public class Movement {
 	int e = 0;
 	Sound s =new Sound();
 	
-<<<<<<< HEAD
 	public void shoot() {//Schießen halt
-=======
-	public void shoot() {
->>>>>>> master
 		e++;
 		if(Variables.shot&& e > 5) {Variables.shots[Variables.freePos] = new Shot(); Variables.freePos++; e = 0; s.playSound();
 		} //spawning
@@ -45,19 +41,6 @@ public class Movement {
 	}
 	
 	
-	
-<<<<<<< HEAD
-	public void move() {//bewegung
-		if(Variables.moveright==true)
-		{	if(Player.px<730){					
-			Player.px+=Variables.speedright;
-		}
-		}
-		if(Variables.moveleft==true){
-		if(Player.px>0)
-		{
-			Player.px-=Variables.speedleft;
-=======
 	public void move() {
 		if(Variables.moveright==true)
 		{	if(Main.lvl.p.x<730){					
@@ -68,35 +51,11 @@ public class Movement {
 		if(Main.lvl.p.x>0)
 		{
 			Main.lvl.p.x-=Variables.speedX;
->>>>>>> master
 				}
 		}
 		
 		//Jump
-<<<<<<< HEAD
-				if(Player.py >= 400) {jh = Variables.jumpheight; } // jump max höhe;
-				
-				if(Variables.moveup && jh != 0){
-					Variables.velY-=Variables.speedjump;  //Sprung ges. hinzugeben (voller Sprung)
-				}else {
-					Variables.velY = 0; //Sprung ges. hinzugeben (nicht voller Sprung, solang man w hält)
-				}
-				if(Variables.velY == 0 && Player.py < 400) { //sinken
-					Player.py+= Variables.speeddown; //sinken
-				}
-				 
-				if(Variables.velY < 0 && jh > 0) { //steigen
-					Player.py-= Variables.speedjump;
-					Variables.velY++;
-					jh--;
-				}
-				
-				if(Player.py > 400){	//wenn man in den boden buggt
-					Player.py = 400; 
-					}
-				//Jump-Ende
-				if(Variables.debug) {System.out.println("Vel: " + Variables.velY + Variables.moveup);}//debug mode
-=======
+
 				if(Main.lvl.p.y >= 400) {jh = Main.lvl.p.jumpheight; } // jump max höhe;
 				
 				if(Variables.moveup && jh != 0){
@@ -119,7 +78,7 @@ public class Movement {
 					}
 				//Jump-Ende
 				if(Variables.debug) {System.out.println("Vel: " + Main.lvl.p.velY + Variables.moveup);}//debug mode
->>>>>>> master
+
 			
 		
 	}
