@@ -12,4 +12,10 @@ public class Enemy extends GameObject {
 		super(x, y, 100, 140);
 		this.health = health;
 	}
+
+	@Override
+	public void render() {
+		// TODO Auto-generated method stub
+		
+	}
 }

@@ -9,6 +9,7 @@ import javax.imageio.ImageIO;
 import javax.swing.JLabel;
 
 import entities.Player;
+import main.Main;
 import main.Variables;
 
 @SuppressWarnings("unused")
@@ -33,19 +34,19 @@ public class Label extends JLabel {
 
 			// different Playermodels
 			if (Variables.f2) {
-				g.drawImage(Variables.player1, Player.x, Player.y, 100, 140, null);
+				g.drawImage(Variables.player1, Main.lvl.player.x, Main.lvl.player.y, 100, 140, null);
 			} else if (Variables.moveleft) {
-				g.drawImage(Variables.player1inv, Player.x, Player.y, 100, 140, null);
+				g.drawImage(Variables.player1inv, Main.lvl.player.x, Main.lvl.player.y, 100, 140, null);
 			} else {
-				g.drawImage(Variables.e, Player.x, Player.y, 100, 140, null);
+				g.drawImage(Variables.e, Main.lvl.player.x, Main.lvl.player.y, 100, 140, null);
 			}
 
-			g.drawString("Health: " + Player.health, 20, 40);
-			g.drawString("Kills: " + Player.kills, 20, 20);
+			g.drawString("Health: " + Main.lvl.player.health, 20, 40);
+			g.drawString("Kills: " + Main.lvl.player.kills, 20, 20);
 
 			// painting all Bullets
 			for (int i = 0; i < Variables.freePos; i++) {
-				if (Variables.shots[i].sX != Player.x + 75) {
+				if (Variables.shots[i].sX != Main.lvl.player.x + 75) {
 					g.drawImage(Variables.bullet, Variables.shots[i].sX, Variables.shots[i].sY, 9, 9, null);
 					if (Variables.moveleft) {
 						g.drawImage(Variables.bulletinv, Variables.shots[i].sX, Variables.shots[i].sY, 9, 9, null);

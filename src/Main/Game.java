@@ -29,8 +29,8 @@ public class Game {
 				c.testC();
 
 				if (Variables.debug) {
-					System.out.println("Px" + Player.x);
-					System.out.println("Py" + Player.y);
+					System.out.println("Px" + Main.lvl.player.x);
+					System.out.println("Py" + Main.lvl.player.y);
 				}
 			}
 		}, 0, 10);

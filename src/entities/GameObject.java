@@ -1,7 +1,7 @@
 package entities;
 
-public class GameObject {
-	int x, y, w, h;
+public abstract class GameObject {
+	public int x, y, w, h;
 
 	public GameObject(int x, int y, int w, int h) {
 		this.x = x;
@@ -9,4 +9,6 @@ public class GameObject {
 		this.w = w;
 		this.h = h;
 	}
+	
+	public abstract void render();
 }

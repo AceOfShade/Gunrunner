@@ -1,6 +1,7 @@
 package rendering;
 
 import entities.Player;
+import main.Main;
 //import enteties.Sprite;
 import main.Variables;
 
@@ -9,7 +10,7 @@ public class Collision {
 	public void testC() {
 		// P-E
 //		for(int i = 0; i < Variables.freePos; i++) {
-		if (rectangleRectangleCollision(Player.x, Player.y, Variables.pheight, Variables.pwidth, Variables.ex,
+		if (rectangleRectangleCollision(Main.lvl.player.x, Main.lvl.player.y, Variables.pheight, Variables.pwidth, Variables.ex,
 				Variables.ey, Variables.eheight, Variables.ewidth)) {
 			Variables.health -= 1;// wenn player auf enemy trifft passiert das was hier drin steht
 			System.out.println("Collision: Player-Enemy");

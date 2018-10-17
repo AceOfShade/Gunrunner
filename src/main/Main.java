@@ -14,7 +14,7 @@ public class Main {
 	public static Variables v;
 	public static Label lbl;
 	public static Sound s;
-	public static Level lvl;
+	public static GameWorld lvl;
 	public static Movement mov;
 	
 	
@@ -27,7 +27,7 @@ public class Main {
 		kh = new KeyHandler();
 		gui =new Gui();
 		s = new Sound();
-		lvl= new Level();
+		lvl= new GameWorld();
 		mov= new Movement();
 		g.startGame();
 	}
