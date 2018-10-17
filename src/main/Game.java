@@ -12,28 +12,27 @@ public class Game {
 	Movement m = new Movement();
 	Collision c = new Collision();
 	int tick;
-	
 
 	public void startGame() {
-		g=new Timer();
+		g = new Timer();
 		g.scheduleAtFixedRate(new TimerTask() {
-				@Override
-				public void run() {
-					if(!Variables.loadscreen) {
-						tick++;
-						if(tick == 100) {
-							Variables.loadscreen = true;
-						}
-					}
-					m.shoot();
-					m.move();
-					c.testC();
-					
-					if(Variables.debug) {
-						System.out.println("Px" + Player.x);
-						System.out.println("Py" + Player.y); 
+			@Override
+			public void run() {
+				if (!Variables.loadscreen) {
+					tick++;
+					if (tick == 100) {
+						Variables.loadscreen = true;
 					}
 				}
+				m.shoot();
+				m.move();
+				c.testC();
+
+				if (Variables.debug) {
+					System.out.println("Px" + Player.x);
+					System.out.println("Py" + Player.y);
+				}
+			}
 		}, 0, 10);
 	}
 }

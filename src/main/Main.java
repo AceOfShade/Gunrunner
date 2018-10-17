@@ -19,7 +19,7 @@ public class Main {
 	
 	
 	
-	
+
 	public static void main(String[] args) {
 		v = new Variables();
 		lbl = new Label();

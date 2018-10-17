@@ -4,77 +4,81 @@ import sound.Sound;
 import main.Variables;
 
 public class Movement {
-	int jh; //max Sprunghöhe von Variables kopiert
+	int jh; // max Sprunghöhe von Variables kopiert
 	int e = 0;
-	Sound s =new Sound();
-	
-	public void shoot() {//Schießen halt
-		e++;
-		if(Variables.shot && e > 5) {Variables.shots[Variables.freePos] = new Shot(); Variables.freePos++; e = 0; s.playSound();
-		} //spawning
-		
+	Sound s = new Sound();
 
-		for(int i = 0; i < Variables.freePos && Variables.freePos != 0; i++) { // despawn
+	public void shoot() {// Schießen halt
+		e++;
+		if (Variables.shot && e > 5) {
+			Variables.shots[Variables.freePos] = new Shot();
+			Variables.freePos++;
+			e = 0;
+			s.playSound();
+		} // spawning
+
+		for (int i = 0; i < Variables.freePos && Variables.freePos != 0; i++) { // despawn
 			Variables.shots[i].schuss();
-			if(Variables.shots[i].sX > Variables.screenwidth || Variables.shots[i].sX <= 0) {
-				for(int a = i; a < Variables.freePos; a++) {
-					Variables.shots[a]= Variables.shots[a+1];
+			if (Variables.shots[i].sX > Variables.screenwidth || Variables.shots[i].sX <= 0) {
+				for (int a = i; a < Variables.freePos; a++) {
+					Variables.shots[a] = Variables.shots[a + 1];
 				}
 				Variables.freePos--;
 				Variables.shots[Variables.freePos] = null;
 			}
 		}
-		
-		if(Variables.freePos >= 98) {
+
+		if (Variables.freePos >= 98) {
 			Variables.freePos = 0;
-			for(int i = 0; i < Variables.shots.length; i++) {
-				Variables.shots[i]= null;
+			for (int i = 0; i < Variables.shots.length; i++) {
+				Variables.shots[i] = null;
 			}
 		}
 
-
-		if(Variables.debug) {System.out.println("Anzahl Schüsse:" +Variables.freePos);}//debug mode
+		if (Variables.debug) {
+			System.out.println("Anzahl Schüsse:" + Variables.freePos);
+		} // debug mode
 	}
-	
-	
-	
-	public void move() {//bewegung
-		if(Variables.moveright==true)
-		{	if(Player.x<730){					
-			Player.x+=Variables.speedright;
+
+	public void move() {// bewegung
+		if (Variables.moveright == true) {
+			if (Player.x < 730) {
+				Player.x += Variables.speedright;
+			}
 		}
+		if (Variables.moveleft == true) {
+			if (Player.x > 0) {
+				Player.x -= Variables.speedleft;
+			}
 		}
-		if(Variables.moveleft==true){
-		if(Player.x>0)
-		{
-			Player.x-=Variables.speedleft;
-				}
+
+		// Jump
+		if (Player.x >= 400) {
+			jh = Variables.jumpheight;
+		} // jump max höhe;
+
+		if (Variables.moveup && jh != 0) {
+			Variables.velY -= Variables.speedjump; // Sprung ges. hinzugeben (voller Sprung)
+		} else {
+			Variables.velY = 0; // Sprung ges. hinzugeben (nicht voller Sprung, solang man w hält)
 		}
-		
-		//Jump
-				if(Player.x >= 400) {jh = Variables.jumpheight; } // jump max höhe;
-				
-				if(Variables.moveup && jh != 0){
-					Variables.velY-=Variables.speedjump;  //Sprung ges. hinzugeben (voller Sprung)
-				}else {
-					Variables.velY = 0; //Sprung ges. hinzugeben (nicht voller Sprung, solang man w hält)
-				}
-				if(Variables.velY == 0 && Player.y < 400) { //sinken
-					Player.y+= Variables.speeddown; //sinken
-				}
-				 
-				if(Variables.velY < 0 && jh > 0) { //steigen
-					Player.y-= Variables.speedjump;
-					Variables.velY++;
-					jh--;
-				}
-				
-				if(Player.y > 400){	//wenn man in den boden buggt
-					Player.y = 400; 
-					}
-				//Jump-Ende
-				if(Variables.debug) {System.out.println("Vel: " + Variables.velY + Variables.moveup);}//debug mode
-			
-		
+		if (Variables.velY == 0 && Player.y < 400) { // sinken
+			Player.y += Variables.speeddown; // sinken
+		}
+
+		if (Variables.velY < 0 && jh > 0) { // steigen
+			Player.y -= Variables.speedjump;
+			Variables.velY++;
+			jh--;
+		}
+
+		if (Player.y > 400) { // wenn man in den boden buggt
+			Player.y = 400;
+		}
+		// Jump-Ende
+		if (Variables.debug) {
+			System.out.println("Vel: " + Variables.velY + Variables.moveup);
+		} // debug mode
+
 	}
 }
