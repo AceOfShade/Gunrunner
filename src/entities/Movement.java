@@ -1,10 +1,6 @@
 package entities;
 
 import sound.Sound;
-<<<<<<< HEAD
-=======
-import main.Main;
->>>>>>> master
 import main.Variables;
 
 public class Movement {
@@ -14,7 +10,7 @@ public class Movement {
 	
 	public void shoot() {//Schießen halt
 		e++;
-		if(Variables.shot&& e > 5) {Variables.shots[Variables.freePos] = new Shot(); Variables.freePos++; e = 0; s.playSound();
+		if(Variables.shot && e > 5) {Variables.shots[Variables.freePos] = new Shot(); Variables.freePos++; e = 0; s.playSound();
 		} //spawning
 		
 
@@ -41,44 +37,43 @@ public class Movement {
 	}
 	
 	
-	public void move() {
+	
+	public void move() {//bewegung
 		if(Variables.moveright==true)
-		{	if(Main.lvl.p.x<730){					
-			Main.lvl.p.x+=Variables.speedX;
+		{	if(Player.x<730){					
+			Player.x+=Variables.speedright;
 		}
 		}
 		if(Variables.moveleft==true){
-		if(Main.lvl.p.x>0)
+		if(Player.x>0)
 		{
-			Main.lvl.p.x-=Variables.speedX;
+			Player.x-=Variables.speedleft;
 				}
 		}
 		
 		//Jump
-
-				if(Main.lvl.p.y >= 400) {jh = Main.lvl.p.jumpheight; } // jump max höhe;
+				if(Player.x >= 400) {jh = Variables.jumpheight; } // jump max höhe;
 				
 				if(Variables.moveup && jh != 0){
-					Main.lvl.p.velY-=Variables.speedjump;  //Sprung ges. hinzugeben (voller Sprung)
+					Variables.velY-=Variables.speedjump;  //Sprung ges. hinzugeben (voller Sprung)
 				}else {
-					Main.lvl.p.velY = 0; //Sprung ges. hinzugeben (nicht voller Sprung, solang man w hält)
+					Variables.velY = 0; //Sprung ges. hinzugeben (nicht voller Sprung, solang man w hält)
 				}
-				if(Main.lvl.p.velY == 0 && Main.lvl.p.y < 400) { //sinken
-					Main.lvl.p.y+= Variables.speeddown; //sinken
+				if(Variables.velY == 0 && Player.y < 400) { //sinken
+					Player.y+= Variables.speeddown; //sinken
 				}
 				 
-				if(Main.lvl.p.velY < 0 && jh > 0) { //steigen
-					Main.lvl.p.y-= Variables.speedjump;
-					Main.lvl.p.velY++;
+				if(Variables.velY < 0 && jh > 0) { //steigen
+					Player.y-= Variables.speedjump;
+					Variables.velY++;
 					jh--;
 				}
 				
-				if(Main.lvl.p.y > 400){	//wenn man in den boden buggt
-					Main.lvl.p.y = 400; 
+				if(Player.y > 400){	//wenn man in den boden buggt
+					Player.y = 400; 
 					}
 				//Jump-Ende
-				if(Variables.debug) {System.out.println("Vel: " + Main.lvl.p.velY + Variables.moveup);}//debug mode
-
+				if(Variables.debug) {System.out.println("Vel: " + Variables.velY + Variables.moveup);}//debug mode
 			
 		
 	}

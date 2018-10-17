@@ -12,6 +12,7 @@ import rendering.Label;
 
 public class Variables {
 
+	public static JFrame jf1;
     //Screen width and hight
 	public static int screenwidth = 800;
 	public static int screenhight = 600;
@@ -24,8 +25,8 @@ public class Variables {
 	public static int px=350,py=400; 
 	public static int pheight;			//Player hight
 	public static int pwidth;			//Player width
-	public static int kills=0;			//kills from player
-	public static int health=3;			//player health
+	public static int kills=0;						//kills from player
+	public static int health=3;					//player health
 	
 
 	//Sound
@@ -40,10 +41,16 @@ public class Variables {
 	
 	public static int speedshot=30;
 	public static boolean collision=false;
-	public static double speedX=5,speedjump=3,speeddown=4.5;
+	public static double speedright=5;
+	public static double speedleft=5;
+	public static double speedjump=3;
+	public static double speeddown=4.5;
 	//Move
-	public static boolean moveup = false, shot= false, moveleft = false, moveright = false, movedown=false;
+	public static boolean moveup = false, shot= false, moveleft = false;
+	public static boolean moveright = false;
+	public static boolean movedown=false;
 	//kein plan also label
+	public static Label lbl;
 	public static boolean lefting=false, righting=false;
 	public static boolean startmenu = true;
 	public static boolean loadscreen = false;
@@ -67,5 +74,25 @@ public class Variables {
 	public Variables() {
 		shots = new Shot[maxShots];
 		
+		
+		try {
+
+			l1 = ImageIO.read(Variables.class.getResourceAsStream("/level1.png"));
+			start = ImageIO.read(Variables.class.getResourceAsStream("/start.png"));
+			icon = ImageIO.read(Variables.class.getResourceAsStream("/iconi.png"));
+			bullet = ImageIO.read(Variables.class.getResourceAsStream("/patrone.png"));
+			bulletinv=ImageIO.read(Variables.class.getResourceAsStream("/patroneinv.png"));
+			enemy=ImageIO.read(Variables.class.getResourceAsStream("/gegner1.png"));
+			player1 = ImageIO.read(Variables.class.getResourceAsStream("/playermodel.png"));
+			player1inv = ImageIO.read(Variables.class.getResourceAsStream("/player3inv.png"));
+			e = ImageIO.read(Variables.class.getResourceAsStream("/player3.png"));
+			hp = ImageIO.read(Variables.class.getResourceAsStream("/Hp.png"));
+			kill = ImageIO.read(Variables.class.getResourceAsStream("/Kills.png"));
+			loading = ImageIO.read(Variables.class.getResourceAsStream("/loadingscreen.png"));
+		} 
+		catch (IOException e) {
+			e.printStackTrace();
+			System.out.println("Can't load images");
+		}
 	}	
 }

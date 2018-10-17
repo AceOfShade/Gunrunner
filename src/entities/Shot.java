@@ -10,8 +10,8 @@ public class Shot{
 	
 	public Shot() {
 		this.speedshot = Variables.speedshot;
-		this.sX = Main.lvl.p.x+75;
-		this.sY = Main.lvl.p.y+85;
+		this.sX = Player.x+75;
+		this.sY = Player.y+85;
 		if(Variables.moveleft) {
 			right = false;
 		}else {

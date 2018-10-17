@@ -24,15 +24,14 @@ public class Game {
 						if(tick == 100) {
 							Variables.loadscreen = true;
 						}
-						Main.lvl.createLvl(Variables.level);
 					}
 					m.shoot();
 					m.move();
-//					c.testC();
+					c.testC();
 					
 					if(Variables.debug) {
-						System.out.println("Px" + Main.lvl.p.x);
-						System.out.println("Py" + Main.lvl.p.y); 
+						System.out.println("Px" + Player.x);
+						System.out.println("Py" + Player.y); 
 					}
 				}
 		}, 0, 10);

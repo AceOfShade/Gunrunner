@@ -19,14 +19,15 @@ public class Main {
 	
 	
 	public static void main(String[] args) {
-		v = new Variables();
-		lbl = new Label();
 		g = new Game();
 		kh = new KeyHandler();
 		gui =new Gui();
+		v = new Variables();
+		lbl = new Label();
 		s = new Sound();
 		lvl= new Level();
 		mov= new Movement();
+		lbl.Iconsetzen();
 		g.startGame();
 	}
 }

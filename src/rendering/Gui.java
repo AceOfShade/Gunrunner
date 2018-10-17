@@ -4,7 +4,6 @@ import javax.swing.JFrame;
 
 import main.Variables;
 	public class Gui {
-		Label lbl = new Label();
 
 	public Gui(){
 		Variables.jf1 = new JFrame();
@@ -19,9 +18,9 @@ import main.Variables;
 		Variables.jf1.setIconImage(Variables.icon);
 		Variables.jf1.setVisible(true);
 	
-	lbl = new Label();
-	lbl.setBounds(0,0,Variables.screenwidth,Variables.screenhight);
-	lbl.setVisible(true);
-	Variables.jf1.add(lbl);
+	Variables.lbl = new Label();
+	Variables.lbl.setBounds(0,0,Variables.screenwidth,Variables.screenhight);
+	Variables.lbl.setVisible(true);
+	Variables.jf1.add(Variables.lbl);
 	}
 }
