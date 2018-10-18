@@ -15,9 +15,12 @@ import main.Variables;
 @SuppressWarnings("unused")
 public class Label extends JLabel {
 	private static final long serialVersionUID = 1L;
-
+	public static byte pic;
+	public boolean nextPic;
+	
 	public void Iconsetzen() {
 		Variables.jf1.setIconImage(Variables.icon);
+		pic = 1;
 	}
 
 	protected void paintComponent(Graphics g) {
@@ -25,11 +28,22 @@ public class Label extends JLabel {
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 
+		
 		if (!Variables.startmenu) {
-			if (!Variables.loadscreen) {
-				g.drawImage(Variables.loading, Variables.backgroundY1, 1, 800, 600, null);
+//			if (!Variables.loadscreen) {
+//				g.drawImage(Variables.loading, Variables.backgroundY1, 1, 800, 600, null);
+//			}
+			if(nextPic) {pic++; nextPic = false;}
+//			switch(pic) {
+//			case 1:		g.drawImage(Variables.l1, 0, Variables.backgroundY1, 800, 600, null); System.out.println("a");break;
+//			case 2:		g.drawImage(Variables.l2, 0, Variables.backgroundY1, 800, 600, null);System.out.println("b");break;
+//			}
+			if(pic == 1) {
+				g.drawImage(Variables.l1, 0, Variables.backgroundY1, 800, 600, null);
+			}else if(pic == 2) {
+				g.drawImage(Variables.l2, 0, Variables.backgroundY1, 800, 600, null);
 			}
-			g.drawImage(Variables.l1, 0, Variables.backgroundY1, 800, 600, null);
+			
 			g.drawImage(Variables.enemy, Variables.ex, Variables.ey, 100, 140, null);
 
 			// different Playermodels

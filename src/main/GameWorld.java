@@ -17,8 +17,9 @@ public class GameWorld {
 			
 	
 	public void levelactualisizer() { // so richtig falsch geschrieben
-		if (player.x == 800) {
-
+		if (player.x >= 740) {
+			player.x = 0;
+			Main.lbl.nextPic = true;
 		}
 	}
 	

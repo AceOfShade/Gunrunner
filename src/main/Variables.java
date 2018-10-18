@@ -18,16 +18,7 @@ public class Variables {
 	public static int backgroundY1 = 0;
 	public static int x = 400, y = 400;
 
-	// Player
-
-	public static int px = 350, py = 400;
-	public static int pheight; // Player hight
-	public static int pwidth; // Player width
-	public static int kills = 0; // kills from player
-	public static int health = 3; // player health
-
-	// Sound
-	public static boolean sound = false;
+	//
 	// Enemy
 	public static int ex = 675, ey = 400;
 	public static int eheight = 100; // Enemy hight
@@ -47,7 +38,6 @@ public class Variables {
 	public static Label lbl;
 	public static boolean lefting = false, righting = false;
 	public static boolean startmenu = true;
-	public static boolean loadscreen = false;
 	// Schuss X und Y
 	public static int sy;
 	public static int sx;
@@ -70,7 +60,7 @@ public class Variables {
 		shots = new Shot[maxShots];
 
 		try {
-
+			l2 = ImageIO.read(Variables.class.getResourceAsStream("/level2.png"));
 			l1 = ImageIO.read(Variables.class.getResourceAsStream("/level1.png"));
 			start = ImageIO.read(Variables.class.getResourceAsStream("/start.png"));
 			icon = ImageIO.read(Variables.class.getResourceAsStream("/iconi.png"));

@@ -54,32 +54,28 @@ public class Movement {
 		}
 
 		// Jump
-		if (Main.lvl.player.x >= 400) {
-			jh = Variables.jumpheight;
-		} // jump max höhe;
-
-		if (Variables.moveup && jh != 0) {
-			Variables.velY -= Variables.speedjump; // Sprung ges. hinzugeben (voller Sprung)
-		} else {
-			Variables.velY = 0; // Sprung ges. hinzugeben (nicht voller Sprung, solang man w hält)
+if(Main.lvl.player.y >= 400) {jh = Variables.jumpheight; } // jump max höhe;
+		
+		if(Variables.moveup && jh != 0){
+			if(Main.lvl.player.y>0 ){Variables.velY-=Variables.speedjump; } //Sprung ges. hinzugeben (voller Sprung)
+		}else {
+			Variables.velY = 0; //Sprung ges. hinzugeben (nicht voller Sprung, solang man w hält)
 		}
-		if (Variables.velY == 0 && Main.lvl.player.y < 400) { // sinken
-			Main.lvl.player.y += Variables.speeddown; // sinken
+		if(Variables.velY == 0 && Main.lvl.player.y < 400) { //sinken
+			Main.lvl.player.y+= Variables.speeddown; //sinken
 		}
-
-		if (Variables.velY < 0 && jh > 0) { // steigen
-			Main.lvl.player.y -= Variables.speedjump;
+		 
+		if(Variables.velY < 0 && jh > 0) { //steigen
+			Main.lvl.player.y-= Variables.speedjump;
 			Variables.velY++;
 			jh--;
 		}
-
-		if (Main.lvl.player.y > 400) { // wenn man in den boden buggt
-			Main.lvl.player.y = 400;
-		}
-		// Jump-Ende
-		if (Variables.debug) {
-			System.out.println("Vel: " + Variables.velY + Variables.moveup);
-		} // debug mode
+		
+		if(Main.lvl.player.y > 400){	//wenn man in den boden buggt
+			Main.lvl.player.y = 400; 
+			}
+		//Jump-Ende
+		if(Variables.debug) {System.out.println("Vel: " + Variables.velY + Variables.moveup);}//debug mode
 
 	}
 }
