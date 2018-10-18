@@ -38,7 +38,10 @@ public class Label extends JLabel {
 			case 2:		g.drawImage(Variables.l2, 0, Variables.backgroundY1, 800, 600, null);break;
 			}
 			
-			g.drawImage(Variables.enemy, Variables.ex, Variables.ey, 100, 140, null);
+			for(int i = 0; i < Main.lvl.enemyObjects.size(); i++) {
+				g.drawImage(Variables.enemy, Main.lvl.enemyObjects.get(i).getX(), Variables.ey, 100, 140, null);
+			}
+			
 
 			// different Playermodels
 			if (Variables.f2) {

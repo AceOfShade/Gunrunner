@@ -15,11 +15,13 @@ public class GameWorld {
 		player = new Player(350, 400);
 		enemyObjects = new ArrayList<>(2);
 		shotObjects = new ArrayList<>(20);
+		Enemy e = new Enemy(700, 400);
+		enemyObjects.add(e);
 	}
 			
 	
 	public void levelactualisizer() { // so richtig falsch geschrieben
-		if (player.x >= 8wd  ada 00) {
+		if (player.x >= 800) {
 			player.x = 0;
 			Main.lbl.nextPic = true;
 		}
