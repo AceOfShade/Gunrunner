@@ -11,4 +11,22 @@ public abstract class GameObject {
 	}
 	
 	public abstract void render();
+
+	public int getX() {
+		return x;
+	}
+
+	public int getY() {
+		return y;
+	}
+
+	public int getW() {
+		return w;
+	}
+
+	public int getH() {
+		return h;
+	}
+
+	
 }

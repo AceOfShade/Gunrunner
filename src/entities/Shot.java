@@ -2,29 +2,23 @@ package entities;
 
 import main.*;
 
-public class Shot{
+public class Shot extends GameObject{
 	public double speedshot;
-	public int sX;
-	public int sY;
 	public boolean right;
 	
 	public Shot() {
+		super(Main.lvl.player.x+75, Main.lvl.player.y+85, 9, 9);
 		this.speedshot = Variables.speedshot;
-		this.sX = Main.lvl.player.x+75;
-		this.sY = Main.lvl.player.y+85;
 		if(Variables.moveleft) {
 			right = false;
 		}else {
 			right = true;
 		}
 	}
-	public void schuss(){
-		if(right) {
-			sX +=speedshot;
-		}
-		if(right==false) {
-			sX -= speedshot;
-		}
+	@Override
+	public void render() {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	

@@ -6,11 +6,12 @@ import java.util.TimerTask;
 import entities.Movement;
 //import entities.Player;
 //import rendering.Collision;
+import rendering.Collision;
 
 public class Game {
 	Timer g;
 	Movement m = new Movement();
-//	Collision c = new Collision();
+	Collision c = new Collision();
 	int tick;
 
 	public void startGame() {
@@ -21,7 +22,7 @@ public class Game {
 				
 				m.shoot();
 				m.move();
-//				c.testC();
+				c.testC();
 				Main.lvl.levelactualisizer();
 
 				if (Variables.debug) {

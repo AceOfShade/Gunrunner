@@ -34,13 +34,8 @@ public class Label extends JLabel {
 //			}
 			if(nextPic) {pic++; nextPic = false;}
 			switch(pic) {
-			case 1:		g.drawImage(Variables.l1, 0, Variables.backgroundY1, 800, 600, null); System.out.println("a");break;
-			case 2:		g.drawImage(Variables.l2, 0, Variables.backgroundY1, 800, 600, null);System.out.println("b");break;
-			}
-			if(pic == 1) {
-				g.drawImage(Variables.l1, 0, Variables.backgroundY1, 800, 600, null);
-			}else if(pic == 2) {
-				g.drawImage(Variables.l2, 0, Variables.backgroundY1, 800, 600, null);
+			case 1:		g.drawImage(Variables.l1, 0, Variables.backgroundY1, 800, 600, null);;break;
+			case 2:		g.drawImage(Variables.l2, 0, Variables.backgroundY1, 800, 600, null);break;
 			}
 			
 			g.drawImage(Variables.enemy, Variables.ex, Variables.ey, 100, 140, null);
@@ -58,11 +53,11 @@ public class Label extends JLabel {
 			g.drawString("Kills: " + Main.lvl.player.kills, 20, 20);
 
 			// painting all Bullets
-			for (int i = 0; i < Variables.freePos; i++) {
-				if (Variables.shots[i].sX != Main.lvl.player.x + 75) {
-					g.drawImage(Variables.bullet, Variables.shots[i].sX, Variables.shots[i].sY, 9, 9, null);
+			for (int i = 0; i < Main.lvl.shotObjects.size(); i++) {
+				if (Main.lvl.shotObjects.get(i).getX() != Main.lvl.player.x + 75) {
+					g.drawImage(Variables.bullet, Main.lvl.shotObjects.get(i).getX(), Main.lvl.shotObjects.get(i).getY(), 9, 9, null);
 					if (Variables.moveleft) {
-						g.drawImage(Variables.bulletinv, Variables.shots[i].sX, Variables.shots[i].sY, 9, 9, null);
+						g.drawImage(Variables.bulletinv, Main.lvl.shotObjects.get(i).getX(), Main.lvl.shotObjects.get(i).getY(), 9, 9, null);
 					}
 				}
 			}
