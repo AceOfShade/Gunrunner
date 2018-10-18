@@ -21,10 +21,6 @@ public class GameWorld {
 			
 	
 	public void levelactualisizer() { // so richtig falsch geschrieben
-		if (player.x >= 800) {
-			player.x = 0;
-			Main.lbl.nextPic = true;
-		}
 	}
 	
 	public void levelgenerator() {

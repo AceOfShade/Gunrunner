@@ -15,8 +15,12 @@ import main.Variables;
 @SuppressWarnings("unused")
 public class Label extends JLabel {
 	private static final long serialVersionUID = 1L;
-	public static byte pic = 1;
+	public int pic;
 	public boolean nextPic;
+	
+	public Label() {
+		pic= 1;
+	}
 	
 	public void Iconsetzen() {
 		Variables.jf1.setIconImage(Variables.icon);
@@ -26,16 +30,22 @@ public class Label extends JLabel {
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-
+		if (Main.lvl.player.getX() + Main.lvl.player.getW() >= 800) {
+			pic++;
+			Main.lvl.player.x = 0;
+		}
 		
 		if (!Variables.startmenu) {
 //			if (!Variables.loadscreen) {
 //				g.drawImage(Variables.loading, Variables.backgroundY1, 1, 800, 600, null);
 //			}
-			if(nextPic) {pic++; nextPic = false;}
 			switch(pic) {
-			case 1:		g.drawImage(Variables.l1, 0, Variables.backgroundY1, 800, 600, null);;break;
-			case 2:		g.drawImage(Variables.l2, 0, Variables.backgroundY1, 800, 600, null);break;
+			case 1:		g.drawImage(Variables.l1, 0, 0, 800, 600, null);break;
+			
+			case 2:		
+				g.drawImage(Variables.l2, 0, 0, 800, 600, null);;break;
+			
+			default:g.drawImage(Variables.l2, 0, 0, 800, 600, null);;break;
 			}
 			
 			for(int i = 0; i < Main.lvl.enemyObjects.size(); i++) {
