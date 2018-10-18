@@ -30,9 +30,13 @@ public class Label extends JLabel {
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-		if (Main.lvl.player.getX() + Main.lvl.player.getW() >= 800) {
+		if (Main.lvl.player.getX() + Main.lvl.player.getW() >= 800 && pic < 2 && pic >0) {
 			pic++;
 			Main.lvl.player.x = 0;
+		}
+		if (Main.lvl.player.getX() == 0 && pic <= 2 && pic >1) {
+			pic--;
+			Main.lvl.player.x = 800 - Main.lvl.player.getW();
 		}
 		
 		if (!Variables.startmenu) {

@@ -67,7 +67,7 @@ if(Main.lvl.player.y >= 400) {jh = Variables.jumpheight; } // jump max höhe;
 		}
 		
 		if(Main.lvl.player.y > 400){	//wenn man in den boden buggt
-			Main.lvl.player.y = 400; 
+			Main.lvl.player.y = 400;
 			}
 		//Jump-Ende
 		if(Variables.debug) {System.out.println("Vel: " + Main.lvl.player.velY + Variables.moveup);}//debug mode
