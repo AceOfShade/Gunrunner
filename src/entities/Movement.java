@@ -1,9 +1,6 @@
 package entities;
 
 import sound.Sound;
-
-import java.util.Collection;
-
 import main.Main;
 import main.Variables;
 

@@ -27,6 +27,6 @@ public abstract class GameObject {
 	public int getH() {
 		return h;
 	}
-
 	
+
 }
