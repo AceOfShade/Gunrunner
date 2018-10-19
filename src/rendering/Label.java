@@ -39,7 +39,7 @@ public class Label extends JLabel {
 		}
 		
 		if (!Variables.startmenu) {//Wenn du möchtest das etwas wartet, dann verwende Thread.sleep(millis)
-//			if (!Variables.loadscreen) {
+//			if (!Variables.loadscreen) {																			Marco war hier :3
 //				g.drawImage(Variables.loading, Variables.backgroundY1, 1, 800, 600, null);
 //			}
 			switch(pic) {//xd
