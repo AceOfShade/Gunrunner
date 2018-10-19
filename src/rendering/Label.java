@@ -42,7 +42,7 @@ public class Label extends JLabel {
 //			if (!Variables.loadscreen) {
 //				g.drawImage(Variables.loading, Variables.backgroundY1, 1, 800, 600, null);
 //			}
-			switch(pic) {
+			switch(pic) {//xd
 			case 1:		g.drawImage(Variables.l1, 0, 0, 800, 600, null);break;
 			
 			case 2:		
