@@ -21,7 +21,6 @@ public class Variables {
 	public static int ewidth = 140; // Enemy width
 
 	public static int speedshot = 30;
-	public static boolean collision = false;
 	public static double speedright = 5;
 	public static double speedleft = 5;
 	public static double speedjump = 3;

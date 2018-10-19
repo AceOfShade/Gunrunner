@@ -9,10 +9,10 @@ import entities.Movement;
 import rendering.Collision;
 
 public class Game {
-	Timer g;
-	Movement m = new Movement();
-	Collision c = new Collision();
-	int tick;
+	public Timer g;
+	public Movement m = new Movement();
+	public Collision c = new Collision();
+	public int tick;
 
 	public void startGame() {
 		g = new Timer();
@@ -20,10 +20,12 @@ public class Game {
 			@Override
 			public void run() {
 				
-				m.shoot();
 				m.move();
 				c.testC();
 				Main.lvl.levelactualisizer();
+				if(Main.lbl.loadingscreentimer > 0 && Main.lbl.loadscreen) {
+					Main.lbl.loadingscreentimer--;
+				}
 
 				if (Variables.debug) {
 					System.out.println("Px" + Main.lvl.player.x);

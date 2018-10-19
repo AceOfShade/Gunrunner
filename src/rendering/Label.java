@@ -16,10 +16,13 @@ import main.Variables;
 public class Label extends JLabel {
 	private static final long serialVersionUID = 1L;
 	public int pic;
-	public boolean nextPic;
+	public boolean loadscreen;
+	public int loadingscreentimer;
 	
 	public Label() {
 		pic= 1;
+		loadscreen = false;
+		loadingscreentimer = 200;
 	}
 	
 	public void Iconsetzen() {
@@ -39,41 +42,43 @@ public class Label extends JLabel {
 		}
 		
 		if (!Variables.startmenu) {//Wenn du möchtest das etwas wartet, dann verwende Thread.sleep(millis)
-//			if (!Variables.loadscreen) {																			Marco war hier :3
-//				g.drawImage(Variables.loading, Variables.backgroundY1, 1, 800, 600, null);
-//			}
-			switch(pic) {//xd
-			case 1:		g.drawImage(Variables.l1, 0, 0, 800, 600, null);break;
-			
-			case 2:		
-				g.drawImage(Variables.l2, 0, 0, 800, 600, null);;break;
-			
-			default:g.drawImage(Variables.l2, 0, 0, 800, 600, null);;break;
-			}
-			
-			for(int i = 0; i < Main.lvl.enemyObjects.size(); i++) {
-				g.drawImage(Variables.enemy, Main.lvl.enemyObjects.get(i).getX(), Variables.ey, 100, 140, null);
-			}
-			
-
-			// different Playermodels
-			if (Variables.f2) {
-				g.drawImage(Variables.player1, Main.lvl.player.x, Main.lvl.player.y, 100, 140, null);
-			} else if (Variables.moveleft) {
-				g.drawImage(Variables.player1inv, Main.lvl.player.x, Main.lvl.player.y, 100, 140, null);
-			} else {
-				g.drawImage(Variables.e, Main.lvl.player.x, Main.lvl.player.y, 100, 140, null);
-			}
-
-			g.drawString("Health: " + Main.lvl.player.health, 20, 40);
-			g.drawString("Kills: " + Main.lvl.player.kills, 20, 20);
-
-			// painting all Bullets
-			for (int i = 0; i < Main.lvl.shotObjects.size(); i++) {
-				if (Main.lvl.shotObjects.get(i).getX() != Main.lvl.player.x + 75) {
-					g.drawImage(Variables.bullet, Main.lvl.shotObjects.get(i).getX(), Main.lvl.shotObjects.get(i).getY(), 9, 9, null);
-					if (Variables.moveleft) {
-						g.drawImage(Variables.bulletinv, Main.lvl.shotObjects.get(i).getX(), Main.lvl.shotObjects.get(i).getY(), 9, 9, null);
+			if (!loadscreen && loadingscreentimer < 1) {
+				g.drawImage(Variables.loading, Variables.backgroundY1, 1, 800, 600, null);
+				Variables.shot = true;
+			}else {
+				switch(pic) {//xd
+				case 1:		g.drawImage(Variables.l1, 0, 0, 800, 600, null);break;
+				
+				case 2:		
+					g.drawImage(Variables.l2, 0, 0, 800, 600, null);;break;
+				
+				default:g.drawImage(Variables.l2, 0, 0, 800, 600, null);;break;
+				}
+				
+				for(int i = 0; i < Main.lvl.enemyObjects.size(); i++) {
+					g.drawImage(Variables.enemy, Main.lvl.enemyObjects.get(i).getX(), Variables.ey, 100, 140, null);
+				}
+				
+	
+				// different Playermodels
+				if (Variables.f2) {
+					g.drawImage(Variables.player1, Main.lvl.player.x, Main.lvl.player.y, 100, 140, null);
+				} else if (Variables.moveleft) {
+					g.drawImage(Variables.player1inv, Main.lvl.player.x, Main.lvl.player.y, 100, 140, null);
+				} else {
+					g.drawImage(Variables.e, Main.lvl.player.x, Main.lvl.player.y, 100, 140, null);
+				}
+	
+				g.drawString("Health: " + Main.lvl.player.health, 20, 40);
+				g.drawString("Kills: " + Main.lvl.player.kills, 20, 20);
+	
+				// painting all Bullets
+				for (int i = 0; i < Main.lvl.shotObjects.size(); i++) {
+					if (Main.lvl.shotObjects.get(i).getX() != Main.lvl.player.x + 75) {
+						g.drawImage(Variables.bullet, Main.lvl.shotObjects.get(i).getX(), Main.lvl.shotObjects.get(i).getY(), 9, 9, null);
+						if (Variables.moveleft) {
+							g.drawImage(Variables.bulletinv, Main.lvl.shotObjects.get(i).getX(), Main.lvl.shotObjects.get(i).getY(), 9, 9, null);
+						}
 					}
 				}
 			}

@@ -8,13 +8,18 @@ public class Movement {
 	int jh; // max Sprunghöhe von Variables kopiert
 	int e = 0;
 	Sound s = new Sound();
+	Shot a = new Shot();
 	
+	public Movement() {
+		
+	}
 
 	public void shoot() {// Schießen halt
-		Shot a = new Shot();
+	 	
 		e++;
-		if (Variables.shot && e > 5) {
+		if (e > 5) {
 			Main.lvl.shotObjects.add(a);
+			System.out.println(Main.lvl.shotObjects.size());
 			e = 0;
 			s.playSound();
 		} // spawning

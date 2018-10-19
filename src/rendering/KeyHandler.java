@@ -3,6 +3,7 @@ package rendering;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
+import main.Main;
 import main.Variables;
 
 public class KeyHandler implements KeyListener {
@@ -23,7 +24,7 @@ public class KeyHandler implements KeyListener {
 			if (Variables.startmenu) {
 				Variables.startmenu = false;
 			} else {
-				Variables.shot = true;
+				Main.g.m.shoot();
 			}
 		}
 		if (e.getKeyCode() == KeyEvent.VK_F1) {
