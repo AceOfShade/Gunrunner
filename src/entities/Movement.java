@@ -2,41 +2,38 @@ package entities;
 
 import main.Main;
 import main.Variables;
+import rendering.KeyHandler;
 import sound.Sound;
 
 public class Movement {
 	int jh; // max Sprunghöhe von Variables kopiert
 	int e = 0;
 	Sound s;
-	Shot a;
 	
 	public Movement() {
-		try {
-		a = new Shot();
 		s = new Sound();
-		}
-		catch(NullPointerException n){
-			n = null;
-		}
 	}
 
 	public void shoot() {// Schießen halt
 	 	
-		e++;
+		 // spawning
+
+		if(KeyHandler.spacePressed)
+			e++;
 		if (e > 5) {
+			Shot a = new Shot();
 			Main.lvl.shotObjects.add(a);
 			System.out.println(Main.lvl.shotObjects.size());
 			e = 0;
 			s.playSound();
-		} // spawning
-
+		}
 		for(int i = 0; i < Main.lvl.shotObjects.size(); i++) {
 			if(Main.lvl.shotObjects.get(i).right) {
 				Main.lvl.shotObjects.get(i).x += Main.lvl.shotObjects.get(i).speedshot;
 			}else {
 				Main.lvl.shotObjects.get(i).x -= Main.lvl.shotObjects.get(i).speedshot;
 			}
-			if(Main.lvl.shotObjects.get(i).getX() >= 800) {
+			if(Main.lvl.shotObjects.get(i).getX() >= 800 || Main.lvl.shotObjects.get(i).getX() < 0) {
 				Main.lvl.shotObjects.remove(i);
 			}
 			
@@ -45,12 +42,12 @@ public class Movement {
 	}
 
 	public void move() {// bewegung
-		if (Variables.moveright == true) {
+		if (KeyHandler.dPressed) {
 			if (Main.lvl.player.x < 730) {
 				Main.lvl.player.x += Variables.speedright;
 			}
 		}
-		if (Variables.moveleft == true) {
+		if (KeyHandler.aPressed) {
 			if (Main.lvl.player.x > 0) {
 				Main.lvl.player.x -= Variables.speedleft;
 			}
@@ -59,7 +56,7 @@ public class Movement {
 		// Jump
 if(Main.lvl.player.y >= 400) {jh = Variables.jumpheight; } // jump max höhe;
 		
-		if(Variables.moveup && jh != 0){
+		if(KeyHandler.wPressed && jh != 0){
 			if(Main.lvl.player.y>0 ){Main.lvl.player.velY-=Variables.speedjump; } //Sprung ges. hinzugeben (voller Sprung)
 		}else {
 			Main.lvl.player.velY = 0; //Sprung ges. hinzugeben (nicht voller Sprung, solang man w hält)
@@ -78,7 +75,7 @@ if(Main.lvl.player.y >= 400) {jh = Variables.jumpheight; } // jump max höhe;
 			Main.lvl.player.y = 400;
 			}
 		//Jump-Ende
-		if(Variables.debug) {System.out.println("Vel: " + Main.lvl.player.velY + Variables.moveup);}//debug mode
+		if(Variables.debug) {System.out.println("Vel: " + Main.lvl.player.velY + KeyHandler.wPressed);}//debug mode
 
 	}
 }

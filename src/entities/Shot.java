@@ -1,6 +1,7 @@
 package entities;
 
 import main.*;
+import rendering.KeyHandler;
 
 public class Shot extends GameObject{
 	public double speedshot;
@@ -9,7 +10,7 @@ public class Shot extends GameObject{
 	public Shot() {
 		super(Main.lvl.player.x+75, Main.lvl.player.y+85, 9, 9);
 		this.speedshot = Variables.speedshot;
-		if(Variables.moveleft) {
+		if(KeyHandler.aPressed) {
 			right = false;
 		}else {
 			right = true;

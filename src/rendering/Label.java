@@ -44,7 +44,7 @@ public class Label extends JLabel {
 		if (!Variables.startmenu) {//Wenn du möchtest das etwas wartet, dann verwende Thread.sleep(millis)
 			if (!loadscreen && loadingscreentimer < 1) {
 				g.drawImage(Variables.loading, Variables.backgroundY1, 1, 800, 600, null);
-				Variables.shot = true;
+				KeyHandler.wPressed = true;
 			}else {
 				switch(pic) {//xd
 				case 1:		g.drawImage(Variables.l1, 0, 0, 800, 600, null);break;
@@ -63,7 +63,7 @@ public class Label extends JLabel {
 				// different Playermodels
 				if (Variables.f2) {
 					g.drawImage(Variables.player1, Main.lvl.player.x, Main.lvl.player.y, 100, 140, null);
-				} else if (Variables.moveleft) {
+				} else if (KeyHandler.aPressed) {
 					g.drawImage(Variables.player1inv, Main.lvl.player.x, Main.lvl.player.y, 100, 140, null);
 				} else {
 					g.drawImage(Variables.e, Main.lvl.player.x, Main.lvl.player.y, 100, 140, null);
@@ -76,7 +76,7 @@ public class Label extends JLabel {
 				for (int i = 0; i < Main.lvl.shotObjects.size(); i++) {
 					if (Main.lvl.shotObjects.get(i).getX() != Main.lvl.player.x + 75) {
 						g.drawImage(Variables.bullet, Main.lvl.shotObjects.get(i).getX(), Main.lvl.shotObjects.get(i).getY(), 9, 9, null);
-						if (Variables.moveleft) {
+						if (KeyHandler.aPressed) {
 							g.drawImage(Variables.bulletinv, Main.lvl.shotObjects.get(i).getX(), Main.lvl.shotObjects.get(i).getY(), 9, 9, null);
 						}
 					}

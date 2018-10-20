@@ -13,6 +13,9 @@ public class Game {
 	public Movement m = new Movement();
 	public Collision c = new Collision();
 	public int tick;
+	int i = 0;
+	static int a = 0;
+	static boolean startcounting;
 
 	public void startGame() {
 		g = new Timer();
@@ -20,6 +23,14 @@ public class Game {
 			@Override
 			public void run() {
 				
+//				if(startcounting) {// unnötig
+//					if(0 == 0) {
+//						i = 1;
+//					}else if(i > a) {
+//						i = 0;
+//					}
+//				}
+				m.shoot();
 				m.move();
 				c.testC();
 				Main.lvl.levelactualisizer();

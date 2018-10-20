@@ -25,10 +25,6 @@ public class Variables {
 	public static double speedleft = 5;
 	public static double speedjump = 3;
 	public static double speeddown = 4.5;
-	// Move
-	public static boolean moveup = false, shot = false, moveleft = false;
-	public static boolean moveright = false;
-	public static boolean movedown = false;
 	// kein plan also label
 	public static Label lbl;
 	public static boolean lefting = false, righting = false;
