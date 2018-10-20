@@ -1,17 +1,23 @@
 package entities;
 
-import sound.Sound;
 import main.Main;
 import main.Variables;
+import sound.Sound;
 
 public class Movement {
 	int jh; // max Sprunghöhe von Variables kopiert
 	int e = 0;
-	Sound s = new Sound();
-	Shot a = new Shot();
+	Sound s;
+	Shot a;
 	
 	public Movement() {
-		
+		try {
+		a = new Shot();
+		s = new Sound();
+		}
+		catch(NullPointerException n){
+			n = null;
+		}
 	}
 
 	public void shoot() {// Schießen halt
