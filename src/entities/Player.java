@@ -11,7 +11,7 @@ public class Player extends GameObject {
 		velY = 0;
 	}
 	
-	public Player(int x, int y, int health) {
+	public Player(int x, int y, byte health) {
 		super(x, y, 140, 100);
 		this.health = health;
 	}
