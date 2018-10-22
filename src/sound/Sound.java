@@ -1,10 +1,9 @@
 package sound;
 
 import javax.sound.sampled.AudioInputStream;
+
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
-
-import main.Variables;
 import rendering.KeyHandler;
 
 public class Sound {

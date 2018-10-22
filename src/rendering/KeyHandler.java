@@ -1,9 +1,8 @@
 package rendering;
 
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 
-import main.Main;
+import java.awt.event.KeyListener;
 import main.Variables;
 
 public class KeyHandler implements KeyListener {
