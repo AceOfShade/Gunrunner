@@ -37,7 +37,6 @@ public class Variables {
 			hp;
 	// frag fabian
 	public static int jumpheight = 70;
-	public static boolean debug = false;
 	public static int maxShots = 100; // 100 max shots per frame
 	public static boolean f2; // Playerwechsel
 

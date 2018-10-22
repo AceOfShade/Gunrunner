@@ -75,7 +75,7 @@ if(Main.lvl.player.y >= 400) {jh = Variables.jumpheight; } // jump max höhe;
 			Main.lvl.player.y = 400;
 			}
 		//Jump-Ende
-		if(Variables.debug) {System.out.println("Vel: " + Main.lvl.player.velY + KeyHandler.wPressed);}//debug mode
+		if(KeyHandler.f1Pressed) {System.out.println("Vel: " + Main.lvl.player.velY + KeyHandler.wPressed);}//debug mode
 
 	}
 }

@@ -7,6 +7,7 @@ import entities.Movement;
 //import entities.Player;
 //import rendering.Collision;
 import rendering.Collision;
+import rendering.KeyHandler;
 
 public class Game {
 	public Timer g;
@@ -38,7 +39,7 @@ public class Game {
 					Main.lbl.loadingscreentimer--;
 				}
 
-				if (Variables.debug) {
+				if (KeyHandler.f1Pressed) {
 					System.out.println("Px" + Main.lvl.player.x);
 					System.out.println("Py" + Main.lvl.player.y);
 				}
