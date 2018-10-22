@@ -49,7 +49,7 @@ public class Variables {
 			start = ImageIO.read(Variables.class.getResourceAsStream("/start.png"));
 			icon = ImageIO.read(Variables.class.getResourceAsStream("/iconi.png"));
 			bullet = ImageIO.read(Variables.class.getResourceAsStream("/patrone.png"));
-			bulletinv = ImageIO.read(Variables.class.getResourceAsStream("/patroneinv.png"));
+			bulletinv = ImageIO.read(Variables.class.getResourceAsStream("/patroneInv.png"));
 			enemy = ImageIO.read(Variables.class.getResourceAsStream("/gegner1.png"));
 			player1 = ImageIO.read(Variables.class.getResourceAsStream("/playermodel.png"));
 			player1inv = ImageIO.read(Variables.class.getResourceAsStream("/player3inv.png"));

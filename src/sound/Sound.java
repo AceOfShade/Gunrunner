@@ -8,7 +8,7 @@ import javax.sound.sampled.Clip;
 public class Sound {
 	public void playSound() {
 	    try {
-	        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(Sound.class.getResourceAsStream("/gunsound.wav"));
+	        AudioInputStream audioInputStream = AudioSystem.getAudioInputStream(getClass().getResource("/gunsound.wav"));
 	        Clip clip = AudioSystem.getClip();
 	        clip.open(audioInputStream);
 	        clip.start();
