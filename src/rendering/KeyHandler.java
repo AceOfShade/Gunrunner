@@ -11,7 +11,7 @@ public class KeyHandler implements KeyListener {
 	@Override
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_W) {
-			
+			wPressed = true;
 		}
 
 		if (e.getKeyCode() == KeyEvent.VK_A) {
@@ -27,7 +27,7 @@ public class KeyHandler implements KeyListener {
 				KeyHandler.spacePressed = true;
 			}
 		}
-		if (e.getKeyCode() == KeyEvent.VK_F1) {
+		if (e.getKeyCode() == KeyEvent.VK_F1){
 			f1Pressed = true;
 		}
 		if (e.getKeyCode() == KeyEvent.VK_F2) {
