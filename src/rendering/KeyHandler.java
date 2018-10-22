@@ -32,7 +32,7 @@ public class KeyHandler implements KeyListener {
 		}
 		if (e.getKeyCode() == KeyEvent.VK_F2) {
 			if (f2Pressed) {
-				aPressed = true;
+				f2Pressed = false;
 			} else {
 				f2Pressed = true;
 			}
