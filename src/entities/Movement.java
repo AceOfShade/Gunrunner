@@ -35,10 +35,8 @@ public class Movement {
 			}
 			if(Main.lvl.shotObjects.get(i).getX() >= 800 || Main.lvl.shotObjects.get(i).getX() < 0) {
 				Main.lvl.shotObjects.remove(i);
-			}
-			
+			}	
 		}
-		
 	}
 
 	public void move() {// bewegung
@@ -76,6 +74,5 @@ if(Main.lvl.player.y >= 400) {jh = Variables.jumpheight; } // jump max höhe;
 			}
 		//Jump-Ende
 		if(KeyHandler.f1Pressed) {System.out.println("Vel: " + Main.lvl.player.velY + KeyHandler.wPressed);}//debug mode
-
 	}
 }
