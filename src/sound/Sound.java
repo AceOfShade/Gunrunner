@@ -1,5 +1,7 @@
 package sound;
-
+/**
+ * This is a class for sounds of the gameplay
+ */
 import javax.sound.sampled.AudioInputStream;
 
 import javax.sound.sampled.AudioSystem;

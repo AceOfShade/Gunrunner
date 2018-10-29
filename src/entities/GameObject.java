@@ -1,5 +1,9 @@
 package entities;
 
+/**
+ *
+ * This is an Abstract Game object class used as a base for further implementations 
+ */
 public abstract class GameObject {
 	public int x, y, w, h;
 
