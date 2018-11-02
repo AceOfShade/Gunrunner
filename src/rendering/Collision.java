@@ -2,6 +2,7 @@ package rendering;
 
 import entities.GameObject;
 import main.Main;
+import entities.Enemy;
 
 public class Collision {
 
@@ -9,6 +10,7 @@ public class Collision {
 		for(int i = 0; i< 0; i++) {
 			if(rectangleRectangleCollision(Main.lvl.player, Main.lvl.shotObjects.get(i))) {
 				System.out.println("C: S-E");
+				Enemy.bodycollision =true;
 			}
 			
 		}
