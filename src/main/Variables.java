@@ -34,7 +34,7 @@ public class Variables {
 	public static int sy;
 	public static int sx;
 	// Bilder
-	public static BufferedImage l1, l2, loading, start, player1, player1inv, e, bullet, bulletinv, enemy, icon, kill,
+	public static BufferedImage l1, l2, loading, start, player1, player1inv, e, bullet, bulletinv, enemy,enemydead, icon, kill,
 			hp;
 	// frag fabian
 	public static int jumpheight = 70;
@@ -52,6 +52,7 @@ public class Variables {
 			bullet = ImageIO.read(Variables.class.getResourceAsStream("/patrone.png"));
 			bulletinv = ImageIO.read(Variables.class.getResourceAsStream("/patroneInv.png"));
 			enemy = ImageIO.read(Variables.class.getResourceAsStream("/gegner1.png"));
+			enemydead= ImageIO.read(Variables.class.getResourceAsStream("/deadenemy.png"));
 			player1 = ImageIO.read(Variables.class.getResourceAsStream("/playermodel.png"));
 			player1inv = ImageIO.read(Variables.class.getResourceAsStream("/player3inv.png"));
 			e = ImageIO.read(Variables.class.getResourceAsStream("/player3.png"));
