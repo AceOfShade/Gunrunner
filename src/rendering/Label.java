@@ -84,6 +84,10 @@ public class Label extends JLabel {
 					}
 				}
 			}
+			if(KeyHandler.escPressed){
+				Variables.startmenu =true;
+			}
+			
 		} else {
 			g.drawImage(Variables.start, 0, Variables.backgroundY1, 800, 600, null);
 		}

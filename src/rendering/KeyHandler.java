@@ -6,7 +6,7 @@ import java.awt.event.KeyListener;
 import main.Variables;
 
 public class KeyHandler implements KeyListener {
-	public static boolean wPressed, aPressed, dPressed, spacePressed, f2Pressed, f1Pressed;
+	public static boolean wPressed, aPressed, dPressed, spacePressed, f2Pressed, f1Pressed, escPressed;
 
 	@Override
 	public void keyPressed(KeyEvent e) {
@@ -78,7 +78,9 @@ public class KeyHandler implements KeyListener {
 		case KeyEvent.VK_M: break;
 		case KeyEvent.VK_SPACE: break;
 		case KeyEvent.VK_SHIFT: break;
-		
+		case KeyEvent.VK_ESCAPE: 
+			escPressed=true;
+			break;
 		}
 	}
 
@@ -95,6 +97,9 @@ public class KeyHandler implements KeyListener {
 		}
 		if (e.getKeyCode() == KeyEvent.VK_D) {
 			dPressed = false;
+		}
+		if(e.getKeyCode()== KeyEvent.VK_ESCAPE) {
+			escPressed=false;
 		}
 	}
 
