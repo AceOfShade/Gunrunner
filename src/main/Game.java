@@ -34,7 +34,7 @@ public class Game {
 				m.shoot();
 				m.move();
 				c.testC();
-				//Main.lvl.levelupdater();
+				Main.lvl.levelupdater();
 				if(Main.lbl.loadingscreentimer > 0 && Main.lbl.loadscreen) {
 					Main.lbl.loadingscreentimer--;
 				}
