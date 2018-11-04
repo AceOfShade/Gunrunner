@@ -15,7 +15,7 @@ public class Enemy extends GameObject {
 
 	@Override
 	public void render() {
-		// TODO Auto-generated method stub
+		
 		
 	}
 }
