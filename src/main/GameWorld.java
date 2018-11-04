@@ -20,11 +20,13 @@ public class GameWorld {
 	}
 			
 	
-	public void levelactualisizer() { // so richtig falsch geschrieben
-	}
 	
-	public void levelgenerator() {
+	  	public void levelupdater() { // so richtig falsch geschrieben
+	 
+		}
+	
+		public void levelgenerator() {
 		
-	}
+		}
 	
 }

@@ -33,10 +33,10 @@ public class Label extends JLabel {
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-		if (Main.lvl.player.getX() + Main.lvl.player.getW() >= 800 && pic < 2 && pic >=0) {
+		if (Main.lvl.player.getX() + Main.lvl.player.getW() >= 800 && pic < 3 && pic >=0) {
 			pic++;
 			Main.lvl.player.x = 10;
-		}else if (Main.lvl.player.getX() <= 5 && pic <= 2 && pic >1) {
+		}else if (Main.lvl.player.getX() <= 5 && pic <= 3 && pic >1) {
 			pic--;
 			Main.lvl.player.x = 790 - Main.lvl.player.getW();
 		}
@@ -46,13 +46,15 @@ public class Label extends JLabel {
 				g.drawImage(Variables.loading, Variables.backgroundY1, 1, 800, 600, null);
 				KeyHandler.wPressed = true;
 			}else {
-				switch(pic) {//xd
-				case 1:		g.drawImage(Variables.l1, 0, 0, 800, 600, null);break;
+				switch(pic) {//Levelupdater/changer
+				case 1:	g.drawImage(Variables.l1, 0, 0, 800, 600, null);break;
 				
 				case 2:		
-					g.drawImage(Variables.l2, 0, 0, 800, 600, null);;break;
-				
-				default:g.drawImage(Variables.l2, 0, 0, 800, 600, null);;break;
+					  g.drawImage(Variables.l2, 0, 0, 800, 600, null);;break;
+				case 3:
+					g.drawImage(Variables.l3, 0, 0, 800, 600, null); break;
+					
+				default:g.drawImage(Variables.loading, 0, 0, 800, 600, null);;break;
 				}
 				
 				for(int i = 0; i < Main.lvl.enemyObjects.size(); i++) {
@@ -82,6 +84,10 @@ public class Label extends JLabel {
 					}
 				}
 			}
+			if(KeyHandler.escPressed){
+				Variables.startmenu =true;
+			}
+			
 		} else {
 			g.drawImage(Variables.start, 0, Variables.backgroundY1, 800, 600, null);
 		}

@@ -16,7 +16,7 @@ public class Main {
 	public static Sound s;
 	public static GameWorld lvl;
 	public static Movement mov;
-	
+	public static Collision c;
 	
 	
 
@@ -30,5 +30,6 @@ public class Main {
 		lvl= new GameWorld();
 		mov= new Movement();
 		g.startGame();
+		
 	}
 }
