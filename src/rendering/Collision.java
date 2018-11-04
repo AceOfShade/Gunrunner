@@ -24,7 +24,7 @@ public class Collision {
 		
 	public boolean rectangleRectangleCollision(GameObject a, GameObject b) {
 		if ((a.getX()) + a.getW() <= b.getX() + b.getW()) { // +58 because of the detection area behind the enemy
-			if ((a.getX() + 80) + a.getX() >= b.getW()) { // +80 because of the detection area before the enemy
+			if ((a.getX()) + a.getX() >= b.getW()) { // +80 because of the detection area before the enemy
 				if (a.getY() + a.getH() <= b.getY() + b.getH()) {
 					if (a.getY() + a.getH() >= b.getY()) {
 						System.out.println("C");
