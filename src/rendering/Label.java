@@ -70,7 +70,7 @@ public class Label extends JLabel {
 				} else {
 					g.drawImage(Variables.e, Main.lvl.player.x, Main.lvl.player.y, 100, 140, null);
 				}
-	
+				g.setColor(Color.RED);
 				g.drawString("Health: " + Main.lvl.player.health, 20, 40);
 				g.drawString("Kills: " + Main.lvl.player.kills, 20, 20);
 	
@@ -84,7 +84,7 @@ public class Label extends JLabel {
 					}
 				}
 			}
-			if(KeyHandler.escPressed){
+			if(KeyHandler.escPressed  ){
 				Variables.startmenu =true;
 			}
 			
