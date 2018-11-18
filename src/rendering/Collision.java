@@ -11,6 +11,8 @@ public class Collision {
 		for(Enemy e : Main.lvl.enemyObjects) {
 			if(collisionRect(Main.lvl.player, e)) {
 				System.out.println("C: P-E");
+			}else {
+				System.out.println("LLL");
 			}
 		}
 		
@@ -24,6 +26,7 @@ public class Collision {
 	}
 	
 	public boolean collisionRect(GameObject r1, GameObject r2){
-	    return r1.y < r2.y + r2.h && r1.y + r1.h > r2.x && r1.x + r1.w > r2.x && r1.x < r2.x + r2.w;
+		return r1.x + r1.w > r2.x && r1.y + r1.h > r2.x && r2.x + r2.w > r1.x && r2.y + r2.h > r1.y;
+//	    return r1.y < r2.y + r2.h && r1.y + r1.h > r2.x && r1.x + r1.w > r2.x && r1.x < r2.x + r2.w;
 	}
 }

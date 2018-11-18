@@ -14,7 +14,6 @@ public class Enemy extends GameObject {
 		this.health = health;
 	}
 
-	@Override
 	public void render() {
 		// TODO Auto-generated method stub
 		if(bodycollision) {

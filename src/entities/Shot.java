@@ -16,7 +16,7 @@ public class Shot extends GameObject{
 			right = true;
 		}
 	}
-	@Override
+	
 	public void render() {
 		// TODO Auto-generated method stub
 		
