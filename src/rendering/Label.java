@@ -74,7 +74,7 @@ public class Label extends JLabel {
 				}
 				
 				for(int i = 0; i < Main.lvl.enemyObjects.size(); i++) {
-					g.drawImage(Variables.enemy, Main.lvl.enemyObjects.get(i).getX(), Variables.ey, 100, 140, null);
+					g.drawImage(Variables.enemy, Main.lvl.enemyObjects.get(i).getX(), Main.lvl.enemyObjects.get(i).getY(), Main.lvl.enemyObjects.get(i).getW(), Main.lvl.enemyObjects.get(i).getH(), null);
 				}
 				
 	
