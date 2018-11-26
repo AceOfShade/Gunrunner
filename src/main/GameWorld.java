@@ -13,10 +13,12 @@ public class GameWorld {
 	
 	public GameWorld() {
 		player = new Player(350, 400);
-		enemyObjects = new ArrayList<>();
+		enemyObjects = new ArrayList<Enemy>(1);
 		shotObjects = new ArrayList<>();
 		Enemy e = new Enemy(600,400);
+		Enemy e1 = new Enemy(700,400);
 		enemyObjects.add(e);
+		enemyObjects.add(e1);
 	}
 			
 	

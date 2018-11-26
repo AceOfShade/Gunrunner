@@ -8,7 +8,9 @@ import entities.Enemy;
 public class Collision {
 
 	public void testC(){
-		for(Enemy e : Main.lvl.enemyObjects) {
+		Enemy e = null;
+		for(int i = 0;i < Main.lvl.enemyObjects.size();i++) {
+			e = Main.lvl.enemyObjects.get(i);
 			if(collisionRect(Main.lvl.player, e)) {
 				System.out.println("C: P-E");
 			}else {
@@ -16,9 +18,9 @@ public class Collision {
 			}
 		}
 		
-		for(Shot e : Main.lvl.shotObjects) {
+		for(Shot s : Main.lvl.shotObjects) {
 			for(Enemy f : Main.lvl.enemyObjects){
-				if(collisionRect(f, e)) {
+				if(collisionRect(f, s)) {
 					System.out.println("C: S-E");
 				}
 			}
