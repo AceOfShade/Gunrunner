@@ -4,7 +4,7 @@ package entities;
  *
  * This is an Abstract Game object class used as a base for further implementations 
  */
-public abstract class GameObject {
+public class GameObject {
 	public int x, y, w, h;
 
 	public GameObject(int x, int y, int w, int h) {
@@ -14,7 +14,7 @@ public abstract class GameObject {
 		this.h = h;
 	}
 	
-	public abstract void render();
+//	public abstract void render();
 
 	public int getX() {
 		return x;

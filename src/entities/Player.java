@@ -6,7 +6,7 @@ public class Player extends GameObject {
 	int velY;
 
 	public Player(int x, int y) {
-		super(x, y, 140, 100);
+		super(x, y, 100, 140);
 		this.health = 3;
 		velY = 0;
 	}
@@ -16,7 +16,6 @@ public class Player extends GameObject {
 		this.health = health;
 	}
 
-	@Override
 	public void render() {
 		
 		

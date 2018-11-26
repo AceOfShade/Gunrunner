@@ -13,9 +13,9 @@ public class GameWorld {
 	
 	public GameWorld() {
 		player = new Player(350, 400);
-		enemyObjects = new ArrayList<>(2);
-		shotObjects = new ArrayList<>(20);
-		Enemy e = new Enemy(700, 400);
+		enemyObjects = new ArrayList<>();
+		shotObjects = new ArrayList<>();
+		Enemy e = new Enemy(600,400);
 		enemyObjects.add(e);
 	}
 			
