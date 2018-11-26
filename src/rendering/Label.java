@@ -33,20 +33,11 @@ public class Label extends JLabel {
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+		
 		if(pic==1 && Main.lvl.player.kills >=5) {
-			if(pic==2 && Main.lvl.player.kills >=10) {
-				//after 10 kills
-				if (Main.lvl.player.getX() + Main.lvl.player.getW() >= 800 && pic < 3 && pic >=0) {
-					pic++;
-					Main.lvl.player.x = 10;
-				}
-//				else if (Main.lvl.player.getX() <= 5 && pic <= 3 && pic >1) {
-//					pic--;
-//					Main.lvl.player.x = 790 - Main.lvl.player.getW();
-//				}
-			}
+			
 			//After 5 Kills
-			if (Main.lvl.player.getX() + Main.lvl.player.getW() >= 800 && pic < 2 && pic >=0) {
+			if (Main.lvl.player.getX() + Main.lvl.player.getW() >= 800 && pic < 3 && pic >=0) {
 				pic++;
 				Main.lvl.player.x = 10;
 			}
@@ -56,6 +47,19 @@ public class Label extends JLabel {
 //			}
 			
 		}
+		//after 10 kills
+		if(pic==2 && Main.lvl.player.kills >=10) {
+			
+			if (Main.lvl.player.getX() + Main.lvl.player.getW() >= 800 && pic < 3 && pic >=0) {
+				pic++;
+				Main.lvl.player.x = 10;
+			}
+//			else if (Main.lvl.player.getX() <= 5 && pic <= 3 && pic >1) {
+//				pic--;
+//				Main.lvl.player.x = 790 - Main.lvl.player.getW();
+//			}
+		}
+		
 		
 		if (!Variables.startmenu) {
 			if (!loadscreen && loadingscreentimer < 1) {
