@@ -33,15 +33,31 @@ public class Label extends JLabel {
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
-		if (Main.lvl.player.getX() + Main.lvl.player.getW() >= 800 && pic < 3 && pic >=0) {
-			pic++;
-			Main.lvl.player.x = 10;
-		}else if (Main.lvl.player.getX() <= 5 && pic <= 3 && pic >1) {
-			pic--;
-			Main.lvl.player.x = 790 - Main.lvl.player.getW();
+		if(pic==1 && Main.lvl.player.kills >=5) {
+			if(pic==2 && Main.lvl.player.kills >=10) {
+				//after 10 kills
+				if (Main.lvl.player.getX() + Main.lvl.player.getW() >= 800 && pic < 3 && pic >=0) {
+					pic++;
+					Main.lvl.player.x = 10;
+				}
+//				else if (Main.lvl.player.getX() <= 5 && pic <= 3 && pic >1) {
+//					pic--;
+//					Main.lvl.player.x = 790 - Main.lvl.player.getW();
+//				}
+			}
+			//After 5 Kills
+			if (Main.lvl.player.getX() + Main.lvl.player.getW() >= 800 && pic < 2 && pic >=0) {
+				pic++;
+				Main.lvl.player.x = 10;
+			}
+//			else if (Main.lvl.player.getX() <= 5 && pic <= 2 && pic >1) {
+//				pic--;
+//				Main.lvl.player.x = 790 - Main.lvl.player.getW();
+//			}
+			
 		}
 		
-		if (!Variables.startmenu) {//Wenn du möchtest das etwas wartet, dann verwende Thread.sleep(millis)
+		if (!Variables.startmenu) {
 			if (!loadscreen && loadingscreentimer < 1) {
 				g.drawImage(Variables.loading, Variables.backgroundY1, 1, 800, 600, null);
 				KeyHandler.wPressed = true;
@@ -87,10 +103,14 @@ public class Label extends JLabel {
 			if(KeyHandler.escPressed  ){
 				Variables.startmenu =true;
 			}
+			if(KeyHandler.kPressed) {
+				Main.lvl.player.kills++;
+			}
 			
 		} else {
 			g.drawImage(Variables.start, 0, Variables.backgroundY1, 800, 600, null);
 		}
 		repaint();
 	}
+	
 }

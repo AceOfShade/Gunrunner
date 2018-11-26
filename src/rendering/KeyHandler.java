@@ -1,16 +1,13 @@
 package rendering;
 
 import java.awt.event.KeyEvent;
-
 import java.awt.event.KeyListener;
-import java.util.Scanner;
 
 import main.Variables;
 
-/** sieg heil */
 public class KeyHandler implements KeyListener {
 	public static char lastPressed;
-	public static boolean wPressed, aPressed, dPressed, spacePressed, f2Pressed, f1Pressed, escPressed;
+	public static boolean kPressed, wPressed, aPressed, dPressed, spacePressed, f2Pressed, f1Pressed, escPressed;
 	@Override
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_W) {
@@ -36,6 +33,9 @@ public class KeyHandler implements KeyListener {
 		if (e.getKeyCode() == KeyEvent.VK_F2) {
 			f2Pressed = !f2Pressed;
 		}
+		if(e.getKeyCode()== KeyEvent.VK_K) {
+			kPressed=true;
+		}
 	}
 
 	@Override
@@ -54,6 +54,9 @@ public class KeyHandler implements KeyListener {
 		}
 		if(e.getKeyCode()== KeyEvent.VK_ESCAPE) {
 			escPressed=false;
+		}
+		if(e.getKeyCode()== KeyEvent.VK_K) {
+			kPressed=false;
 		}
 	}
 
