@@ -13,10 +13,16 @@ public class KeyHandler implements KeyListener {
 		if (e.getKeyCode() == KeyEvent.VK_W) {
 			wPressed = true;
 		}
-
+//		if (e.getKeyCode() == KeyEvent.VK_W) {
+//			lastPressed = 'w';
+//		}
+//
 		if (e.getKeyCode() == KeyEvent.VK_A) {
 			aPressed = true;
 		}
+//		if (e.getKeyCode() == KeyEvent.VK_A) {
+//			lastPressed = 'a';
+//		}
 		if (e.getKeyCode() == KeyEvent.VK_D) {
 			dPressed = true;
 		}
