@@ -70,11 +70,11 @@ public class Label extends JLabel {
 				case 1:	g.drawImage(Variables.l1, 0, 0, 800, 600, null);break;
 				
 				case 2:		
-					  g.drawImage(Variables.l2, 0, 0, 800, 600, null);;break;
+					  g.drawImage(Variables.l2, 0, 0, 800, 600, null);break;
 				case 3:
 					g.drawImage(Variables.l3, 0, 0, 800, 600, null); break;
 					
-				default:g.drawImage(Variables.loading, 0, 0, 800, 600, null);;break;
+				default:g.drawImage(Variables.loading, 0, 0, 800, 600, null);break;
 				}
 				
 				for(int i = 0; i < Main.lvl.enemyObjects.size(); i++) {
