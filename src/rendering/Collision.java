@@ -13,8 +13,6 @@ public class Collision {
 			e = Main.lvl.enemyObjects.get(i);
 			if(collisionRect(Main.lvl.player, e)) {
 				System.out.println("C: P-E");
-			}else {
-				System.out.println("LLL");
 			}
 		}
 		
@@ -27,8 +25,7 @@ public class Collision {
 		}
 	}
 	
-	public boolean collisionRect(GameObject r1, GameObject r2){
-		return r1.x + r1.w > r2.x && r1.y + r1.h > r2.x && r2.x + r2.w > r1.x && r2.y + r2.h > r1.y;
-//	    return r1.y < r2.y + r2.h && r1.y + r1.h > r2.x && r1.x + r1.w > r2.x && r1.x < r2.x + r2.w;
+	public boolean collisionRect(GameObject r1, GameObject r2){ // - r2.h war die scheße weswegen es nicht funktioniert hat
+		return r1.x + r1.w > r2.x && r1.y + r1.h > r2.x -r2.h && r2.x + r2.w > r1.x && r2.y + r2.h > r1.y;
 	}
 }
