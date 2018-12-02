@@ -28,15 +28,16 @@ public class Collision {
 				}
 				e= null;
 			}
+			System.out.println(s);
 			s = null;
 		}
 	}
 	
 	public boolean collisionRect(GameObject r1, GameObject r2){ // - r2.h war die scheße weswegen es nicht funktioniert hat
 		if(r1.x + r1.w > r2.x) {
-			if(r1.y + r1.h > r2.x -r2.h) {
-				if(r2.x + r2.w > r1.x) {
-					if(r2.y + r2.h > r1.y) {
+			if(r1.y + r1.h > r2.h) {
+				if(r2.x + r2.w < r1.x) {
+					if(r2.y - r2.h > r1.y) {
 						return true;
 					}
 				}
