@@ -13,9 +13,8 @@ public class Enemy extends GameObject {
 		super(x, y, 100, 140);
 		this.health = health;
 	}
-
+	
 	public void render() {
-		// TODO Auto-generated method stub
 		if(bodycollision) {
 			health--;
 			Enemy.bodycollision=false;
