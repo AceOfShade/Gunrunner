@@ -1,18 +1,16 @@
 package rendering;
 
 import java.awt.Color;
+
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
-import java.io.File;
-import javax.imageio.ImageIO;
 import javax.swing.JLabel;
 
-import entities.Player;
 import main.Main;
 import main.Variables;
 
-@SuppressWarnings("unused")
+
 public class Label extends JLabel {
 	private static final long serialVersionUID = 1L;
 	public int pic;
@@ -86,7 +84,7 @@ public class Label extends JLabel {
 				if (Variables.f2) {
 					g.drawImage(Variables.player1, Main.lvl.player.x, Main.lvl.player.y, 100, 140, null);
 				} else if (KeyHandler.aPressed) {
-					g.drawImage(Variables.player1inv, Main.lvl.player.x, Main.lvl.player.y, 100, 140, null);
+					g.drawImage(Variables.playerwpinv, Main.lvl.player.x, Main.lvl.player.y, 100, 140, null);
 				} else {
 					g.drawImage(Variables.e, Main.lvl.player.x, Main.lvl.player.y, 100, 140, null);
 				}
