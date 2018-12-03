@@ -4,6 +4,7 @@ public class Player extends GameObject {
 	public int kills = 0; // kills from player
 	public int health; // player health
 	int velY;
+	public static int jumpheight = 70;
 
 	public Player(int x, int y) {
 		super(x, y, 100, 140);

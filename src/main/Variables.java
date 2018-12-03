@@ -23,17 +23,14 @@ public class Variables {
 	
 	// kein plan also label
 	public static Label lbl;
-	public static boolean lefting = false, righting = false;
 	public static boolean startmenu = true;
 	// Schuss X und Y
 	public static int sy;
 	public static int sx;
 	// Bilder
-	public static BufferedImage l1, l2, l3, loading, start, player1, player1inv, e, bullet, bulletinv, enemy,enemydead, icon, kill,
-			hp;
+	public static BufferedImage l1, l2, l3, loading, start, player1, player1inv, e, bullet, bulletinv, enemy,enemydead, icon, kill, hp;
 	// frag fabian
-	public static int jumpheight = 70;
-	public static int maxShots = 100; // 100 max shots per frame
+
 	public static boolean f2; // Playerwechsel
 
 	// Constructor

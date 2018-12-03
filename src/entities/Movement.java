@@ -52,7 +52,7 @@ public class Movement {
 		}
 
 		// Jump
-if(Main.lvl.player.y >= 400) {jh = Variables.jumpheight; } // jump max höhe;
+if(Main.lvl.player.y >= 400) {jh = Player.jumpheight; } // jump max höhe;
 		
 		if(KeyHandler.wPressed && jh != 0){
 			if(Main.lvl.player.y>0 ){Main.lvl.player.velY-=Variables.speedjump; } //Sprung ges. hinzugeben (voller Sprung)
