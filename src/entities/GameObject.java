@@ -8,6 +8,7 @@ public class GameObject {
 	public int x, y, w, h;
 
 	public GameObject(int x, int y, int w, int h) {
+		super();
 		this.x = x;
 		this.y = y;
 		this.w = w;
