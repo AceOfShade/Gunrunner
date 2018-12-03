@@ -14,9 +14,6 @@ public class Variables {
 	public static int screenhight = 600;
 	public static int backgroundY1 = 0;
 	public static int x = 400, y = 400;
-	// Enemy
-	public static int eheight = 100; // Enemy hight
-	public static int ewidth = 140; // Enemy width
 
 	public static int speedshot = 30;
 	public static double speedright = 5;
