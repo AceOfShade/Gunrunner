@@ -76,17 +76,17 @@ public class Label extends JLabel {
 				}
 				
 				for(int i = 0; i < Main.lvl.enemyObjects.size(); i++) {
-					g.drawImage(Variables.enemy, Main.lvl.enemyObjects.get(i).getX(), Main.lvl.enemyObjects.get(i).getY(), Main.lvl.enemyObjects.get(i).getW(), Main.lvl.enemyObjects.get(i).getH(), null);
+					g.drawImage(Variables.enemy, (int)(Main.lvl.enemyObjects.get(i).getX()), (int)(Main.lvl.enemyObjects.get(i).getY()), Main.lvl.enemyObjects.get(i).getW(), Main.lvl.enemyObjects.get(i).getH(), null);
 				}
 				
 	
 				// different Playermodels
 				if (Variables.f2) {
-					g.drawImage(Variables.player1, Main.lvl.player.x, Main.lvl.player.y, 100, 140, null);
+					g.drawImage(Variables.player1, (int)(Main.lvl.player.x), (int)(Main.lvl.player.y), 100, 140, null);
 				} else if (KeyHandler.aPressed) {
-					g.drawImage(Variables.playerwpinv, Main.lvl.player.x, Main.lvl.player.y, 100, 140, null);
+					g.drawImage(Variables.playerwpinv, (int)(Main.lvl.player.x), (int)(Main.lvl.player.y), 100, 140, null);
 				} else {
-					g.drawImage(Variables.playerwp, Main.lvl.player.x, Main.lvl.player.y, 100, 140, null);
+					g.drawImage(Variables.playerwp, (int)(Main.lvl.player.x), (int)(Main.lvl.player.y), 100, 140, null);
 				}
 				g.setColor(Color.RED);
 				g.drawString("Health: " + Main.lvl.player.health, 20, 40);
@@ -95,9 +95,9 @@ public class Label extends JLabel {
 				// painting all Bullets
 				for (int i = 0; i < Main.lvl.shotObjects.size(); i++) {
 					if (Main.lvl.shotObjects.get(i).getX() != Main.lvl.player.x + 75) {
-						g.drawImage(Variables.bullet, Main.lvl.shotObjects.get(i).getX(), Main.lvl.shotObjects.get(i).getY(), 9, 9, null);
+						g.drawImage(Variables.bullet, (int)(Main.lvl.shotObjects.get(i).getX()), (int)(Main.lvl.shotObjects.get(i).getY()), 9, 9, null);
 						if (KeyHandler.aPressed) {
-							g.drawImage(Variables.bulletinv, Main.lvl.shotObjects.get(i).getX(), Main.lvl.shotObjects.get(i).getY(), 9, 9, null);
+							g.drawImage(Variables.bulletinv, (int)(Main.lvl.shotObjects.get(i).getX()), (int)(Main.lvl.shotObjects.get(i).getY()), 9, 9, null);
 						}
 					}
 				}

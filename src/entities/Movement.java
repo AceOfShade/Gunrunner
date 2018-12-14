@@ -20,7 +20,7 @@ public class Movement {
 
 		if(KeyHandler.spacePressed)
 			e++;
-		if (e > 5) {
+		if (e > 200) {
 			Shot a = new Shot();
 			Main.lvl.shotObjects.add(a);
 			System.out.println(Main.lvl.shotObjects.size());

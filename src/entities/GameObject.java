@@ -4,24 +4,24 @@ package entities;
  *
  * This is an Abstract Game object class used as a base for further implementations 
  */
-public class GameObject {
-	public int x, y, w, h;
+public class GameObject {	public float x, y;
+public int w, h;
 
-	public GameObject(int x, int y, int w, int h) {
+	public GameObject(float f, float g, int w, int h) {
 		super();
-		this.x = x;
-		this.y = y;
+		this.x = f;
+		this.y = g;
 		this.w = w;
 		this.h = h;
 	}
 	
 //	public abstract void render();
 
-	public int getX() {
+	public float getX() {
 		return x;
 	}
 
-	public int getY() {
+	public float getY() {
 		return y;
 	}
 

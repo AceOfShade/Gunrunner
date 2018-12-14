@@ -3,8 +3,8 @@ package entities;
 public class Player extends GameObject {
 	public int kills = 0; // kills from player
 	public int health; // player health
-	int velY;
-	public static int jumpheight = 70;
+	float velY;
+	public static int jumpheight = 250;
 	public String waffe;
 	
 	public Player(int x, int y) {
