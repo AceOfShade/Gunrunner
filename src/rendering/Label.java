@@ -86,7 +86,7 @@ public class Label extends JLabel {
 				} else if (KeyHandler.aPressed) {
 					g.drawImage(Variables.playerwpinv, Main.lvl.player.x, Main.lvl.player.y, 100, 140, null);
 				} else {
-					g.drawImage(Variables.e, Main.lvl.player.x, Main.lvl.player.y, 100, 140, null);
+					g.drawImage(Variables.playerwp, Main.lvl.player.x, Main.lvl.player.y, 100, 140, null);
 				}
 				g.setColor(Color.RED);
 				g.drawString("Health: " + Main.lvl.player.health, 20, 40);
