@@ -1,4 +1,4 @@
-package Edvin;
+package abilitys;
 
 public class Waffe {
 
