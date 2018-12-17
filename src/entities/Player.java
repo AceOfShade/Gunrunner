@@ -1,6 +1,6 @@
 package entities;
 
-import Edvin.Waffe;
+import abilitys.Waffe;
 
 public class Player extends GameObject {
 	public int kills = 0; // kills from player
