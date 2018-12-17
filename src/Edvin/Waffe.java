@@ -2,8 +2,7 @@ package Edvin;
 
 public class Waffe {
 
-	 public int x, y;
-	 public int shotX, shotY;
+	 public static int shotX, shotY;
 	 
 	public void waffe(String name) {
 		switch(name) {
@@ -13,10 +12,10 @@ public class Waffe {
 	}
 		 
 		 public void set(int x, int y, int shotX, int shotY) {
-			 this.x = x;
-			 this.y = y;
-			 this.shotX = shotX;
-			 this.shotY = shotY;
+//			 this.x = x;
+//			 this.y = y;
+			 Waffe.shotX = shotX;
+			 Waffe.shotY = shotY;
 		 }
 	
 }
