@@ -1,17 +1,22 @@
 package Edvin;
 
 public class Waffe {
-	public Waff waffe(String name) {
-		Waff w = null;
+
+	 public int x, y;
+	 public int shotX, shotY;
+	 
+	public void waffe(String name) {
 		switch(name) {
-		case"MP7" : w = new Waff();break;
-		case"Pistole" : w = new Waff();break;
+		case"MP7" : set(0,0,0,0);break;
+		case"Pistole" : set(0,0,89,73);break;
 		}
-		return w;
 	}
-	public class Waff{
-		 public String name;
-		 public int x, y;
-		 public int shotX, shotY;
-	}
+		 
+		 public void set(int x, int y, int shotX, int shotY) {
+			 this.x = x;
+			 this.y = y;
+			 this.shotX = shotX;
+			 this.shotY = shotY;
+		 }
+	
 }
