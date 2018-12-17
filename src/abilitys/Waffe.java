@@ -2,12 +2,12 @@ package abilitys;
 
 public class Waffe {
 
-	 public static int shotX, shotY;
+	 public static int shotX = 0, shotY = 0;
 	 
 	public void waffe(String name) {
 		switch(name) {
-		case"MP7" : set(0,0,0,0);break;
-		case"Pistole" : set(0,0,89,73);break;
+		case"MP7" : set(0,0,75,85);break;
+		case"Pistole" : set(0,0,89,89);break;
 		}
 	}
 		 

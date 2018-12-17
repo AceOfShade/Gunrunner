@@ -94,12 +94,11 @@ public class Label extends JLabel {
 	
 				// painting all Bullets
 				for (int i = 0; i < Main.lvl.shotObjects.size(); i++) {
-					if (Main.lvl.shotObjects.get(i).getX() != Main.lvl.player.x + Main.lvl.player.waffe) {
-						g.drawImage(Variables.bullet, (int)(Main.lvl.shotObjects.get(i).getX()), (int)(Main.lvl.shotObjects.get(i).getY()), 9, 9, null);
-						if (KeyHandler.aPressed) {
+						if (Main.lvl.shotObjects.get(i).right) {
+							g.drawImage(Variables.bullet, (int)(Main.lvl.shotObjects.get(i).getX()), (int)(Main.lvl.shotObjects.get(i).getY()), 9, 9, null);
+						}else {
 							g.drawImage(Variables.bulletinv, (int)(Main.lvl.shotObjects.get(i).getX()), (int)(Main.lvl.shotObjects.get(i).getY()), 9, 9, null);
 						}
-					}
 				}
 			}
 			if(KeyHandler.escPressed  ){

@@ -7,13 +7,13 @@ public class Player extends GameObject {
 	public int health; // player health
 	float velY;
 	public static int jumpheight = 250;
-	public Waffe waffe;
+	public Waffe waffe = new Waffe();
 	
 	public Player(int x, int y) {
 		super(x, y, 100, 140);
 		this.health = 3;
 		velY = 0;
-		waffe.waffe("MP7");
+		waffe.waffe("Pistole");
 //		waffe.school.shooting(true);
 	}
 	
