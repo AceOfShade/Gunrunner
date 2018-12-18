@@ -1,8 +1,8 @@
 package entities;
 
+import inputs.KeyHandler;
 import main.Main;
 import main.Variables;
-import rendering.KeyHandler;
 import sound.Sound;
 
 public class Movement {

@@ -1,8 +1,8 @@
 package entities;
 
 import abilitys.Weapon;
+import inputs.KeyHandler;
 import main.*;
-import rendering.KeyHandler;
 
 public class Shot extends GameObject{
 	public double speedshot;

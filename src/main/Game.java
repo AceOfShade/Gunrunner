@@ -4,10 +4,10 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import entities.Movement;
+import inputs.KeyHandler;
 //import entities.Player;
 //import rendering.Collision;
 import rendering.Collision;
-import rendering.KeyHandler;
 
 public class Game {
 	public Timer g;

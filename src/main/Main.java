@@ -2,6 +2,7 @@
 
 import sound.*;
 import entities.*;
+import inputs.KeyHandler;
 import rendering.*;
 
 public class Main {

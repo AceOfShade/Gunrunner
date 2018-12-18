@@ -3,6 +3,7 @@ package rendering;
 import java.awt.event.KeyListener;
 import javax.swing.JFrame;
 
+import inputs.KeyHandler;
 import main.Variables;
 
 public class Gui {

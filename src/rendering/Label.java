@@ -7,6 +7,7 @@ import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import javax.swing.JLabel;
 
+import inputs.KeyHandler;
 import main.Main;
 import main.Variables;
 
