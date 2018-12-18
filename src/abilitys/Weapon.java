@@ -1,6 +1,6 @@
 package abilitys;
 
-public class Waffe {
+public class Weapon {
 
 	 public static int shotX = 0, shotY = 0;
 	 
@@ -14,8 +14,8 @@ public class Waffe {
 		 public void set(int x, int y, int shotX, int shotY) {
 //			 this.x = x;
 //			 this.y = y;
-			 Waffe.shotX = shotX;
-			 Waffe.shotY = shotY;
+			 Weapon.shotX = shotX;
+			 Weapon.shotY = shotY;
 		 }
 	
 }
