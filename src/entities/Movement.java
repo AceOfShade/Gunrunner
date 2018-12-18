@@ -2,7 +2,6 @@ package entities;
 
 import inputs.KeyHandler;
 import main.Main;
-import main.Variables;
 import sound.Sound;
 
 public class Movement {
