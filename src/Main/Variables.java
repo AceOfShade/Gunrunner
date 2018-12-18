@@ -13,7 +13,6 @@ public class Variables {
 	public static int screenwidth = 800;
 	public static int screenhight = 600;
 	public static int backgroundY1 = 0;
-	public static int x = 400, y = 400;
 
 	public static float speedshot = 1.2f;
 	public static float speedright = 0.5f;
@@ -25,8 +24,6 @@ public class Variables {
 	public static Label lbl;
 	public static boolean startmenu = true;
 	// Schuss X und Y
-	public static int sy;
-	public static int sx;
 	// Bilder
 
 	public static BufferedImage l1, l2, l3, loading, start, player1, player1inv,playerwp ,playerwpinv, e, bullet, bulletinv, enemy,enemydead, icon, kill,
