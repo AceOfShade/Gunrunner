@@ -42,12 +42,12 @@ public class Movement {
 	public void move() {// bewegung
 		if (KeyHandler.dPressed) {
 			if (Main.lvl.player.x < 730) {
-				Main.lvl.player.x += Variables.speedright;
+				Main.lvl.player.x += Player.speedright;
 			}
 		}
 		if (KeyHandler.aPressed) {
 			if (Main.lvl.player.x > 0) {
-				Main.lvl.player.x -= Variables.speedleft;
+				Main.lvl.player.x -= Player.speedleft;
 			}
 		}
 
@@ -55,16 +55,16 @@ public class Movement {
 if(Main.lvl.player.y >= 400) {jh = Player.jumpheight; } // jump max höhe;
 		
 		if(KeyHandler.wPressed && jh != 0){
-			if(Main.lvl.player.y>0 ){Main.lvl.player.velY-=Variables.speedjump; } //Sprung ges. hinzugeben (voller Sprung)
+			if(Main.lvl.player.y>0 ){Main.lvl.player.velY-=Player.speedjump; } //Sprung ges. hinzugeben (voller Sprung)
 		}else {
 			Main.lvl.player.velY = 0; //Sprung ges. hinzugeben (nicht voller Sprung, solang man w hält)
 		}
 		if(Main.lvl.player.velY == 0 && Main.lvl.player.y < 400) { //sinken
-			Main.lvl.player.y+= Variables.speeddown; //sinken
+			Main.lvl.player.y+= Player.speeddown; //sinken
 		}
 		 
 		if(Main.lvl.player.velY < 0 && jh > 0) { //steigen
-			Main.lvl.player.y-= Variables.speedjump;
+			Main.lvl.player.y-= Player.speedjump;
 			Main.lvl.player.velY++;
 			jh--;
 		}

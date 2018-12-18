@@ -15,10 +15,6 @@ public class Variables {
 	public static int backgroundY1 = 0;
 
 	public static float speedshot = 1.2f;
-	public static float speedright = 0.5f;
-	public static float speedleft = 0.5f;
-	public static float speedjump = 0.6f;
-	public static float speeddown = 0.75f;
 	
 	// kein plan also label
 	public static Label lbl;
