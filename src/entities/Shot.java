@@ -1,7 +1,6 @@
 package entities;
 
 import abilitys.Weapon;
-import inputs.KeyHandler;
 import main.*;
 
 public class Shot extends GameObject{
@@ -11,7 +10,7 @@ public class Shot extends GameObject{
 	public Shot() {
 		super(Main.lvl.player.x + Weapon.shotX, Main.lvl.player.y + Weapon.shotY, 9, 9);
 		this.speedshot = Variables.speedshot;
-		if(KeyHandler.aPressed) {
+		if(Player.lookingLeft) {
 			right = false;
 		}else {
 			right = true;
@@ -25,7 +24,3 @@ public class Shot extends GameObject{
 	
 	
 }
-
-
-
-

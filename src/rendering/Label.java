@@ -7,6 +7,7 @@ import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import javax.swing.JLabel;
 
+import entities.Player;
 import inputs.KeyHandler;
 import main.Main;
 import main.Variables;
@@ -82,11 +83,12 @@ public class Label extends JLabel {
 				
 	
 				// different Playermodels
-				if (Variables.f2) {
-					g.drawImage(Variables.player1, (int)(Main.lvl.player.x), (int)(Main.lvl.player.y), 100, 140, null);
-				} else if (KeyHandler.aPressed) {
+//				if (Variables.f2) {
+//					g.drawImage(Variables.player1, (int)(Main.lvl.player.x), (int)(Main.lvl.player.y), 100, 140, null);
+//				}
+				if (Player.lookingLeft) {
 					g.drawImage(Variables.playerwpinv, (int)(Main.lvl.player.x), (int)(Main.lvl.player.y), 100, 140, null);
-				} else {
+				}else if(!Player.lookingLeft){
 					g.drawImage(Variables.playerwp, (int)(Main.lvl.player.x), (int)(Main.lvl.player.y), 100, 140, null);
 				}
 				g.setColor(Color.RED);

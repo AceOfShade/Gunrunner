@@ -22,7 +22,7 @@ public class Movement {
 		if (e > 200) {
 			Shot a = new Shot();
 			Main.lvl.shotObjects.add(a);
-			System.out.println(Main.lvl.shotObjects.size());
+//			System.out.println(Main.lvl.shotObjects.size());
 			e = 0;
 			s.playSound();
 		}

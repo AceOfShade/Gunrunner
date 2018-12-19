@@ -14,6 +14,8 @@ public class Player extends GameObject {
 	public static float speedjump = 0.6f;
 	public static float speeddown = 0.75f;
 	
+	public static boolean lookingLeft;
+	
 	public Player(int x, int y) {
 		super(x, y, 100, 140);
 		this.health = 3;
