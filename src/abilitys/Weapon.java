@@ -1,6 +1,5 @@
 package abilitys;
 
-import entities.Player;
 
 public class Weapon {
 
