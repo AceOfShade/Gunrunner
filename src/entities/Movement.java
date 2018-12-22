@@ -1,5 +1,6 @@
 package entities;
 
+import abilitys.Weapon;
 import inputs.KeyHandler;
 import main.Main;
 import sound.Sound;
@@ -8,6 +9,7 @@ public class Movement {
 	int jh; // max Sprunghöhe von Variables kopiert
 	int e = 0;
 	Sound s;
+	public static Weapon w = new Weapon();
 	
 	public Movement() {
 		s = new Sound();
@@ -16,6 +18,7 @@ public class Movement {
 	public void shoot() {// Schießen halt
 	 	
 		 // spawning
+		w.waffe(Main.lvl.player.waffe);
 
 		if(KeyHandler.spacePressed)
 			e++;

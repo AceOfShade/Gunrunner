@@ -2,7 +2,6 @@ package inputs;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
-
 import entities.Player;
 import main.Variables;
 
@@ -20,14 +19,17 @@ public class KeyHandler implements KeyListener {
 //
 		if (e.getKeyCode() == KeyEvent.VK_A) {
 			aPressed = true;
-			Player.lookingLeft = true;
+				Player.lookingLeft = true;
+			
+			
 		}
 //		if (e.getKeyCode() == KeyEvent.VK_A) {
 //			lastPressed = 'a';
 //		}
 		if (e.getKeyCode() == KeyEvent.VK_D) {
 			dPressed = true;
-			Player.lookingLeft = false;
+				Player.lookingLeft = false;
+			
 		}
 		if (e.getKeyCode() == KeyEvent.VK_SPACE) {
 			if (Variables.startmenu) {

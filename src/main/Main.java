@@ -2,7 +2,7 @@
 
 import sound.*;
 import entities.*;
-import inputs.KeyHandler;
+import inputs.*;
 import rendering.*;
 
 public class Main {
