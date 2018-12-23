@@ -7,6 +7,7 @@ import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import javax.swing.JLabel;
 
+import abilitys.Weapon;
 import entities.Player;
 import inputs.KeyHandler;
 import main.Main;
@@ -83,14 +84,19 @@ public class Label extends JLabel {
 				
 	
 				// different Playermodels
-//				if (Variables.f2) {
-//					g.drawImage(Variables.player1, (int)(Main.lvl.player.x), (int)(Main.lvl.player.y), 100, 140, null);
-//				}
-				if (Player.lookingLeft) {
-					g.drawImage(Variables.playerwpinv, (int)(Main.lvl.player.x), (int)(Main.lvl.player.y), 100, 140, null);
-				}else if(!Player.lookingLeft){
-					g.drawImage(Variables.playerwp, (int)(Main.lvl.player.x), (int)(Main.lvl.player.y), 100, 140, null);
-				}
+					if(Player.lookingLeft){
+						switch(Weapon.name) {
+							case"MP7" : g.drawImage(Variables.player1inv, (int)(Main.lvl.player.x), (int)(Main.lvl.player.y), 100, 140, null);break;
+							case"Pistole" : g.drawImage(Variables.playerwpinv, (int)(Main.lvl.player.x), (int)(Main.lvl.player.y), 100, 140, null);break;
+						}
+						}else{
+						switch(Weapon.name) {
+							case"MP7" : g.drawImage(Variables.e, (int)(Main.lvl.player.x), (int)(Main.lvl.player.y), 100, 140, null);break;
+							case"Pistole" : g.drawImage(Variables.playerwp, (int)(Main.lvl.player.x), (int)(Main.lvl.player.y), 100, 140, null);break;
+						}
+						
+					}
+				//Ende
 				g.setColor(Color.RED);
 				g.drawString("Health: " + Main.lvl.player.health, 20, 40);
 				g.drawString("Kills: " + Main.lvl.player.kills, 20, 20);

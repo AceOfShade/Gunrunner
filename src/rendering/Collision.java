@@ -14,6 +14,7 @@ public class Collision {
 			e = Main.lvl.enemyObjects.get(i);
 			if(collisionRect(Main.lvl.player, e)) {
 				System.out.println("C: P-E");
+				Main.lvl.player.health--;
 			}
 			e=null;
 		}
@@ -24,6 +25,7 @@ public class Collision {
 			for(int y = 0;y < Main.lvl.enemyObjects.size();y++){
 				e = Main.lvl.enemyObjects.get(y);
 				if(collisionRect(e, s)) {
+					Main.lvl.player.kills++;
 					System.out.println("C: S-E");
 				}
 				e= null;

@@ -1,7 +1,8 @@
 package entities;
 
 import abilitys.Weapon;
-import main.*;
+import main.Main;
+import main.Variables;
 
 public class Shot extends GameObject{
 	public double speedshot;

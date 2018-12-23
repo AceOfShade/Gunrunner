@@ -19,15 +19,16 @@ public class Movement {
 	 	
 		 // spawning
 		w.waffe(Main.lvl.player.waffe);
-
-		if(KeyHandler.spacePressed)
+		if(e <= Weapon.cooldown) {
 			e++;
-		if (e > 200) {
-			Shot a = new Shot();
-			Main.lvl.shotObjects.add(a);
-//			System.out.println(Main.lvl.shotObjects.size());
-			e = 0;
-			s.playSound();
+		}
+		if (e > Weapon.cooldown) {
+			if(KeyHandler.spacePressed) {
+				Shot a = new Shot();
+				Main.lvl.shotObjects.add(a);
+				e = 0;
+				s.playSound();
+			}
 		}
 		for(int i = 0; i < Main.lvl.shotObjects.size(); i++) {
 			if(Main.lvl.shotObjects.get(i).right) {
@@ -35,9 +36,9 @@ public class Movement {
 			}else {
 				Main.lvl.shotObjects.get(i).x -= Main.lvl.shotObjects.get(i).speedshot;
 			}
-			if(Main.lvl.shotObjects.get(i).getX() >= 800 || Main.lvl.shotObjects.get(i).getX() < 0) {
+			if(Main.lvl.shotObjects.get(i).getX() >= 800 || Main.lvl.shotObjects.get(i).getX() <= 0) {
 				Main.lvl.shotObjects.remove(i);
-			}	
+			}
 		}
 	}
 
