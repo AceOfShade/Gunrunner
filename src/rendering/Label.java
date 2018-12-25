@@ -35,12 +35,12 @@ public class Label extends JLabel {
 		Graphics2D g2d = (Graphics2D) g;
 		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
 		
-		if(pic==1 && Main.lvl.player.kills >=5) {
+		if(pic==1 && Main.gw.player.kills >=5) {
 			
 			//After 5 Kills
-			if (Main.lvl.player.getX() + Main.lvl.player.getW() >= 800 && pic < 3 && pic >=0) {
+			if (Main.gw.player.getX() + Main.gw.player.getW() >= 800 && pic < 3 && pic >=0) {
 				pic++;
-				Main.lvl.player.x = 10;
+				Main.gw.player.x = 10;
 			}
 //			else if (Main.lvl.player.getX() <= 5 && pic <= 2 && pic >1) {
 //				pic--;
@@ -49,11 +49,11 @@ public class Label extends JLabel {
 			
 		}
 		//after 10 kills
-		if(pic==2 && Main.lvl.player.kills >=10) {
+		if(pic==2 && Main.gw.player.kills >=10) {
 			
-			if (Main.lvl.player.getX() + Main.lvl.player.getW() >= 800 && pic < 3 && pic >=0) {
+			if (Main.gw.player.getX() + Main.gw.player.getW() >= 800 && pic < 3 && pic >=0) {
 				pic++;
-				Main.lvl.player.x = 10;
+				Main.gw.player.x = 10;
 			}
 //			else if (Main.lvl.player.getX() <= 5 && pic <= 3 && pic >1) {
 //				pic--;
@@ -78,35 +78,40 @@ public class Label extends JLabel {
 				default:g.drawImage(Variables.loading, 0, 0, 800, 600, null);break;
 				}
 				
-				for(int i = 0; i < Main.lvl.enemyObjects.size(); i++) {
-					g.drawImage(Variables.enemy, (int)(Main.lvl.enemyObjects.get(i).getX()), (int)(Main.lvl.enemyObjects.get(i).getY()), Main.lvl.enemyObjects.get(i).getW(), Main.lvl.enemyObjects.get(i).getH(), null);
+				//enemy
+				for(int i = 0; i < Main.gw.enemyObjects.size(); i++) {
+					if(Main.gw.enemyObjects.get(i).health != 0) {
+						g.drawImage(Variables.enemy, (int)(Main.gw.enemyObjects.get(i).getX()), (int)(Main.gw.enemyObjects.get(i).getY()), Main.gw.enemyObjects.get(i).getW(), Main.gw.enemyObjects.get(i).getH(), null);
+					}else {
+						g.drawImage(Variables.enemydead, (int)(Main.gw.enemyObjects.get(i).getX()), (int)(Main.gw.enemyObjects.get(i).getY()), Main.gw.enemyObjects.get(i).getW(), Main.gw.enemyObjects.get(i).getH(), null);
+					}
 				}
 				
 	
 				// different Playermodels
 					if(Player.lookingLeft){
 						switch(Weapon.name) {
-							case"MP7" : g.drawImage(Variables.player1inv, (int)(Main.lvl.player.x), (int)(Main.lvl.player.y), 100, 140, null);break;
-							case"Pistole" : g.drawImage(Variables.playerwpinv, (int)(Main.lvl.player.x), (int)(Main.lvl.player.y), 100, 140, null);break;
+							case"MP7" : g.drawImage(Variables.player1inv, (int)(Main.gw.player.x), (int)(Main.gw.player.y), 100, 140, null);break;
+							case"Pistole" : g.drawImage(Variables.playerwpinv, (int)(Main.gw.player.x), (int)(Main.gw.player.y), 100, 140, null);break;
 						}
 						}else{
 						switch(Weapon.name) {
-							case"MP7" : g.drawImage(Variables.e, (int)(Main.lvl.player.x), (int)(Main.lvl.player.y), 100, 140, null);break;
-							case"Pistole" : g.drawImage(Variables.playerwp, (int)(Main.lvl.player.x), (int)(Main.lvl.player.y), 100, 140, null);break;
+							case"MP7" : g.drawImage(Variables.e, (int)(Main.gw.player.x), (int)(Main.gw.player.y), 100, 140, null);break;
+							case"Pistole" : g.drawImage(Variables.playerwp, (int)(Main.gw.player.x), (int)(Main.gw.player.y), 100, 140, null);break;
 						}
 						
 					}
 				//Ende
 				g.setColor(Color.RED);
-				g.drawString("Health: " + Main.lvl.player.health, 20, 40);
-				g.drawString("Kills: " + Main.lvl.player.kills, 20, 20);
+				g.drawString("Health: " + Main.gw.player.health, 20, 40);
+				g.drawString("Kills: " + Main.gw.player.kills, 20, 20);
 	
 				// painting all Bullets
-				for (int i = 0; i < Main.lvl.shotObjects.size(); i++) {
-						if (Main.lvl.shotObjects.get(i).right) {
-							g.drawImage(Variables.bullet, (int)(Main.lvl.shotObjects.get(i).getX()), (int)(Main.lvl.shotObjects.get(i).getY()), 9, 9, null);
+				for (int i = 0; i < Main.gw.shotObjects.size(); i++) {
+						if (Main.gw.shotObjects.get(i).right) {
+							g.drawImage(Variables.bullet, (int)(Main.gw.shotObjects.get(i).getX()), (int)(Main.gw.shotObjects.get(i).getY()), 9, 9, null);
 						}else {
-							g.drawImage(Variables.bulletinv, (int)(Main.lvl.shotObjects.get(i).getX()), (int)(Main.lvl.shotObjects.get(i).getY()), 9, 9, null);
+							g.drawImage(Variables.bulletinv, (int)(Main.gw.shotObjects.get(i).getX()), (int)(Main.gw.shotObjects.get(i).getY()), 9, 9, null);
 						}
 				}
 			}
@@ -114,7 +119,7 @@ public class Label extends JLabel {
 				Variables.startmenu =true;
 			}
 			if(KeyHandler.kPressed) {
-				Main.lvl.player.kills++;
+				Main.gw.player.kills++;
 			}
 			
 		} else {

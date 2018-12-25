@@ -1,9 +1,10 @@
 package entities;
 
+import main.Main;
+
 public class Enemy extends GameObject {
-	int x, y, health;
-	public static boolean bodycollision;
-	public static boolean enemykill;
+	public int x, y, health;
+	public boolean enemydead = false;
 	public Enemy(int x, int y) {
 		super(x, y, 100, 140);
 		this.health = 3;
@@ -14,13 +15,18 @@ public class Enemy extends GameObject {
 		this.health = health;
 	}
 	
+	public void hit() {
+		if(!enemydead) {
+			if(health>0) {
+				health--;
+			}else if(health == 0) {
+				enemydead = true;
+				Main.gw.player.kills++;
+			}
+		}
+	}
+	
 	public void render() {
-		if(bodycollision) {
-			health--;
-			Enemy.bodycollision=false;
-		if(health==0) {
-			enemykill=true;
-		}
-		}
+
 	}
 }

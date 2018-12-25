@@ -4,7 +4,7 @@ package entities;
 public class Player extends GameObject {
 	public int kills = 0; // kills from player
 	public int health; // player health
-	float velY;
+	public float velY;
 	public static int jumpheight = 250;
 
 	public static float speedright = 0.5f;
@@ -20,7 +20,7 @@ public class Player extends GameObject {
 		this.health = 3;
 		this.velY = 0;
 		this.waffe ="MP7";
-//		waffe.school.shooting(true);
+//		waffe.schoolShooting = true;
 	}
 	
 	public Player(int x, int y, byte health,String w) {

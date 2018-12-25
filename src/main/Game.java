@@ -34,14 +34,14 @@ public class Game {
 				m.shoot();
 				m.move();
 				c.testC();
-				Main.lvl.levelupdater();
+				Main.gw.levelupdater();
 				if(Main.lbl.loadingscreentimer > 0 && Main.lbl.loadscreen) {
 					Main.lbl.loadingscreentimer--;
 				}
 
 				if (KeyHandler.f1Pressed) {
-					System.out.println("Px" + Main.lvl.player.x);
-					System.out.println("Py" + Main.lvl.player.y);
+					System.out.println("Px" + Main.gw.player.x);
+					System.out.println("Py" + Main.gw.player.y);
 				}
 			}
 		}, 0, 1);

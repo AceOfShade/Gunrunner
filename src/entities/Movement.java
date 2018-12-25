@@ -18,64 +18,64 @@ public class Movement {
 	public void shoot() {// Schieﬂen halt
 	 	
 		 // spawning
-		w.waffe(Main.lvl.player.waffe);
+		w.waffe(Main.gw.player.waffe);
 		if(e <= Weapon.cooldown) {
 			e++;
 		}
 		if (e > Weapon.cooldown) {
 			if(KeyHandler.spacePressed) {
 				Shot a = new Shot();
-				Main.lvl.shotObjects.add(a);
+				Main.gw.shotObjects.add(a);
 				e = 0;
 				s.playSound();
 			}
 		}
-		for(int i = 0; i < Main.lvl.shotObjects.size(); i++) {
-			if(Main.lvl.shotObjects.get(i).right) {
-				Main.lvl.shotObjects.get(i).x += Main.lvl.shotObjects.get(i).speedshot;
+		for(int i = 0; i < Main.gw.shotObjects.size(); i++) {
+			if(Main.gw.shotObjects.get(i).right) {
+				Main.gw.shotObjects.get(i).x += Main.gw.shotObjects.get(i).speedshot;
 			}else {
-				Main.lvl.shotObjects.get(i).x -= Main.lvl.shotObjects.get(i).speedshot;
+				Main.gw.shotObjects.get(i).x -= Main.gw.shotObjects.get(i).speedshot;
 			}
-			if(Main.lvl.shotObjects.get(i).getX() >= 800 || Main.lvl.shotObjects.get(i).getX() <= 0) {
-				Main.lvl.shotObjects.remove(i);
+			if(Main.gw.shotObjects.get(i).getX() >= 800 || Main.gw.shotObjects.get(i).getX() <= 0) {
+				Main.gw.shotObjects.remove(i);
 			}
 		}
 	}
 
 	public void move() {// bewegung
 		if (KeyHandler.dPressed) {
-			if (Main.lvl.player.x < 730) {
-				Main.lvl.player.x += Player.speedright;
+			if (Main.gw.player.x < 730) {
+				Main.gw.player.x += Player.speedright;
 			}
 		}
 		if (KeyHandler.aPressed) {
-			if (Main.lvl.player.x > 0) {
-				Main.lvl.player.x -= Player.speedleft;
+			if (Main.gw.player.x > 0) {
+				Main.gw.player.x -= Player.speedleft;
 			}
 		}
 
 		// Jump
-		if(Main.lvl.player.y >= 400) {jh = Player.jumpheight; } // jump max hˆhe;
+		if(Main.gw.player.y >= 400) {jh = Player.jumpheight; } // jump max hˆhe;
 		
 		if(KeyHandler.wPressed && jh != 0){
-			if(Main.lvl.player.y>0 ){Main.lvl.player.velY-=Player.speedjump; } //Sprung ges. hinzugeben (voller Sprung)
+			if(Main.gw.player.y>0 ){Main.gw.player.velY-=Player.speedjump; } //Sprung ges. hinzugeben (voller Sprung)
 		}else {
-			Main.lvl.player.velY = 0; //Sprung ges. hinzugeben (nicht voller Sprung, solang man w h‰lt)
+			Main.gw.player.velY = 0; //Sprung ges. hinzugeben (nicht voller Sprung, solang man w h‰lt)
 		}
-		if(Main.lvl.player.velY == 0 && Main.lvl.player.y < 400) { //sinken
-			Main.lvl.player.y+= Player.speeddown; //sinken
+		if(Main.gw.player.velY == 0 && Main.gw.player.y < 400) { //sinken
+			Main.gw.player.y+= Player.speeddown; //sinken
 		}
 		 
-		if(Main.lvl.player.velY < 0 && jh > 0) { //steigen
-			Main.lvl.player.y-= Player.speedjump;
-			Main.lvl.player.velY++;
+		if(Main.gw.player.velY < 0 && jh > 0) { //steigen
+			Main.gw.player.y-= Player.speedjump;
+			Main.gw.player.velY++;
 			jh--;
 		}
 		
-		if(Main.lvl.player.y > 400){	//wenn man in den boden buggt
-			Main.lvl.player.y = 400;
+		if(Main.gw.player.y > 400){	//wenn man in den boden buggt
+			Main.gw.player.y = 400;
 			}
 		//Jump-Ende
-		if(KeyHandler.f1Pressed) {System.out.println("Vel: " + Main.lvl.player.velY + KeyHandler.wPressed);}//debug mode
+		if(KeyHandler.f1Pressed) {System.out.println("Vel: " + Main.gw.player.velY + KeyHandler.wPressed);}//debug mode
 	}
 }

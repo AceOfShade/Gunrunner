@@ -13,7 +13,7 @@ public class Weapon {
 		if(Player.lookingLeft){
 			switch(name) {
 			case"MP7" : set(26,75,200);break;
-			case"Pistole" : set(3,43,600 );break;
+			case"Pistole" : set(3,43,600);break;
 			}
 		}else {
 			switch(name) {

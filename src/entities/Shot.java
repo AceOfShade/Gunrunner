@@ -9,7 +9,7 @@ public class Shot extends GameObject{
 	public boolean right;
 	
 	public Shot() {
-		super(Main.lvl.player.x + Weapon.shotX, Main.lvl.player.y + Weapon.shotY, 9, 9);
+		super(Main.gw.player.x + Weapon.shotX, Main.gw.player.y + Weapon.shotY, 9, 9);
 		this.speedshot = Variables.speedshot;
 		if(Player.lookingLeft) {
 			right = false;
