@@ -4,8 +4,9 @@ package entities;
  *
  * This is an Abstract Game object class used as a base for further implementations 
  */
-public class GameObject {	public float x, y;
-public int w, h;
+public class GameObject {	
+	public float x, y;
+	public int w, h;
 
 	public GameObject(float f, float g, int w, int h) {
 		super();
