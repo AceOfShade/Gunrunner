@@ -3,6 +3,7 @@ package inputs;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import entities.Player;
+import main.Main;
 import main.Variables;
 
 public class KeyHandler implements KeyListener {
@@ -46,6 +47,7 @@ public class KeyHandler implements KeyListener {
 		}
 		if(e.getKeyCode()== KeyEvent.VK_K) {
 			kPressed=true;
+			Main.gw.player.kills++;
 		}
 	}
 

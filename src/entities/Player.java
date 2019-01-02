@@ -1,5 +1,10 @@
 package entities;
 
+import java.awt.Graphics;
+
+import abilitys.Weapon;
+import main.Main;
+import main.Variables;
 
 public class Player extends GameObject {
 	public int kills = 0; // kills from player
@@ -19,7 +24,7 @@ public class Player extends GameObject {
 		super(x, y, 100, 140);
 		this.health = 3;
 		this.velY = 0;
-		this.waffe ="MP7";
+		this.waffe ="Pistole";
 //		waffe.schoolShooting = true;
 	}
 	
@@ -29,8 +34,21 @@ public class Player extends GameObject {
 		this.waffe = w;
 	}
 
-	public void render() {
-		
+	@Override
+	public void render(Graphics g) {
+		if(Player.lookingLeft){
+			switch(Weapon.name) {
+				case"MP7" : g.drawImage(Variables.player1inv, (int)(x), (int)(Main.gw.player.y), 100, 140, null);break;
+				case"Pistole" : g.drawImage(Variables.playerwpinv, (int)(x), (int)(y), 100, 140, null);break;
+			}
+			}else{
+			switch(Weapon.name) {
+				case"MP7" : g.drawImage(Variables.e, (int)(x), (int)(Main.gw.player.y), 100, 140, null);break;
+				case"Pistole" : g.drawImage(Variables.playerwp, (int)(x), (int)(y), 100, 140, null);break;
+			}
+			
+		}
 		
 	}
+
 }

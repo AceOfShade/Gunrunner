@@ -80,27 +80,12 @@ public class Label extends JLabel {
 				
 				//enemy
 				for(int i = 0; i < Main.gw.enemyObjects.size(); i++) {
-					if(Main.gw.enemyObjects.get(i).health != 0) {
-						g.drawImage(Variables.enemy, (int)(Main.gw.enemyObjects.get(i).getX()), (int)(Main.gw.enemyObjects.get(i).getY()), Main.gw.enemyObjects.get(i).getW(), Main.gw.enemyObjects.get(i).getH(), null);
-					}else {
-						g.drawImage(Variables.enemydead, (int)(Main.gw.enemyObjects.get(i).getX()), (int)(Main.gw.enemyObjects.get(i).getY()), Main.gw.enemyObjects.get(i).getW(), Main.gw.enemyObjects.get(i).getH(), null);
-					}
+					Main.gw.enemyObjects.get(i).render(g);
 				}
 				
 	
 				// different Playermodels
-					if(Player.lookingLeft){
-						switch(Weapon.name) {
-							case"MP7" : g.drawImage(Variables.player1inv, (int)(Main.gw.player.x), (int)(Main.gw.player.y), 100, 140, null);break;
-							case"Pistole" : g.drawImage(Variables.playerwpinv, (int)(Main.gw.player.x), (int)(Main.gw.player.y), 100, 140, null);break;
-						}
-						}else{
-						switch(Weapon.name) {
-							case"MP7" : g.drawImage(Variables.e, (int)(Main.gw.player.x), (int)(Main.gw.player.y), 100, 140, null);break;
-							case"Pistole" : g.drawImage(Variables.playerwp, (int)(Main.gw.player.x), (int)(Main.gw.player.y), 100, 140, null);break;
-						}
-						
-					}
+					Main.gw.player.render(g);
 				//Ende
 				g.setColor(Color.RED);
 				g.drawString("Health: " + Main.gw.player.health, 20, 40);
@@ -108,18 +93,11 @@ public class Label extends JLabel {
 	
 				// painting all Bullets
 				for (int i = 0; i < Main.gw.shotObjects.size(); i++) {
-						if (Main.gw.shotObjects.get(i).right) {
-							g.drawImage(Variables.bullet, (int)(Main.gw.shotObjects.get(i).getX()), (int)(Main.gw.shotObjects.get(i).getY()), 9, 9, null);
-						}else {
-							g.drawImage(Variables.bulletinv, (int)(Main.gw.shotObjects.get(i).getX()), (int)(Main.gw.shotObjects.get(i).getY()), 9, 9, null);
-						}
+						Main.gw.shotObjects.get(i).render(g);
 				}
 			}
 			if(KeyHandler.escPressed  ){
 				Variables.startmenu =true;
-			}
-			if(KeyHandler.kPressed) {
-				Main.gw.player.kills++;
 			}
 			
 		} else {

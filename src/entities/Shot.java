@@ -1,5 +1,7 @@
 package entities;
 
+import java.awt.Graphics;
+
 import abilitys.Weapon;
 import main.Main;
 import main.Variables;
@@ -17,11 +19,16 @@ public class Shot extends GameObject{
 			right = true;
 		}
 	}
-	
-	public void render() {
-		// TODO Auto-generated method stub
-		
+
+	@Override
+	public void render(Graphics g) {
+			if (right) {
+			g.drawImage(Variables.bullet, (int)(x), (int)(y), 9, 9, null);
+		}else {
+			g.drawImage(Variables.bulletinv, (int)(x), (int)(y), 9, 9, null);
+		}
 	}
+	
 	
 	
 }

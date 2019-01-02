@@ -1,10 +1,12 @@
 package entities;
 
+import java.awt.Graphics;
+
 /**
  *
  * This is an Abstract Game object class used as a base for further implementations 
  */
-public class GameObject {	
+public abstract class GameObject {	
 	public float x, y;
 	public int w, h;
 
@@ -16,7 +18,7 @@ public class GameObject {
 		this.h = h;
 	}
 	
-//	public abstract void render();
+	public abstract void render(Graphics g);
 
 	public float getX() {
 		return x;
