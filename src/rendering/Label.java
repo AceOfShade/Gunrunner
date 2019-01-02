@@ -1,14 +1,10 @@
 package rendering;
 
 import java.awt.Color;
-
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import javax.swing.JLabel;
-
-import abilitys.Weapon;
-import entities.Player;
 import inputs.KeyHandler;
 import main.Main;
 import main.Variables;

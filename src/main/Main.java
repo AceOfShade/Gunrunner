@@ -8,7 +8,7 @@ public class Main {
 	
 	public static Game g;
 	public static KeyHandler kh;
-	public static Gui gui;
+	public static Frame f;
 	public static Variables v;
 	public static Label lbl;
 	public static GameWorld gw;
@@ -22,7 +22,7 @@ public class Main {
 		lbl = new Label();
 		g = new Game();
 		kh = new KeyHandler();
-		gui =new Gui();
+		f =new Frame();
 		gw= new GameWorld();
 		mov= new Movement();
 		g.startGame();
