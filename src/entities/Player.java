@@ -3,8 +3,8 @@ package entities;
 import java.awt.Graphics;
 
 import abilitys.Weapon;
+import inputs.Resources;
 import main.Main;
-import main.Variables;
 
 public class Player extends GameObject {
 	public int kills = 0; // kills from player
@@ -38,13 +38,13 @@ public class Player extends GameObject {
 	public void render(Graphics g) {
 		if(Player.lookingLeft){
 			switch(Weapon.name) {
-				case"MP7" : g.drawImage(Variables.player1inv, (int)(x), (int)(Main.gw.player.y), 100, 140, null);break;
-				case"Pistole" : g.drawImage(Variables.playerwpinv, (int)(x), (int)(y), 100, 140, null);break;
+				case"MP7" : g.drawImage(Resources.player1inv, (int)(x), (int)(Main.gw.player.y), 100, 140, null);break;
+				case"Pistole" : g.drawImage(Resources.playerwpinv, (int)(x), (int)(y), 100, 140, null);break;
 			}
 			}else{
 			switch(Weapon.name) {
-				case"MP7" : g.drawImage(Variables.e, (int)(x), (int)(Main.gw.player.y), 100, 140, null);break;
-				case"Pistole" : g.drawImage(Variables.playerwp, (int)(x), (int)(y), 100, 140, null);break;
+				case"MP7" : g.drawImage(Resources.e, (int)(x), (int)(Main.gw.player.y), 100, 140, null);break;
+				case"Pistole" : g.drawImage(Resources.playerwp, (int)(x), (int)(y), 100, 140, null);break;
 			}
 			
 		}

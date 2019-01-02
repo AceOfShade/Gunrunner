@@ -2,8 +2,9 @@ package rendering;
 
 
 import javax.swing.JFrame;
+
+import inputs.Resources;
 import main.Main;
-import main.Variables;
 
 public class Frame {
 	public static int screenwidth = 800;
@@ -19,7 +20,7 @@ public class Frame {
 		jf.setResizable(false);
 		jf.requestFocus();
 		jf.addKeyListener(Main.kh);
-		jf.setIconImage(Variables.icon);
+		jf.setIconImage(Resources.icon);
 		jf.setVisible(true);
 
 		Label lbl = new Label();

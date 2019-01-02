@@ -4,7 +4,7 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import entities.Player;
 import main.Main;
-import main.Variables;
+import rendering.Label;
 
 public class KeyHandler implements KeyListener {
 	public static char lastPressed;
@@ -33,8 +33,8 @@ public class KeyHandler implements KeyListener {
 			
 		}
 		if (e.getKeyCode() == KeyEvent.VK_SPACE) {
-			if (Variables.startmenu) {
-				Variables.startmenu = false;
+			if (Label.startmenu) {
+				Label.startmenu = false;
 			} else {
 				KeyHandler.spacePressed = true;
 			}

@@ -1,10 +1,9 @@
 package entities;
 
 import java.awt.Graphics;
-
 import abilitys.Weapon;
+import inputs.Resources;
 import main.Main;
-import main.Variables;
 
 public class Shot extends GameObject{
 	public double speedshot;
@@ -12,7 +11,7 @@ public class Shot extends GameObject{
 	
 	public Shot() {
 		super(Main.gw.player.x + Weapon.shotX, Main.gw.player.y + Weapon.shotY, 9, 9);
-		this.speedshot = Variables.speedshot;
+		this.speedshot = Weapon.speedshot;
 		if(Player.lookingLeft) {
 			right = false;
 		}else {
@@ -23,9 +22,9 @@ public class Shot extends GameObject{
 	@Override
 	public void render(Graphics g) {
 			if (right) {
-			g.drawImage(Variables.bullet, (int)(x), (int)(y), 9, 9, null);
+			g.drawImage(Resources.bullet, (int)(x), (int)(y), 9, 9, null);
 		}else {
-			g.drawImage(Variables.bulletinv, (int)(x), (int)(y), 9, 9, null);
+			g.drawImage(Resources.bulletinv, (int)(x), (int)(y), 9, 9, null);
 		}
 	}
 	

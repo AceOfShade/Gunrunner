@@ -1,4 +1,4 @@
-package main;
+package abilitys;
 
 public class Cheatcodes {
 	public static char[] lastPressed = new char[6];

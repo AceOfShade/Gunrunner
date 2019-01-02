@@ -2,8 +2,8 @@ package entities;
 
 import java.awt.Graphics;
 
+import inputs.Resources;
 import main.Main;
-import main.Variables;
 
 public class Enemy extends GameObject {
 	public int health;
@@ -32,9 +32,9 @@ public class Enemy extends GameObject {
 	@Override
 	public void render(Graphics g) {
 		if(health != 0) {
-			g.drawImage(Variables.enemy, (int)(x), (int)(y), 100, 140, null);
+			g.drawImage(Resources.enemy, (int)(x), (int)(y), 100, 140, null);
 		}else {
-			g.drawImage(Variables.enemydead, (int)(x), (int)(y), 100, 140, null);
+			g.drawImage(Resources.enemydead, (int)(x), (int)(y), 100, 140, null);
 		}
 		
 	}

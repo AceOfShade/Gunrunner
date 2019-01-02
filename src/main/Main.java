@@ -9,16 +9,15 @@ public class Main {
 	public static Game g;
 	public static KeyHandler kh;
 	public static Frame f;
-	public static Variables v;
 	public static Label lbl;
 	public static GameWorld gw;
 	public static Movement mov;
 	public static Collision c;
+	public static Resources res;
 	
 	
 
 	public static void main(String[] args) {
-		v = new Variables();
 		lbl = new Label();
 		g = new Game();
 		kh = new KeyHandler();
@@ -26,6 +25,7 @@ public class Main {
 		gw= new GameWorld();
 		mov= new Movement();
 		g.startGame();
+		res = new Resources();
 		
 	}
 }

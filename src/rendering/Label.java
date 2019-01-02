@@ -6,8 +6,8 @@ import java.awt.Graphics2D;
 import java.awt.RenderingHints;
 import javax.swing.JLabel;
 import inputs.KeyHandler;
+import inputs.Resources;
 import main.Main;
-import main.Variables;
 
 
 public class Label extends JLabel {
@@ -15,8 +15,10 @@ public class Label extends JLabel {
 	public int pic;
 	public boolean loadscreen;
 	public int loadingscreentimer;
+	public static boolean startmenu;
 	
 	public Label() {
+		startmenu = true;
 		pic= 1;
 		loadscreen = false;
 		loadingscreentimer = 200;
@@ -54,20 +56,20 @@ public class Label extends JLabel {
 		}
 		
 		
-		if (!Variables.startmenu) {
+		if (!startmenu) {
 			if (!loadscreen && loadingscreentimer < 1) {
-				g.drawImage(Variables.loading, 0, 1, 800, 600, null);
+				g.drawImage(Resources.loading, 0, 1, 800, 600, null);
 				KeyHandler.wPressed = true;
 			}else {
 				switch(pic) {//Levelupdater/changer
-				case 1:	g.drawImage(Variables.l1, 0, 0, 800, 600, null);break;
+				case 1:	g.drawImage(Resources.l1, 0, 0, 800, 600, null);break;
 				
 				case 2:		
-					  g.drawImage(Variables.l2, 0, 0, 800, 600, null);break;
+					  g.drawImage(Resources.l2, 0, 0, 800, 600, null);break;
 				case 3:
-					g.drawImage(Variables.l3, 0, 0, 800, 600, null); break;
+					g.drawImage(Resources.l3, 0, 0, 800, 600, null); break;
 					
-				default:g.drawImage(Variables.loading, 0, 0, 800, 600, null);break;
+				default:g.drawImage(Resources.loading, 0, 0, 800, 600, null);break;
 				}
 				
 				//enemy
@@ -89,11 +91,11 @@ public class Label extends JLabel {
 				}
 			}
 			if(KeyHandler.escPressed  ){
-				Variables.startmenu =true;
+				startmenu =true;
 			}
 			
 		} else {
-			g.drawImage(Variables.start, 0, 0, 800, 600, null);
+			g.drawImage(Resources.start, 0, 0, 800, 600, null);
 		}
 		repaint();
 	}
