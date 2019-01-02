@@ -24,7 +24,7 @@ public class GameWorld {
 	
 	
 	  	public void levelupdater() { // so richtig falsch geschrieben
-	 
+	  		
 		}
 	
 		public void levelgenerator() {
