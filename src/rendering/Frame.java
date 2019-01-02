@@ -6,22 +6,25 @@ import main.Main;
 import main.Variables;
 
 public class Frame {
+	public static int screenwidth = 800;
+	public static int screenhight = 600;
+	
 	public Frame() {
-		Variables.jf1 = new JFrame();
-		Variables.jf1.setSize(Variables.screenwidth, Variables.screenhight);
-		Variables.jf1.setLocationRelativeTo(null);
-		Variables.jf1.setLayout(null);
-		Variables.jf1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		Variables.jf1.setTitle("Gunrunner");
-		Variables.jf1.setResizable(false);
-		Variables.jf1.requestFocus();
-		Variables.jf1.addKeyListener(Main.kh);
-		Variables.jf1.setIconImage(Variables.icon);
-		Variables.jf1.setVisible(true);
+		JFrame jf = new JFrame();
+		jf.setSize(screenwidth, screenhight);
+		jf.setLocationRelativeTo(null);
+		jf.setLayout(null);
+		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		jf.setTitle("Gunrunner");
+		jf.setResizable(false);
+		jf.requestFocus();
+		jf.addKeyListener(Main.kh);
+		jf.setIconImage(Variables.icon);
+		jf.setVisible(true);
 
-		Variables.lbl = new Label();
-		Variables.lbl.setBounds(0, 0, Variables.screenwidth, Variables.screenhight);
-		Variables.lbl.setVisible(true);
-		Variables.jf1.add(Variables.lbl);
+		Label lbl = new Label();
+		lbl.setBounds(0, 0, screenwidth, screenhight);
+		lbl.setVisible(true);
+		jf.add(lbl);
 	}
 }

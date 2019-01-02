@@ -3,31 +3,22 @@ package main;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import javax.imageio.ImageIO;
-import javax.swing.JFrame;
-import rendering.Label;
 
 public class Variables {
 
-	public static JFrame jf1;
 	// Screen width and hight
-	public static int screenwidth = 800;
-	public static int screenhight = 600;
-	public static int backgroundY1 = 0;
+	
+	
 
 	public static float speedshot = 1.2f;
 	
 	// kein plan also label
-	public static Label lbl;
 	public static boolean startmenu = true;
 	// Schuss X und Y
 	// Bilder
 
 	public static BufferedImage l1, l2, l3, loading, start, player1, player1inv,playerwp ,playerwpinv, e, bullet, bulletinv, enemy,enemydead, icon, kill,
 			hp;
-
-	// frag fabian
-
-	public static boolean f2; // Playerwechsel
 
 	// Constructor
 	public Variables() {

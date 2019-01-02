@@ -21,10 +21,6 @@ public class Label extends JLabel {
 		loadscreen = false;
 		loadingscreentimer = 200;
 	}
-	
-	public void Iconsetzen() {
-		Variables.jf1.setIconImage(Variables.icon);
-	}
 
 	protected void paintComponent(Graphics g) {
 		super.paintComponent(g);
@@ -60,7 +56,7 @@ public class Label extends JLabel {
 		
 		if (!Variables.startmenu) {
 			if (!loadscreen && loadingscreentimer < 1) {
-				g.drawImage(Variables.loading, Variables.backgroundY1, 1, 800, 600, null);
+				g.drawImage(Variables.loading, 0, 1, 800, 600, null);
 				KeyHandler.wPressed = true;
 			}else {
 				switch(pic) {//Levelupdater/changer
@@ -97,7 +93,7 @@ public class Label extends JLabel {
 			}
 			
 		} else {
-			g.drawImage(Variables.start, 0, Variables.backgroundY1, 800, 600, null);
+			g.drawImage(Variables.start, 0, 0, 800, 600, null);
 		}
 		repaint();
 	}
