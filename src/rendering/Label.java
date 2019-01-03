@@ -96,7 +96,7 @@ public class Label extends JLabel {
 				}
 			}
 			if(KeyHandler.escPressed  ){
-				startmenu =true;
+				startmenu = !false;
 			}
 			
 		} else {

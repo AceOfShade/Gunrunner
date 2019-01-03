@@ -14,9 +14,9 @@ public class Game {
 	public Movement m = new Movement();
 	public Collision c = new Collision();
 	public int tick;
-	int i = 0;
-	static int a = 0;
-	static boolean startcounting;
+	public int i = 0;
+	public static int a = 0;
+	public static boolean startcounting;
 
 	public void startGame() {
 		g = new Timer();
@@ -28,9 +28,6 @@ public class Game {
 				m.move();
 				c.testC();
 				Main.gw.levelupdater();
-				if(Main.lbl.loadingscreentimer > 0 && Main.lbl.loadscreen) {
-					Main.lbl.loadingscreentimer--;
-				}
 
 				if (KeyHandler.f1Pressed) {
 					System.out.println("Px" + Main.gw.player.x);

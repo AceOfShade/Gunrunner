@@ -2,14 +2,16 @@ package main;
 
 import java.util.ArrayList;
 
+import abilitys.Idk;
 import entities.Enemy;
 import entities.GameObject;
 import entities.Player;
 import entities.Shot;
 
 public class GameWorld {
+	public static int lvl = 1;
 	public Player player;
-	public ArrayList<GameObject> idks;
+	public ArrayList<Idk> idks;
 	public ArrayList<Enemy> enemyObjects;
 	public ArrayList<Shot> shotObjects;
 	
@@ -18,20 +20,24 @@ public class GameWorld {
 		player = new Player(350, 400);
 		enemyObjects = new ArrayList<Enemy>(1);
 		shotObjects = new ArrayList<>();
-		Enemy e = new Enemy(600,400);
-//		Enemy e1 = new Enemy(700,400);
-		enemyObjects.add(e);
-//		enemyObjects.add(e1);
+		levelgenerator();
 	}
 			
 	
 	
 	  	public void levelupdater() { // so richtig falsch geschrieben
-	  		
+	  		for(int i = 0; i < Main.gw.idks.size(); i++) {
+				if(Main.gw.idks.get(i).way < 0) {
+					Main.gw.idks.remove(i);
+				}
+			}
 		}
 	
 		public void levelgenerator() {
-		
+			switch(lvl) {
+			case 1: enemyObjects.add(new Enemy(600,400));
+					enemyObjects.add(new Enemy(700,400)); break;
+			}
 		}
 	
 }

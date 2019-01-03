@@ -4,6 +4,7 @@ import java.awt.Graphics;
 
 import abilitys.Idk;
 import inputs.Resources;
+import main.GameWorld;
 import main.Main;
 
 public class Enemy extends GameObject {
@@ -32,8 +33,7 @@ public class Enemy extends GameObject {
 			if(health == 0) {
 				enemydead = true;
 				Main.gw.player.kills++;
-				Main.gw.idks.add(new Idk(x, y));
-				
+				Main.gw.idks.add(new Idk(x, y, false));
 			}
 		}
 	}
