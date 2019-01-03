@@ -18,6 +18,7 @@ public class Main {
 	
 
 	public static void main(String[] args) {
+		res = new Resources();
 		lbl = new Label();
 		g = new Game();
 		kh = new KeyHandler();
@@ -25,7 +26,6 @@ public class Main {
 		gw= new GameWorld();
 		mov= new Movement();
 		g.startGame();
-		res = new Resources();
 		
 	}
 }

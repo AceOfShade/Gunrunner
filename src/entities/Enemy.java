@@ -2,10 +2,12 @@ package entities;
 
 import java.awt.Graphics;
 
+import abilitys.Idk;
 import inputs.Resources;
 import main.Main;
 
 public class Enemy extends GameObject {
+	public Idk deathSymbole; 
 	public int health;
 	public boolean enemydead = false;
 	public Enemy(int x, int y) {
@@ -15,23 +17,30 @@ public class Enemy extends GameObject {
 
 	public Enemy(int x, int y, int health) {
 		super(x, y, 100, 140);
+		this.deathSymbole = null;
 		this.health = health;
 	}
 	
-	public void hit() {
-		if(!enemydead) {
+	public void hit(boolean instantDead) {
+		if(instantDead) {
+			health = 0;
+			enemydead = true;
+		}else if(!enemydead) {
 			if(health>0) {
 				health--;
-			}else if(health == 0) {
+			} 
+			if(health == 0) {
 				enemydead = true;
 				Main.gw.player.kills++;
+				Main.gw.idks.add(new Idk(x, y));
+				
 			}
 		}
 	}
 
 	@Override
 	public void render(Graphics g) {
-		if(health != 0) {
+		if(!enemydead) {
 			g.drawImage(Resources.enemy, (int)(x), (int)(y), 100, 140, null);
 		}else {
 			g.drawImage(Resources.enemydead, (int)(x), (int)(y), 100, 140, null);

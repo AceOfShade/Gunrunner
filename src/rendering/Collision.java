@@ -11,14 +11,13 @@ public class Collision {
 		Enemy e = null;
 		Shot s = null;
 		for(int i = 0;i < Main.gw.enemyObjects.size();i++) {
-			e = Main.gw.enemyObjects.get(i);
-			if(collisionRect(Main.gw.player, e)) {
+			if(collisionRect(Main.gw.player, Main.gw.enemyObjects.get(i))) {
 				if(!Main.gw.enemyObjects.get(i).enemydead) {
-					Main.gw.player.health--;
+					Main.gw.player.hit();
+					Main.gw.enemyObjects.get(i).hit(true);
 				}
 
 			}
-			e=null;
 		}
 		
 		
@@ -27,7 +26,7 @@ public class Collision {
 			for(int y = 0;y < Main.gw.enemyObjects.size();y++){
 				e = Main.gw.enemyObjects.get(y);
 				if(collisionRect(e, s)) {
-					Main.gw.enemyObjects.get(y).hit();
+					Main.gw.enemyObjects.get(y).hit(false);
 					Main.gw.shotObjects.remove(i);
 				}
 				e= null;

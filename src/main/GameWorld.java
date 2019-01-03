@@ -3,15 +3,18 @@ package main;
 import java.util.ArrayList;
 
 import entities.Enemy;
+import entities.GameObject;
 import entities.Player;
 import entities.Shot;
 
 public class GameWorld {
 	public Player player;
+	public ArrayList<GameObject> idks;
 	public ArrayList<Enemy> enemyObjects;
 	public ArrayList<Shot> shotObjects;
 	
 	public GameWorld() {
+		idks = new ArrayList<>();
 		player = new Player(350, 400);
 		enemyObjects = new ArrayList<Enemy>(1);
 		shotObjects = new ArrayList<>();

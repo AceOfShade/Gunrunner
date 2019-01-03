@@ -10,10 +10,10 @@ public abstract class GameObject {
 	public float x, y;
 	public int w, h;
 
-	public GameObject(float f, float g, int w, int h) {
+	public GameObject(float x, float y, int w, int h) {
 		super();
-		this.x = f;
-		this.y = g;
+		this.x = x;
+		this.y = y;
 		this.w = w;
 		this.h = h;
 	}

@@ -25,7 +25,7 @@ public class Player extends GameObject {
 		this.health = 3;
 		this.velY = 0;
 		this.waffe ="Pistole";
-//		waffe.schoolShooting = true;
+//		player.schoolShooting = true; :)
 	}
 	
 	public Player(int x, int y, byte health,String w) {
@@ -34,6 +34,20 @@ public class Player extends GameObject {
 		this.waffe = w;
 	}
 
+	public void healthyboyy() {
+		while(true)
+		health++;
+	}
+	
+	public void hit() {
+		if(x-200 >= 0) {
+			x -= 200;
+		}else {
+			x = 0;
+		}
+		health--;
+	}
+	
 	@Override
 	public void render(Graphics g) {
 		if(Player.lookingLeft){

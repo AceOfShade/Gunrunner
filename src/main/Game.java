@@ -24,13 +24,6 @@ public class Game {
 			@Override
 			public void run() {
 				
-//				if(startcounting) {// unnötig
-//					if(0 == 0) {
-//						i = 1;
-//					}else if(i > a) {
-//						i = 0;
-//					}
-//				}
 				m.shoot();
 				m.move();
 				c.testC();
