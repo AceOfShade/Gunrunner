@@ -1,10 +1,10 @@
 package main;
 
+
 import java.util.ArrayList;
 
 import abilitys.Idk;
 import entities.Enemy;
-import entities.GameObject;
 import entities.Player;
 import entities.Shot;
 

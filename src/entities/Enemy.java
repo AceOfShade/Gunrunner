@@ -2,10 +2,11 @@ package entities;
 
 import java.awt.Graphics;
 
+
 import abilitys.Idk;
 import inputs.Resources;
-import main.GameWorld;
 import main.Main;
+
 
 public class Enemy extends GameObject {
 	public Idk deathSymbole; 
