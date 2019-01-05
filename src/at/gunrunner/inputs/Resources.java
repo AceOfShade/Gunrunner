@@ -1,4 +1,4 @@
-package inputs;
+package at.gunrunner.inputs;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;

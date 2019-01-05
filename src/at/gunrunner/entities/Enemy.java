@@ -1,11 +1,10 @@
-package entities;
+package at.gunrunner.entities;
 
 import java.awt.Graphics;
 
-
-import abilitys.Idk;
-import inputs.Resources;
-import main.Main;
+import at.gunrunner.abilitys.Idk;
+import at.gunrunner.inputs.Resources;
+import at.gunrunner.main.*;
 
 
 public class Enemy extends GameObject {

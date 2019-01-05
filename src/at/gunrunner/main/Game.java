@@ -1,13 +1,11 @@
-package main;
+package at.gunrunner.main;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
-import entities.Movement;
-import inputs.KeyHandler;
-//import entities.Player;
-//import rendering.Collision;
-import rendering.Collision;
+import at.gunrunner.entities.Movement;
+import at.gunrunner.inputs.KeyHandler;
+import at.gunrunner.rendering.Collision;
 
 public class Game {
 	public Timer g;

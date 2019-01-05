@@ -1,12 +1,12 @@
-package main;
+package at.gunrunner.main;
 
 
 import java.util.ArrayList;
 
-import abilitys.Idk;
-import entities.Enemy;
-import entities.Player;
-import entities.Shot;
+import at.gunrunner.abilitys.Idk;
+import at.gunrunner.entities.Enemy;
+import at.gunrunner.entities.Player;
+import at.gunrunner.entities.Shot;
 
 public class GameWorld {
 	public static int lvl = 1;

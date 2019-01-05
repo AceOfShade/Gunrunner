@@ -1,9 +1,9 @@
-package abilitys;
+package at.gunrunner.abilitys;
 
 import java.awt.Graphics;
 
-import entities.GameObject;
-import inputs.Resources;
+import at.gunrunner.entities.GameObject;
+import at.gunrunner.inputs.Resources;
 
 public class Idk extends GameObject{
 	public int way;

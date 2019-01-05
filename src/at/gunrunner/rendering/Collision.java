@@ -1,9 +1,9 @@
-package rendering;
+package at.gunrunner.rendering;
 
-import entities.GameObject;
-import entities.Shot;
-import main.Main;
-import entities.Enemy;
+import at.gunrunner.entities.Enemy;
+import at.gunrunner.entities.GameObject;
+import at.gunrunner.entities.Shot;
+import at.gunrunner.main.*;
 
 public class Collision {
 

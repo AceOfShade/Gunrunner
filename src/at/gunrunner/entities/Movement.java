@@ -1,9 +1,9 @@
-package entities;
+package at.gunrunner.entities;
 
-import abilitys.Weapon;
-import inputs.KeyHandler;
-import main.Main;
-import sound.Sound;
+import at.gunrunner.abilitys.Weapon;
+import at.gunrunner.inputs.KeyHandler;
+import at.gunrunner.sound.Sound;
+import at.gunrunner.main.*;
 
 public class Movement {
 	int jh; // max Sprunghöhe von Variables kopiert

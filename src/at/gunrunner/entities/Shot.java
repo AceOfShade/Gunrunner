@@ -1,9 +1,10 @@
-package entities;
+package at.gunrunner.entities;
 
 import java.awt.Graphics;
-import abilitys.Weapon;
-import inputs.Resources;
-import main.Main;
+
+import at.gunrunner.abilitys.Weapon;
+import at.gunrunner.inputs.Resources;
+import at.gunrunner.main.*;
 
 public class Shot extends GameObject{
 	public double speedshot;

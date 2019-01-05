@@ -1,10 +1,10 @@
-package rendering;
+package at.gunrunner.rendering;
 
 
 import javax.swing.JFrame;
 
-import inputs.Resources;
-import main.Main;
+import at.gunrunner.inputs.Resources;
+import at.gunrunner.main.*;
 
 public class Frame {
 	public static int screenwidth = 800;

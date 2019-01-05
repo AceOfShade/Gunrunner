@@ -1,8 +1,9 @@
- package main;
+package at.gunrunner.main;
+ 
 
-import entities.*;
-import inputs.*;
-import rendering.*;
+import at.gunrunner.entities.*;
+import at.gunrunner.inputs.*;
+import at.gunrunner.rendering.*;
 
 public class Main {
 	

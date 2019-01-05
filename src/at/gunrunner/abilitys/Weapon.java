@@ -1,6 +1,6 @@
-package abilitys;
+package at.gunrunner.abilitys;
 
-import entities.Player;
+import at.gunrunner.entities.Player;
 
 public class Weapon {
 

@@ -1,4 +1,4 @@
-package sound;
+package at.gunrunner.sound;
 /**
  * This is a class for sounds of the gameplay
  */

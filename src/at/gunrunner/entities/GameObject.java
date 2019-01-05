@@ -1,4 +1,4 @@
-package entities;
+package at.gunrunner.entities;
 
 import java.awt.Graphics;
 
