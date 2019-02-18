@@ -32,6 +32,6 @@ public class Game {
 					System.out.println("Py" + Main.gw.player.y);
 				}
 			}
-		}, 0, 1);
+		}, 0, 10);
 	}
 }
