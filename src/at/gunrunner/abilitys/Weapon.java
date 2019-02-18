@@ -23,7 +23,7 @@ public class Weapon {
 			}
 		}
 	}
-		 
+	
 		 public void set(int shotX, int shotY, int cooldown, float speedshot) {
 			 Weapon.shotX = shotX;
 			 Weapon.shotY = shotY;
