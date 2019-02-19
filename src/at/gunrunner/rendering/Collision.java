@@ -11,7 +11,7 @@ public class Collision {
 		Enemy e = null;
 		Shot s = null;
 		for(int i = 0;i < Main.gw.enemyObjects.size();i++) {
-			if(collisionRect(Main.gw.player, Main.gw.enemyObjects.get(i))) {
+			if(collisionRect(Main.gw.player, Main.gw.enemyObjects.get(i)) && !Main.gw.enemyObjects.get(i).enemydead) {
 				if(!Main.gw.enemyObjects.get(i).enemydead) {
 					Main.gw.player.hit();
 					Main.gw.enemyObjects.get(i).hit(true);
@@ -25,7 +25,7 @@ public class Collision {
 			s = Main.gw.shotObjects.get(i);
 			for(int y = 0;y < Main.gw.enemyObjects.size();y++){
 				e = Main.gw.enemyObjects.get(y);
-				if(collisionRect(e, s)) {
+				if(collisionRect(e, s)  && !Main.gw.enemyObjects.get(y).enemydead) {
 					Main.gw.enemyObjects.get(y).hit(false);
 					Main.gw.shotObjects.remove(i);
 				}

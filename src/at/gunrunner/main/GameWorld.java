@@ -19,7 +19,7 @@ public class GameWorld {
 		idks = new ArrayList<>();
 		player = new Player(350, 400);
 		enemyObjects = new ArrayList<Enemy>(1);
-		shotObjects = new ArrayList<>();
+		shotObjects = new ArrayList<>(5);
 		levelgenerator();
 	}
 			
