@@ -27,6 +27,5 @@ public class Main {
 		gw= new GameWorld();
 		mov= new Movement();
 		g.startGame();
-		
 	}
 }

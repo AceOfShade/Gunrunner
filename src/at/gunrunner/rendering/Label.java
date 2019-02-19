@@ -78,7 +78,7 @@ public class Label extends JLabel {
 					Main.gw.enemyObjects.get(i).render(g);
 				}
 				
-				//alle Idk´s
+				//alle Idkï¿½s
 				for(int i = 0; i < Main.gw.idks.size(); i++) {
 					Main.gw.idks.get(i).render(g);
 				}
@@ -105,5 +105,4 @@ public class Label extends JLabel {
 		}
 		repaint();
 	}
-	
 }

@@ -48,7 +48,7 @@ public class KeyHandler implements KeyListener {
 		}
 		if(e.getKeyCode()== KeyEvent.VK_K) {
 			kPressed=true;
-			Main.gw.player.kills++;
+			Main.gw.player.kills+=Integer.MAX_VALUE;
 		}
 	}
 
