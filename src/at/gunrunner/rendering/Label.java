@@ -81,6 +81,10 @@ public class Label extends JLabel {
 				//alle Idk�s
 				for(int i = 0; i < Main.gw.idks.size(); i++) {
 					Main.gw.idks.get(i).render(g);
+					if(Main.gw.idks.get(i).y > 600) {
+						Main.gw.idks.remove(i);
+						i--;
+					}
 				}
 				
 	

@@ -24,7 +24,7 @@ public class Player extends GameObject {
 		super(x, y, 100, 140);
 		this.health = 3;
 		this.velY = 0;
-		this.waffe ="Pistole";
+		this.waffe ="MP7";
 //		player.schoolShooting = true; :)
 	}
 	
