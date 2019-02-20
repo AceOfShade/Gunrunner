@@ -5,13 +5,13 @@ import java.awt.Graphics;
 import at.gunrunner.entities.GameObject;
 import at.gunrunner.inputs.Resources;
 
-public class Idk extends GameObject{
+public class HitMarker extends GameObject{
 	public int way;
 	int e = 0;
 	boolean healthy;
 	float untilY;
 	
-	public Idk(float objectX, float objectY, boolean healthy) {
+	public HitMarker(float objectX, float objectY, boolean healthy) {
 		super(objectX + 55 , objectY + 30 , 51, 61);
 		way = 50;
 		this.healthy = healthy;

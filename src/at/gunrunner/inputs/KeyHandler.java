@@ -13,6 +13,7 @@ public class KeyHandler implements KeyListener {
 	@Override
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_W) {
+			Main.gw.player.jump(Player.getJumpheight());
 			wPressed = true;
 		}
 //		if (e.getKeyCode() == KeyEvent.VK_W) {

@@ -3,7 +3,7 @@ package at.gunrunner.main;
 
 import java.util.ArrayList;
 
-import at.gunrunner.abilitys.Idk;
+import at.gunrunner.abilitys.HitMarker;
 import at.gunrunner.entities.Enemy;
 import at.gunrunner.entities.Player;
 import at.gunrunner.entities.Shot;
@@ -11,7 +11,7 @@ import at.gunrunner.entities.Shot;
 public class GameWorld {
 	public static int lvl = 1;
 	public Player player;
-	public ArrayList<Idk> idks;
+	public ArrayList<HitMarker> idks;
 	public ArrayList<Enemy> enemyObjects;
 	public ArrayList<Shot> shotObjects;
 	

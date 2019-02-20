@@ -6,24 +6,17 @@ import at.gunrunner.abilitys.Weapon;
 import at.gunrunner.inputs.Resources;
 import at.gunrunner.main.*;
 
-public class Player extends GameObject {
+public class Player extends Charakter {
 	public int kills = 0; // kills from player
-	public int health; // player health
-	public float velY;
-	public static int jumpheight = 250;
-
-	public static float speedright = 0.5f;
-	public static float speedleft = 0.5f;
-	public static float speedjump = 0.6f;
-	public static float speeddown = 0.75f;
+	public int health = 3; // player health
+	private static float speedX = 0.5f;
+	private static float jumpheight = 0.8f;
 	
 	public static boolean lookingLeft;
 	public String waffe;
 	
 	public Player(int x, int y) {
 		super(x, y, 100, 140);
-		this.health = 3;
-		this.velY = 0;
 		this.waffe ="MP7";
 //		player.schoolShooting = true; :)
 	}
@@ -65,4 +58,11 @@ public class Player extends GameObject {
 		
 	}
 
+	public static float getSpeedX() {
+		return speedX;
+	}
+	
+	public static float getJumpheight() {
+		return jumpheight;
+	}
 }

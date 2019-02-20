@@ -2,13 +2,13 @@ package at.gunrunner.entities;
 
 import java.awt.Graphics;
 
-import at.gunrunner.abilitys.Idk;
+import at.gunrunner.abilitys.HitMarker;
 import at.gunrunner.inputs.Resources;
 import at.gunrunner.main.*;
 
 
 public class Enemy extends GameObject {
-	public Idk deathSymbole; 
+	public HitMarker deathSymbole; 
 	public int health;
 	public boolean enemydead = false;
 	public Enemy(int x, int y) {
@@ -33,7 +33,7 @@ public class Enemy extends GameObject {
 			if(health == 0) {
 				enemydead = true;
 				Main.gw.player.kills++;
-				Main.gw.idks.add(new Idk(x, y, false));
+				Main.gw.idks.add(new HitMarker(x, y, false));
 			}
 		}
 	}

@@ -13,6 +13,9 @@ public class Movement {
 	Sound s;
 	public static Weapon w = new Weapon();
 	
+	public static float speedRight = 0.1f;
+	public static float speedLeft = 0.1f;
+	
 	public Movement() {
 		s = new Sound();
 	}
@@ -47,16 +50,19 @@ public class Movement {
 	public void move() {// bewegung
 		if (KeyHandler.dPressed) {
 			if (Main.gw.player.x < 730) {
-				Main.gw.player.x += Player.speedright;
+				Main.gw.player.x += Player.getSpeedX();
 			}
 		}
 		if (KeyHandler.aPressed) {
 			if (Main.gw.player.x > 0) {
-				Main.gw.player.x -= Player.speedleft;
+				Main.gw.player.x -= Player.getSpeedX();
 			}
 		}
-
+		
+		Main.gw.player.y -= Main.gw.player.getVelY();
+		Main.gw.player.applyGravity();
 		// Jump
+		/*
 		if(Main.gw.player.y >= 400) {jh = Player.jumpheight; } // jump max h�he;
 		
 		if(KeyHandler.wPressed && jh != 0){
@@ -77,7 +83,8 @@ public class Movement {
 		if(Main.gw.player.y > 400){	//wenn man in den boden buggt
 			Main.gw.player.y = 400;
 			}
+		*/
 		//Jump-Ende
-		if(KeyHandler.f1Pressed) {System.out.println("Vel: " + Main.gw.player.velY + KeyHandler.wPressed);}//debug mode
+//		if(KeyHandler.f1Pressed) {System.out.println("Vel: " + Main.gw.player.velY + KeyHandler.wPressed);}//debug mode
 	}
 }
