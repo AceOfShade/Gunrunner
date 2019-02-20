@@ -5,26 +5,27 @@ import java.awt.Graphics;
 import at.gunrunner.abilitys.Weapon;
 import at.gunrunner.inputs.Resources;
 import at.gunrunner.main.*;
+import at.gunrunner.physics.Playermovement;
 
 public class Player extends Charakter {
 	public int kills = 0; // kills from player
 	public int health = 3; // player health
 	private static float speedX = 0.5f;
 	private static float jumpheight = 0.4f;
+	public Playermovement pm;
 	
 	public static boolean lookingLeft;
-	public String waffe;
+	public static String waffe;
 	
 	public Player(int x, int y) {
 		super(x, y, 100, 140);
-		this.waffe ="MP7";
-//		player.schoolShooting = true; :)
+		pm = new Playermovement("MP7");
 	}
 	
-	public Player(int x, int y, byte health,String w) {
+	public Player(int x, int y, byte health,String waffe) {
 		super(x, y, 140, 100);
 		this.health = health;
-		this.waffe = w;
+		pm = new Playermovement(waffe);
 	}
 
 	public void healthyboyy() {

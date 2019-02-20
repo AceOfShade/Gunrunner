@@ -7,24 +7,25 @@ import at.gunrunner.inputs.KeyHandler;
 import at.gunrunner.inputs.Resources;
 import at.gunrunner.main.*;
 
-public class Movement {
+public class Playermovement {
 	int cooltime = Weapon.cooldown;
 	public static Weapon w = new Weapon();
 	
 	public static float speedRight = 0.1f;
 	public static float speedLeft = 0.1f;
 
+	public Playermovement(String waffe) {
+		w.waffe(waffe);
+	}
+	
 	public void shoot() {
-	 	
-		 // spawning
-		w.waffe(Main.gw.player.waffe);
+		//spawning
 		if(cooltime <= Weapon.cooldown) {
 			cooltime++;
 		}
 		if (cooltime > Weapon.cooldown) {
 			 if(KeyHandler.spacePressed) {
-				Shot a = new Shot();
-				Main.gw.shotObjects.add(a);
+				Main.gw.shotObjects.add(new Shot());
 				cooltime = 0;
 				Resources.s.playSound();
 			}

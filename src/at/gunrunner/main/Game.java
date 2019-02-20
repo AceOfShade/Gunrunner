@@ -4,33 +4,27 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import at.gunrunner.inputs.KeyHandler;
-import at.gunrunner.physics.Movement;
 import at.gunrunner.rendering.Collision;
 
 public class Game {
 	public Timer g;
-	public Movement m = new Movement();
 	public Collision c = new Collision();
-	public int tick;
-	public int i = 0;
-	public static int a = 0;
-	public static boolean startcounting;
 
-	public void startGame() {
+	public Game() {
 		g = new Timer();
+	}
+	
+	public void startGame() {
 		g.scheduleAtFixedRate(new TimerTask() {
 			@Override
 			public void run() {
 				
-				m.shoot();
-				m.move();
+				Main.gw.player.pm.shoot();
+				Main.gw.player.pm.move();
 				c.testC();
 				Main.gw.levelupdater();
 
-				if (KeyHandler.f1Pressed) {
-					System.out.println("Px" + Main.gw.player.x);
-					System.out.println("Py" + Main.gw.player.y);
-				}
+				if (KeyHandler.f1Pressed) {System.out.println("Px: " + Main.gw.player.x + " Py: " + Main.gw.player.y);}
 			}
 		}, 0, 1);
 	}
