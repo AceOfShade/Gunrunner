@@ -10,6 +10,7 @@ import at.gunrunner.main.*;
 public class KeyHandler implements KeyListener {
 	public static char lastPressed;
 	public static boolean kPressed, wPressed, aPressed, dPressed, spacePressed, f2Pressed, f1Pressed, escPressed;
+	
 	@Override
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_W) {

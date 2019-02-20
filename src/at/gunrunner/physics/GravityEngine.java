@@ -2,7 +2,6 @@ package at.gunrunner.physics;
 
 import java.util.ArrayList;
 
-import at.gunrunner.entities.GameObject;
 import at.gunrunner.entities.PhysicsObject;
 
 public class GravityEngine {

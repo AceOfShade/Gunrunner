@@ -1,14 +1,13 @@
 package at.gunrunner.main;
  
 
-import at.gunrunner.entities.*;
 import at.gunrunner.inputs.*;
 import at.gunrunner.physics.Movement;
 import at.gunrunner.rendering.*;
 
 public class Main {
 	
-	public static final String VersionID = "Alpha 1.01.00.01.02";
+	public static final String VersionID = "Alpha 1.01.00.02.02";
 	
 	public static Game g;
 	public static KeyHandler kh;
@@ -29,6 +28,10 @@ public class Main {
 		f =new Frame();
 		gw= new GameWorld();
 		mov= new Movement();
+		start();
+	}
+	
+	public static void start() {
 		g.startGame();
 	}
 }

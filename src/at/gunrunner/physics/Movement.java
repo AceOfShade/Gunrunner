@@ -4,23 +4,17 @@ import at.gunrunner.abilitys.Weapon;
 import at.gunrunner.entities.Player;
 import at.gunrunner.entities.Shot;
 import at.gunrunner.inputs.KeyHandler;
-import at.gunrunner.sound.Sound;
+import at.gunrunner.inputs.Resources;
 import at.gunrunner.main.*;
 
 public class Movement {
-	int jh; // max Sprungh�he von Variables kopiert
 	int e = 0;
-	Sound s;
 	public static Weapon w = new Weapon();
 	
 	public static float speedRight = 0.1f;
 	public static float speedLeft = 0.1f;
-	
-	public Movement() {
-		s = new Sound();
-	}
 
-	public void shoot() {// Schie�en halt
+	public void shoot() {
 	 	
 		 // spawning
 		w.waffe(Main.gw.player.waffe);
@@ -32,9 +26,10 @@ public class Movement {
 				Shot a = new Shot();
 				Main.gw.shotObjects.add(a);
 				e = 0;
-				s.playSound();
+				Resources.s.playSound();
 			}
 		}
+		//"flying"
 		for(int i = 0; i < Main.gw.shotObjects.size(); i++) {
 			if(Main.gw.shotObjects.get(i).right) {
 				Main.gw.shotObjects.get(i).x += Main.gw.shotObjects.get(i).speedshot;
