@@ -12,10 +12,7 @@ public class PhysicsObject extends GameObject {
 	}
 
 	@Override
-	public void render(Graphics g) {
-		// TODO Auto-generated method stub
-
-	}
+	public void render(Graphics g) {};
 	
 	public void applyGravity() {
 		if(y >= 400) {

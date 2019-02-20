@@ -8,7 +8,7 @@ public class GravityEngine {
 	
 	boolean gravity;
 	public static int floor = 400;
-	public static float gravitySpeed = 0.001f;
+	public static float gravitySpeed = 0.0005f;
 	
 	public void gravity(ArrayList<PhysicsObject> a) {
 		for(PhysicsObject g : a) {

@@ -77,6 +77,10 @@ public class Label extends JLabel {
 				for(int i = 0; i < Main.gw.enemyObjects.size(); i++) {
 					Main.gw.enemyObjects.get(i).render(g);
 				}
+				///bullets
+				for (int i = 0; i < Main.gw.shotObjects.size(); i++) {
+					Main.gw.shotObjects.get(i).render(g);
+				}
 				
 				//alle Idks
 				for(int i = 0; i < Main.gw.idks.size(); i++) {
@@ -96,11 +100,9 @@ public class Label extends JLabel {
 				g.drawString("Kills: " + Main.gw.player.kills, 20, 20);
 	
 				// painting all Bullets
-				for (int i = 0; i < Main.gw.shotObjects.size(); i++) {
-						Main.gw.shotObjects.get(i).render(g);
-				}
+				
 			}
-			if(KeyHandler.escPressed  ){
+			if(KeyHandler.escPressed){
 				startmenu = !false;
 			}
 			

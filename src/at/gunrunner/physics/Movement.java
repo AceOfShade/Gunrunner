@@ -8,7 +8,7 @@ import at.gunrunner.inputs.Resources;
 import at.gunrunner.main.*;
 
 public class Movement {
-	int e = 0;
+	int cooltime = Weapon.cooldown;
 	public static Weapon w = new Weapon();
 	
 	public static float speedRight = 0.1f;
@@ -18,14 +18,14 @@ public class Movement {
 	 	
 		 // spawning
 		w.waffe(Main.gw.player.waffe);
-		if(e <= Weapon.cooldown) {
-			e++;
+		if(cooltime <= Weapon.cooldown) {
+			cooltime++;
 		}
-		if (e > Weapon.cooldown) {
-			if(KeyHandler.spacePressed) {
+		if (cooltime > Weapon.cooldown) {
+			 if(KeyHandler.spacePressed) {
 				Shot a = new Shot();
 				Main.gw.shotObjects.add(a);
-				e = 0;
+				cooltime = 0;
 				Resources.s.playSound();
 			}
 		}

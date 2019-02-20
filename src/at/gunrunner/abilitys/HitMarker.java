@@ -7,7 +7,6 @@ import at.gunrunner.inputs.Resources;
 
 public class HitMarker extends GameObject{
 	public int way;
-	int e = 0;
 	boolean healthy;
 	float untilY;
 	

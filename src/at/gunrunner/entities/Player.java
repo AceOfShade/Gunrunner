@@ -10,7 +10,7 @@ public class Player extends Charakter {
 	public int kills = 0; // kills from player
 	public int health = 3; // player health
 	private static float speedX = 0.5f;
-	private static float jumpheight = 0.8f;
+	private static float jumpheight = 0.4f;
 	
 	public static boolean lookingLeft;
 	public String waffe;
