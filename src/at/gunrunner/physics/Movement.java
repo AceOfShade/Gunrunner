@@ -1,12 +1,14 @@
-package at.gunrunner.entities;
+package at.gunrunner.physics;
 
 import at.gunrunner.abilitys.Weapon;
+import at.gunrunner.entities.Player;
+import at.gunrunner.entities.Shot;
 import at.gunrunner.inputs.KeyHandler;
 import at.gunrunner.sound.Sound;
 import at.gunrunner.main.*;
 
 public class Movement {
-	int jh; // max Sprunghöhe von Variables kopiert
+	int jh; // max Sprunghï¿½he von Variables kopiert
 	int e = 0;
 	Sound s;
 	public static Weapon w = new Weapon();
@@ -15,7 +17,7 @@ public class Movement {
 		s = new Sound();
 	}
 
-	public void shoot() {// Schießen halt
+	public void shoot() {// Schieï¿½en halt
 	 	
 		 // spawning
 		w.waffe(Main.gw.player.waffe);
@@ -55,12 +57,12 @@ public class Movement {
 		}
 
 		// Jump
-		if(Main.gw.player.y >= 400) {jh = Player.jumpheight; } // jump max höhe;
+		if(Main.gw.player.y >= 400) {jh = Player.jumpheight; } // jump max hï¿½he;
 		
 		if(KeyHandler.wPressed && jh != 0){
 			if(Main.gw.player.y>0 ){Main.gw.player.velY-=Player.speedjump; } //Sprung ges. hinzugeben (voller Sprung)
 		}else {
-			Main.gw.player.velY = 0; //Sprung ges. hinzugeben (nicht voller Sprung, solang man w hält)
+			Main.gw.player.velY = 0; //Sprung ges. hinzugeben (nicht voller Sprung, solang man w hï¿½lt)
 		}
 		if(Main.gw.player.velY == 0 && Main.gw.player.y < 400) { //sinken
 			Main.gw.player.y+= Player.speeddown; //sinken

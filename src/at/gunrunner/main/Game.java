@@ -3,8 +3,8 @@ package at.gunrunner.main;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import at.gunrunner.entities.Movement;
 import at.gunrunner.inputs.KeyHandler;
+import at.gunrunner.physics.Movement;
 import at.gunrunner.rendering.Collision;
 
 public class Game {

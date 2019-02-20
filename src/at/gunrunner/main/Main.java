@@ -3,6 +3,7 @@ package at.gunrunner.main;
 
 import at.gunrunner.entities.*;
 import at.gunrunner.inputs.*;
+import at.gunrunner.physics.Movement;
 import at.gunrunner.rendering.*;
 
 public class Main {
