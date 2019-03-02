@@ -4,11 +4,12 @@ import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.RenderingHints;
+
 import javax.swing.JLabel;
 
 import at.gunrunner.inputs.KeyHandler;
 import at.gunrunner.inputs.Resources;
-import at.gunrunner.main.*;
+import at.gunrunner.main.Main;
 
 
 public class Label extends JLabel {
@@ -78,7 +79,7 @@ public class Label extends JLabel {
 					Main.gw.enemyObjects.get(i).render(g);
 				}
 				///bullets
-				for (int i = 0; i < Main.gw.shotObjects.size(); i++) {
+				for (int i = 0; i < Main.gw.shotObjects.size() && Main.gw.shotObjects.get(i) != null; i++) {
 					Main.gw.shotObjects.get(i).render(g);
 				}
 				

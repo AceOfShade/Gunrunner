@@ -14,43 +14,39 @@ public class KeyHandler implements KeyListener {
 	@Override
 	public void keyPressed(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_W) {
-			Main.gw.player.jump(Player.getJumpheight());
 			wPressed = true;
+			return;
 		}
-//		if (e.getKeyCode() == KeyEvent.VK_W) {
-//			lastPressed = 'w';
-//		}
-//
 		if (e.getKeyCode() == KeyEvent.VK_A) {
 			aPressed = true;
-				Player.lookingLeft = true;
-			
-			
+			Player.lookingLeft = true;
+			return;
 		}
-//		if (e.getKeyCode() == KeyEvent.VK_A) {
-//			lastPressed = 'a';
-//		}
 		if (e.getKeyCode() == KeyEvent.VK_D) {
 			dPressed = true;
-				Player.lookingLeft = false;
-			
+			Player.lookingLeft = false;
+			return;
 		}
 		if (e.getKeyCode() == KeyEvent.VK_SPACE) {
 			if (Label.startmenu) {
 				Label.startmenu = false;
-			} else {
+			}else{
 				KeyHandler.spacePressed = true;
 			}
+			return;
 		}
 		if (e.getKeyCode() == KeyEvent.VK_F1){
 			f1Pressed = true;
+			return;
 		}
 		if (e.getKeyCode() == KeyEvent.VK_F2) {
 			f2Pressed = !f2Pressed;
+			return;
 		}
 		if(e.getKeyCode()== KeyEvent.VK_K) {
 			kPressed=true;
 			Main.gw.player.kills++;
+			return;
 		}
 	}
 
@@ -58,21 +54,27 @@ public class KeyHandler implements KeyListener {
 	public void keyReleased(KeyEvent e) {
 		if (e.getKeyCode() == KeyEvent.VK_W) {
 			wPressed = false;
+			return;
 		}
 		if (e.getKeyCode() == KeyEvent.VK_SPACE) {
 			spacePressed = false;
+			return;
 		}
 		if (e.getKeyCode() == KeyEvent.VK_A) {
 			aPressed = false;
+			return;
 		}
 		if (e.getKeyCode() == KeyEvent.VK_D) {
 			dPressed = false;
+			return;
 		}
 		if(e.getKeyCode()== KeyEvent.VK_ESCAPE) {
 			escPressed=false;
+			return;
 		}
 		if(e.getKeyCode()== KeyEvent.VK_K) {
 			kPressed=false;
+			return;
 		}
 	}
 

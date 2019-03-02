@@ -6,8 +6,9 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
 public class Sound {
-	public Clip clip;
+	public static Clip clip;
 	public AudioInputStream audioInputStream;
+	
 	public Sound() {
 		try {
 			audioInputStream = AudioSystem.getAudioInputStream(getClass().getResource("/gunsound.wav"));
@@ -19,7 +20,7 @@ public class Sound {
 	    }
 	}
 	
-	public void playSound() {
+	public static void playSound() {
         clip.start();
 	}
 }
