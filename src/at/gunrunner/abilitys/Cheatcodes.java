@@ -1,6 +1,6 @@
-package main;
+package at.gunrunner.abilitys;
 
-public class cheatcodes {
+public class Cheatcodes {
 	public static char[] lastPressed = new char[6];
 	private byte freiePos;
 	
@@ -17,6 +17,6 @@ public class cheatcodes {
 	}
 	
 	public void cheat() {
-		
+		//xD
 	}
 }
