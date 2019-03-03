@@ -17,7 +17,8 @@ public class PhysicsObject extends GameObject {
 	
 	public void applyGravity() {
 		if(y >= 400) {
-			y= 400;
+			this.velY = 0;
+			this.y = 400;
 			return;
 		}
 		this.velY -= GravityEngine.gravitySpeed;

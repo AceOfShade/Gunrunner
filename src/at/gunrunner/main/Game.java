@@ -26,7 +26,7 @@ public class Game {
 				c.testC();
 				Main.gw.levelupdater();
 				if (KeyHandler.f1Pressed) {
-					System.out.println("Px: " + Main.gw.player.getX() + " Py: " + Main.gw.player.getY() + " VelX: " + Main.gw.player.getVelY() + " VelY: " + Main.gw.player.getVelY());
+					System.out.println(String.format("Px: %f, Py: %f, VelX: %f VelY %f", Main.gw.player.getX(), Main.gw.player.getY(), Main.gw.player.getVelX(), Main.gw.player.getVelY()));
 				}
 			}
 		}, 0, 1);
