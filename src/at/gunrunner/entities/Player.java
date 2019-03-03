@@ -2,6 +2,7 @@ package at.gunrunner.entities;
 
 import java.awt.Graphics;
 
+import at.gunrunner.abilitys.Weapon;
 import at.gunrunner.inputs.Resources;
 import at.gunrunner.main.*;
 import at.gunrunner.physics.Playermovement;
@@ -12,19 +13,21 @@ public class Player extends Charakter {
 	private static float speedX = 0.03f;
 	private static float jumpheight = 0.4f;
 	public Playermovement pm;
+	private int hitboxStart;//muss noch verwendet werden
 	
 	public static boolean lookingLeft;
 	public static String waffe;
 	
 	public Player(int x, int y) {
-		super(x, y, 100, 140);
-		pm = new Playermovement("MP7");
+		super(x, y, 100 -40, 140);
+		hitboxStart = 25;
+		pm = new Playermovement(Weapon.PISTOLE);
 	}
 	
-	public Player(int x, int y, byte health,String waffe) {
+	public Player(int x, int y, byte health,Weapon w) {
 		super(x, y, 140, 100);
 		this.health = health;
-		pm = new Playermovement(waffe);
+		pm = new Playermovement(w);
 	}
 
 	public void healthyboyy() {

@@ -12,10 +12,7 @@ public class Collision {
 		Shot s = null;
 		for(int i = 0;i < Main.gw.enemyObjects.size();i++) {
 			if(collisionRect(Main.gw.player, Main.gw.enemyObjects.get(i)) && !Main.gw.enemyObjects.get(i).enemydead) {
-				if(!Main.gw.enemyObjects.get(i).enemydead) {
-					Main.gw.player.hit();
-				}
-
+				Main.gw.player.hit();
 			}
 		}
 		
