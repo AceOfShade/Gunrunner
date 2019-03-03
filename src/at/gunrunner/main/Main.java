@@ -6,7 +6,7 @@ import at.gunrunner.rendering.*;
 
 public class Main {
 	
-	public static final String VERSIONID = "Alpha 1.01.02.04.00";
+	public static final String VERSIONID = "Alpha 1.01.01.04.00";
 	
 	public static Game g;
 	public static KeyHandler kh;

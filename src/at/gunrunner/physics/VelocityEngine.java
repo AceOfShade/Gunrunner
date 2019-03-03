@@ -5,22 +5,12 @@ import at.gunrunner.main.Main;
 public class VelocityEngine{
 	
 	private float friction = 0.9f;
-	private float airFriction = 0.9995f;
 	
 	public void allIsMoving() {
 		bulletsAreMoving();
 		walk();
 		gravity();
-		hitmarkersAreMoving();
 		Playermovement.w.shoot(false);
-	}
-	
-	private void hitmarkersAreMoving() {
-		for(int i = 0; i < Main.gw.hitmarker.size(); i++) {
-			if(Main.gw.hitmarker.get(i).way < 0) {
-				Main.gw.hitmarker.remove(i);
-			}
-		}
 	}
 	
 	private void bulletsAreMoving() {
@@ -45,11 +35,9 @@ public class VelocityEngine{
 		if (Main.gw.player.x + Main.gw.player.velX > 0  && Main.gw.player.x + Main.gw.player.velX < 730) {
 			Main.gw.player.x += Main.gw.player.velX;
 		}
-		if(Main.gw.player.velX != 0) {
 		if(Main.gw.player.getY() == 400) {
+			if(Main.gw.player.velX != 0) {
 				Main.gw.player.velX *= friction;
-			}else{
-				Main.gw.player.velX *= airFriction;
 			}
 		}
 	}
