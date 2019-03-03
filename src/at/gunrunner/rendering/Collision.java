@@ -14,7 +14,6 @@ public class Collision {
 			if(collisionRect(Main.gw.player, Main.gw.enemyObjects.get(i)) && !Main.gw.enemyObjects.get(i).enemydead) {
 				if(!Main.gw.enemyObjects.get(i).enemydead) {
 					Main.gw.player.hit();
-					Main.gw.enemyObjects.get(i).hit(true);
 				}
 
 			}
