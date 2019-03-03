@@ -21,7 +21,7 @@ public abstract class GameObject {
 	public abstract void render(Graphics g);
 
 	public float getX() {
-		return x;//$FALL-THROUGH$ test 
+		return x;
 	}
 
 	public float getY() {

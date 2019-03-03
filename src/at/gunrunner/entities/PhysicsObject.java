@@ -6,7 +6,7 @@ import at.gunrunner.physics.GravityEngine;
 
 public class PhysicsObject extends GameObject {
 	public float velX;//muss zu private gemacht werden!
-	private float velY;
+	protected float velY;
 
 	public PhysicsObject(float x, float y, int w, int h) {
 		super(x, y, w, h);
