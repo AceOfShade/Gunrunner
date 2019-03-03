@@ -12,7 +12,6 @@ public class VelocityEngine{
 		walk();
 		gravity();
 		hitmarkersAreMoving();
-		Playermovement.w.shoot(false);
 	}
 	
 	private void hitmarkersAreMoving() {

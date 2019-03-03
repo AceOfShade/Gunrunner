@@ -1,48 +1,44 @@
 package at.gunrunner.abilitys;
 
-import at.gunrunner.entities.Player;
-import at.gunrunner.entities.Shot;
-import at.gunrunner.main.Main;
+public enum Weapon {
+	MP7 (26,85,75,75,200,1.25f), PISTOLE (3,97,43,43,600, 1f);
 
-public class Weapon {
+	public int shotXstart, shotYstart,shotXstartInv, shotYstartInv;
+	public int cooldowntime;
+	public float speedshot;
+	
+	private Weapon(int shotXstart,int shotXstartInv, int shotYstart,int shotYstartInv, int cooldowntime, float speedshot) {
+		this.shotXstart = shotXstart;
+		this.shotXstartInv = shotXstartInv;
+		this.shotYstart = shotYstart;
+		this.shotYstartInv = shotYstartInv;
+		this.cooldowntime = cooldowntime;
+		this.speedshot = speedshot;
+	}
 
-	public static String name;
-	public static int shotXstart = 0, shotYstart = 0;
-	public static int cooldowntime = 0; // in millisekunden
-	private int cooldown;
-	public static float speedshot = 0;
-	 
-	public void waffe(String name) {
-		Weapon.name = name;
-		if(Player.lookingLeft){
-			switch(name) {
-			case"MP7" : set(26,75,200, 1.25f);break;
-			case"Pistole" : set(3,43,600, 1f);break;
-			}
-		}else {
-			switch(name) {
-			case"MP7" : set(75,85,200, 1.25f);break;
-			case"Pistole" : set(97,43,600, 1f);break;
-			}
-		}
-		cooldown = cooldowntime;
+	public int getShotXstart() {
+		return shotXstart;
+	}
+
+	public int getShotYstart() {
+		return shotYstart;
+	}
+
+	public int getShotXstartInv() {
+		return shotXstartInv;
+	}
+
+	public int getShotYstartInv() {
+		return shotYstartInv;
+	}
+
+	public int getCooldowntime() {
+		return cooldowntime;
+	}
+
+	public float getSpeedshot() {
+		return speedshot;
 	}
 	
-		 public void set(int shotXstart, int shotYstart, int cooldowntime, float speedshot) {
-			 Weapon.shotXstart = shotXstart;
-			 Weapon.shotYstart = shotYstart;
-			 Weapon.cooldowntime = cooldowntime;
-			 Weapon.speedshot = speedshot;
-		 }
 
-		public void shoot(boolean shoot) {
-			if(shoot && cooldown == cooldowntime) {
-				Main.gw.shotObjects.add(new Shot());
-				cooldown = 0;
-				return;
-			}
-			if(cooldown < cooldowntime){
-				cooldown++;
-			}
-		}
 }

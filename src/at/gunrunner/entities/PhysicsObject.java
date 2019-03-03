@@ -5,7 +5,7 @@ import java.awt.Graphics;
 import at.gunrunner.physics.GravityEngine;
 
 public class PhysicsObject extends GameObject {
-	public float velX;//muss zu private gemacht werden!
+	public float velX;//sollte zu private gemacht werden!
 	protected float velY;
 
 	public PhysicsObject(float x, float y, int w, int h) {

@@ -2,14 +2,16 @@ package at.gunrunner.physics;
 
 import at.gunrunner.abilitys.Weapon;
 import at.gunrunner.entities.Player;
+import at.gunrunner.entities.Shot;
 import at.gunrunner.inputs.KeyHandler;
 import at.gunrunner.main.*;
 
 public class Playermovement {
-	public static Weapon w = new Weapon();
+	int cooldown;
+	public Weapon weapon2 = Weapon.PISTOLE;
 
 	public Playermovement(String waffe) {
-		w.waffe(waffe);
+		cooldown = 0;
 	}
 	
 	public void checkForAction() {
@@ -19,9 +21,15 @@ public class Playermovement {
 	}
 	
 	public void shoot() {
-		if(KeyHandler.spacePressed) {
-			w.shoot(true);
+			if(cooldown < weapon2.cooldowntime){
+				cooldown++;
+			}
+		if(KeyHandler.spacePressed && cooldown == weapon2.cooldowntime) {
+			Main.gw.shotObjects.add(new Shot());
+			cooldown = 0;
+			return;
 		}
+		
 	}
 
 	public void move() {// Movement
