@@ -33,7 +33,7 @@ public class Enemy extends GameObject {
 			if(health == 0) {
 				enemydead = true;
 				Main.gw.player.kills++;
-				Main.gw.idks.add(new HitMarker(x, y, false));
+				Main.gw.hitmarker.add(new HitMarker(x, y, false));
 			}
 		}
 	}
