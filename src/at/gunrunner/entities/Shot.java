@@ -11,8 +11,8 @@ public class Shot extends PhysicsObject{
 	public boolean right;
 	
 	public Shot() {
-		super(Main.gw.player.x + Main.gw.player.pm.weapon2.shotXstart , Main.gw.player.y + Main.gw.player.pm.weapon2.shotYstart, 9, 9);
-		this.speedshot = Main.gw.player.pm.weapon2.speedshot;
+		super(Main.gw.player.x + Main.gw.player.pm.weapon.shotXstart , Main.gw.player.y + Main.gw.player.pm.weapon.shotYstart, 9, 9);
+		this.speedshot = Main.gw.player.pm.weapon.speedshot;
 		if(Player.lookingLeft) {
 			right = false;
 		}else {

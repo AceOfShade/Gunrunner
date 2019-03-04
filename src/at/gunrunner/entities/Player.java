@@ -47,12 +47,12 @@ public class Player extends Charakter {
 	@Override
 	public void render(Graphics g) {
 		if(Player.lookingLeft){
-			switch(pm.weapon2) {
+			switch(pm.weapon) {
 				case MP7 : g.drawImage(Resources.player1inv, (int)(x), (int)(Main.gw.player.y), 100, 140, null);break;
 				case PISTOLE : g.drawImage(Resources.playerwpinv, (int)(x), (int)(y), 100, 140, null);break;
 			}
 			}else{
-			switch(pm.weapon2) {
+			switch(pm.weapon) {
 				case MP7  : g.drawImage(Resources.e, (int)(x), (int)(Main.gw.player.y), 100, 140, null);break;
 				case PISTOLE  : g.drawImage(Resources.playerwp, (int)(x), (int)(y), 100, 140, null);break;
 			}
