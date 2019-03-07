@@ -5,13 +5,14 @@ import javax.sound.sampled.AudioInputStream;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 
-public class Sound {
+
+public class WeaponSoundhandler {
 	public static Clip clip;
 	public AudioInputStream audioInputStream;
 	
-	public Sound() {
+	public WeaponSoundhandler() {
 		try {
-			audioInputStream = AudioSystem.getAudioInputStream(getClass().getResource("/gunsound.wav"));
+			audioInputStream = AudioSystem.getAudioInputStream(getClass().getResource("/sound/glockus.wav"));
 			clip = AudioSystem.getClip();
 			clip.open(audioInputStream);
 		}catch(Exception ex) {
@@ -21,6 +22,10 @@ public class Sound {
 	}
 	
 	public static void playSound() {
-        clip.start();
+		try {
+			clip.start();
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

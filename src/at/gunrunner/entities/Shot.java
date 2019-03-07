@@ -4,21 +4,22 @@ import java.awt.Graphics;
 
 import at.gunrunner.inputs.Resources;
 import at.gunrunner.main.*;
-import at.gunrunner.sound.Sound;
+import at.gunrunner.physics.Playermovement;
+import at.gunrunner.sound.WeaponSoundhandler;
 
 public class Shot extends PhysicsObject{
 	public double speedshot;
 	public boolean right;
 	
 	public Shot() {
-		super(Main.gw.player.x + Main.gw.player.pm.weapon.shotXstart , Main.gw.player.y + Main.gw.player.pm.weapon.shotYstart, 9, 9);
-		this.speedshot = Main.gw.player.pm.weapon.speedshot;
+		super(Main.gw.player.x + Playermovement.weapon.shotXstart , Main.gw.player.y + Playermovement.weapon.shotYstart, 9, 9);
+		this.speedshot = Playermovement.weapon.speedshot;
 		if(Player.lookingLeft) {
 			right = false;
 		}else {
 			right = true;
 		}
-		Sound.playSound();
+		WeaponSoundhandler.playSound();
 	}
 
 	@Override

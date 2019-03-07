@@ -12,7 +12,8 @@ public class Player extends Charakter {
 	public int health = 3; // player health
 	private static float speedX = 0.03f;
 	private static float jumpheight = 0.4f;
-	public Playermovement pm;
+	public static Playermovement pm;
+	@SuppressWarnings("unused")
 	private int hitboxStart;//muss noch verwendet werden
 	
 	public static boolean lookingLeft;
@@ -47,12 +48,12 @@ public class Player extends Charakter {
 	@Override
 	public void render(Graphics g) {
 		if(Player.lookingLeft){
-			switch(pm.weapon) {
+			switch(Playermovement.weapon) {
 				case MP7 : g.drawImage(Resources.player1inv, (int)(x), (int)(Main.gw.player.y), 100, 140, null);break;
 				case PISTOLE : g.drawImage(Resources.playerwpinv, (int)(x), (int)(y), 100, 140, null);break;
 			}
 			}else{
-			switch(pm.weapon) {
+			switch(Playermovement.weapon) {
 				case MP7  : g.drawImage(Resources.e, (int)(x), (int)(Main.gw.player.y), 100, 140, null);break;
 				case PISTOLE  : g.drawImage(Resources.playerwp, (int)(x), (int)(y), 100, 140, null);break;
 			}

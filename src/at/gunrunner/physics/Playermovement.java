@@ -8,10 +8,10 @@ import at.gunrunner.main.*;
 
 public class Playermovement {
 	public int cooldown;
-	public Weapon weapon;
+	public static Weapon weapon;
 
 	public Playermovement(Weapon weapon) {
-		this.weapon = weapon;
+		Playermovement.weapon = weapon;
 		this.cooldown = 0;
 	}
 	
