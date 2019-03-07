@@ -41,7 +41,7 @@ public class Enemy extends GameObject {
 	@Override
 	public void render(Graphics g) {
 		if(!enemydead) {
-			g.drawImage(Resources.enemy, (int)(x), (int)(y), 100, 140, null);
+			g.drawImage(Resources.enemy2, (int)(x), (int)(y), 100, 140, null);
 		}else {
 			g.drawImage(Resources.enemydead, (int)(x), (int)(y), 100, 140, null);
 		}

@@ -7,7 +7,7 @@ import javax.imageio.ImageIO;
 import at.gunrunner.sound.WeaponSoundhandler;
 
 public class Resources {
-	public static BufferedImage l1, l2, l3, loading, start, player1, player1inv,playerwp ,playerwpinv, e, bullet, bulletinv, enemy,enemydead, icon, kill,
+	public static BufferedImage l1, l2, l3, loading, start, player1, player1inv,playerwp ,playerwpinv, e, bullet, bulletinv, enemy,enemy2,enemydead, icon, kill,
 	hp;
 	 //noch verbessern!
 	
@@ -22,6 +22,7 @@ public class Resources {
 			bullet = ImageIO.read(Resources.class.getResourceAsStream("/gfx/patrone.png"));
 			bulletinv = ImageIO.read(Resources.class.getResourceAsStream("/gfx/patroneInv.png"));
 			enemy = ImageIO.read(Resources.class.getResourceAsStream("/gfx/gegner1.png"));
+			enemy2 = ImageIO.read(Resources.class.getResourceAsStream("/gfx/gegner2.png"));
 			enemydead= ImageIO.read(Resources.class.getResourceAsStream("/gfx/deadenemy.png"));
 			player1 = ImageIO.read(Resources.class.getResourceAsStream("/gfx/playermodel.png"));
 			player1inv = ImageIO.read(Resources.class.getResourceAsStream("/gfx/player3inv.png"));
