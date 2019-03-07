@@ -7,11 +7,12 @@ import at.gunrunner.inputs.KeyHandler;
 import at.gunrunner.main.*;
 
 public class Playermovement {
-	int cooldown;
-	public Weapon weapon2 = Weapon.PISTOLE;
+	public int cooldown;
+	public static Weapon weapon;
 
-	public Playermovement(String waffe) {
-		cooldown = 0;
+	public Playermovement(Weapon weapon) {
+		Playermovement.weapon = weapon;
+		this.cooldown = 0;
 	}
 	
 	public void checkForAction() {
@@ -21,10 +22,10 @@ public class Playermovement {
 	}
 	
 	public void shoot() {
-			if(cooldown < weapon2.cooldowntime){
+			if(cooldown < weapon.cooldowntime){
 				cooldown++;
 			}
-		if(KeyHandler.spacePressed && cooldown == weapon2.cooldowntime) {
+		if(KeyHandler.spacePressed && cooldown == weapon.cooldowntime) {
 			Main.gw.shotObjects.add(new Shot());
 			cooldown = 0;
 			return;
