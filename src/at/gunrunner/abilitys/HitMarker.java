@@ -25,9 +25,5 @@ public class HitMarker extends GameObject{
 		}else {
 			g.drawImage(Resources.kill, (int)(x), (int)(y) - way, w, h, null);
 		}
-		
-		
 	}
-
-
 }
