@@ -1,4 +1,4 @@
-package at.gunrunner.rendering;
+package at.gunrunner.core.rendering;
 
 import java.awt.Color;
 import java.awt.Graphics;
@@ -7,9 +7,9 @@ import java.awt.RenderingHints;
 
 import javax.swing.JLabel;
 
-import at.gunrunner.inputs.KeyHandler;
-import at.gunrunner.inputs.Resources;
-import at.gunrunner.main.Main;
+import at.gunrunner.core.inputs.KeyHandler;
+import at.gunrunner.core.inputs.Resources;
+import at.gunrunner.core.main.Main;
 
 
 public class Label extends JLabel {

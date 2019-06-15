@@ -1,9 +1,9 @@
-package at.gunrunner.abilitys;
+package at.gunrunner.core.abilitys;
 
 import java.awt.Graphics;
 
-import at.gunrunner.entities.GameObject;
-import at.gunrunner.inputs.Resources;
+import at.gunrunner.core.entities.GameObject;
+import at.gunrunner.core.inputs.Resources;
 
 public class HitMarker extends GameObject{
 	public int way;

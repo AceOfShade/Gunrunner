@@ -1,4 +1,4 @@
-package at.gunrunner.rendering;
+package at.gunrunner.core.rendering;
 
 import java.util.*;
 

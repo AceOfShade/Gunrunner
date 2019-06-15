@@ -1,4 +1,4 @@
-package at.gunrunner.sound;
+package at.gunrunner.core.sound;
 
 import javax.sound.sampled.AudioInputStream;
 

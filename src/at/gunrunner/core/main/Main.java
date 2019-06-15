@@ -1,13 +1,13 @@
-package at.gunrunner.main;
+package at.gunrunner.core.main;
  
 
-import at.gunrunner.inputs.*;
-import at.gunrunner.rendering.*;
-import at.gunrunner.sound.WeaponSoundhandler;
+import at.gunrunner.core.inputs.*;
+import at.gunrunner.core.rendering.*;
+import at.gunrunner.core.sound.WeaponSoundhandler;
 
 public class Main {
 	
-	public static final String VERSIONID = "Alpha 1.01.02.06.04";
+	public static final String VERSIONID = "Alpha 1.01.02.06.05";
 	
 	public static Game g;
 	public static KeyHandler kh;

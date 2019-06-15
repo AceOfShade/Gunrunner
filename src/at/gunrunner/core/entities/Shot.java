@@ -1,11 +1,11 @@
-package at.gunrunner.entities;
+package at.gunrunner.core.entities;
 
 import java.awt.Graphics;
 
-import at.gunrunner.inputs.Resources;
-import at.gunrunner.main.*;
-import at.gunrunner.physics.Playermovement;
-import at.gunrunner.sound.WeaponSoundhandler;
+import at.gunrunner.core.inputs.Resources;
+import at.gunrunner.core.main.*;
+import at.gunrunner.core.physics.Playermovement;
+import at.gunrunner.core.sound.WeaponSoundhandler;
 
 public class Shot extends PhysicsObject{
 	public double speedshot;

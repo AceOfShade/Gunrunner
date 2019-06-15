@@ -1,10 +1,10 @@
-package at.gunrunner.physics;
+package at.gunrunner.core.physics;
 
-import at.gunrunner.abilitys.Weapon;
-import at.gunrunner.entities.Player;
-import at.gunrunner.entities.Shot;
-import at.gunrunner.inputs.KeyHandler;
-import at.gunrunner.main.*;
+import at.gunrunner.core.abilitys.Weapon;
+import at.gunrunner.core.entities.Player;
+import at.gunrunner.core.entities.Shot;
+import at.gunrunner.core.inputs.KeyHandler;
+import at.gunrunner.core.main.*;
 
 public class Playermovement {
 	public int cooldown;

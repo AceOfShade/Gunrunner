@@ -1,6 +1,6 @@
-package at.gunrunner.physics;
+package at.gunrunner.core.physics;
 
-import at.gunrunner.main.Main;
+import at.gunrunner.core.main.Main;
 
 public class VelocityEngine{
 	

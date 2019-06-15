@@ -1,13 +1,13 @@
-package at.gunrunner.main;
+package at.gunrunner.core.main;
 
 
 import java.util.ArrayList;
 
-import at.gunrunner.abilitys.HitMarker;
-import at.gunrunner.entities.Enemy;
-import at.gunrunner.entities.Player;
-import at.gunrunner.entities.Shot;
-import at.gunrunner.rendering.Label;
+import at.gunrunner.core.abilitys.HitMarker;
+import at.gunrunner.core.entities.Enemy;
+import at.gunrunner.core.entities.Player;
+import at.gunrunner.core.entities.Shot;
+import at.gunrunner.core.rendering.Label;
 
 public class GameWorld {
 	public static int lvl = 1;

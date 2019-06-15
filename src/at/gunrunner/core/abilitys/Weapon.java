@@ -1,4 +1,4 @@
-package at.gunrunner.abilitys;
+package at.gunrunner.core.abilitys;
 
 public enum Weapon {
 	MP7 (26,85,75,75,200,1.25f,"/gunsound.wav"), PISTOLE (3,97,43,43,600, 1f,"/glocksound.wav");
