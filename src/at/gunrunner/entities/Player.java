@@ -1,11 +1,11 @@
-package at.gunrunner.core.entities;
+package at.gunrunner.entities;
 
 import java.awt.Graphics;
 
-import at.gunrunner.core.abilitys.Weapon;
-import at.gunrunner.core.inputs.Resources;
-import at.gunrunner.core.main.*;
-import at.gunrunner.core.physics.Playermovement;
+import at.gunrunner.abilitys.Weapon;
+import at.gunrunner.inputs.Resources;
+import at.gunrunner.main.*;
+import at.gunrunner.physics.Playermovement;
 
 public class Player extends Charakter {
 	public int kills = 0; // kills from player

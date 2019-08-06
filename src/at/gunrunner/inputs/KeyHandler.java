@@ -1,11 +1,11 @@
-package at.gunrunner.core.inputs;
+package at.gunrunner.inputs;
 
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
-import at.gunrunner.core.entities.Player;
-import at.gunrunner.core.rendering.Label;
-import at.gunrunner.core.main.*;
+import at.gunrunner.entities.Player;
+import at.gunrunner.rendering.Label;
+import at.gunrunner.main.*;
 
 public class KeyHandler implements KeyListener {
 	public static char lastPressed;

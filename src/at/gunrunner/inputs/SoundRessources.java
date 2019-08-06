@@ -1,4 +1,4 @@
-package at.gunrunner.core.inputs;
+package at.gunrunner.inputs;
 
 public class SoundRessources {
 	

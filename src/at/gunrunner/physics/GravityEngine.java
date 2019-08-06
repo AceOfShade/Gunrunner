@@ -1,8 +1,8 @@
-package at.gunrunner.core.physics;
+package at.gunrunner.physics;
 
 import java.util.ArrayList;
 
-import at.gunrunner.core.entities.PhysicsObject;
+import at.gunrunner.entities.PhysicsObject;
 
 public class GravityEngine {
 	

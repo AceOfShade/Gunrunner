@@ -1,10 +1,10 @@
-package at.gunrunner.core.entities;
+package at.gunrunner.entities;
 
 import java.awt.Graphics;
 
-import at.gunrunner.core.abilitys.HitMarker;
-import at.gunrunner.core.inputs.Resources;
-import at.gunrunner.core.main.*;
+import at.gunrunner.abilitys.HitMarker;
+import at.gunrunner.inputs.Resources;
+import at.gunrunner.main.*;
 
 
 public class Enemy extends GameObject {

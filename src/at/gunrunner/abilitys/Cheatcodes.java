@@ -1,4 +1,4 @@
-package at.gunrunner.core.abilitys;
+package at.gunrunner.abilitys;
 
 public class Cheatcodes {
 	public static char[] lastPressed = new char[6];

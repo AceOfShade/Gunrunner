@@ -1,12 +1,12 @@
-package at.gunrunner.core.main;
+package at.gunrunner.main;
 
 import java.util.Timer;
 import java.util.TimerTask;
 
-import at.gunrunner.core.entities.EnemyAI;
-import at.gunrunner.core.inputs.KeyHandler;
-import at.gunrunner.core.physics.VelocityEngine;
-import at.gunrunner.core.rendering.Collision;
+import at.gunrunner.entities.EnemyAI;
+import at.gunrunner.inputs.KeyHandler;
+import at.gunrunner.physics.VelocityEngine;
+import at.gunrunner.rendering.Collision;
 
 public class Game {
 	public Timer g;

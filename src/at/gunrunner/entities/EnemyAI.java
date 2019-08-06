@@ -1,6 +1,6 @@
-package at.gunrunner.core.entities;
+package at.gunrunner.entities;
 
-import at.gunrunner.core.main.Main;
+import at.gunrunner.main.Main;
 
 public class EnemyAI {
 	public static void live() {

@@ -1,10 +1,10 @@
-package at.gunrunner.core.inputs;
+package at.gunrunner.inputs;
 
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import javax.imageio.ImageIO;
 
-import at.gunrunner.core.sound.WeaponSoundhandler;
+import at.gunrunner.sound.WeaponSoundhandler;
 
 public class Resources {
 	public static BufferedImage l1, l2, l3, loading, start, player1, player1inv,playerwp ,playerwpinv, e, bullet, bulletinv, enemy,enemy2,enemydead, icon, kill,

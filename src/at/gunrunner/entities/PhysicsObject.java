@@ -1,8 +1,8 @@
-package at.gunrunner.core.entities;
+package at.gunrunner.entities;
 
 import java.awt.Graphics;
 
-import at.gunrunner.core.physics.GravityEngine;
+import at.gunrunner.physics.GravityEngine;
 
 public abstract class PhysicsObject extends GameObject {
 	public float velX;//sollte zu private gemacht werden!

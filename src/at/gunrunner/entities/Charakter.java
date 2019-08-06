@@ -1,4 +1,4 @@
-package at.gunrunner.core.entities;
+package at.gunrunner.entities;
 
 public abstract class Charakter extends PhysicsObject {
 
