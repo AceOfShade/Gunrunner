@@ -3,21 +3,33 @@ package at.gunrunner.main;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import at.gunrunner.entities.EnemyAI;
 import at.gunrunner.inputs.KeyHandler;
 import at.gunrunner.physics.VelocityEngine;
 import at.gunrunner.rendering.Collision;
 
 public class Game {
 	public Timer g;
+	public Timer aiTimer;
 	public Collision c = new Collision();
 	VelocityEngine ve;
 
 	public Game() {
+		aiTimer = new Timer();
 		g = new Timer();
 		ve = new VelocityEngine();
 	}
 	
 	public void startGame() {
+		aiTimer.schedule(new TimerTask() {
+			
+			@Override
+			public void run() {
+				EnemyAI.live();
+			}
+		},0, 100);
+		
+		
 		g.scheduleAtFixedRate(new TimerTask() {
 			@Override
 			public void run() {

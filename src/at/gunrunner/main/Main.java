@@ -7,7 +7,7 @@ import at.gunrunner.sound.WeaponSoundhandler;
 
 public class Main {
 	
-	public static final String VERSIONID = "Alpha 1.01.02.05.04";
+	public static final String VERSIONID = "Alpha 1.01.02.06.04";
 	
 	public static Game g;
 	public static KeyHandler kh;
